@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB04F1F71814CE7A00AAA897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F61814CE7A00AAA897 /* Foundation.framework */; };
+		FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */; };
+		FB04F1FB1814CE7A00AAA897 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1FA1814CE7A00AAA897 /* UIKit.framework */; };
+		FB04F2011814CE7A00AAA897 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB04F1FF1814CE7A00AAA897 /* InfoPlist.strings */; };
+		FB04F2031814CE7A00AAA897 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2021814CE7A00AAA897 /* main.m */; };
+		FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2061814CE7A00AAA897 /* witAppDelegate.m */; };
+		FB04F20A1814CE7A00AAA897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2081814CE7A00AAA897 /* Main.storyboard */; };
+		FB04F20D1814CE7A00AAA897 /* witFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F20C1814CE7A00AAA897 /* witFirstViewController.m */; };
+		FB04F2101814CE7A00AAA897 /* witSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F20F1814CE7A00AAA897 /* witSecondViewController.m */; };
+		FB04F2121814CE7A00AAA897 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2111814CE7A00AAA897 /* Images.xcassets */; };
+		FB04F2191814CE7A00AAA897 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F2181814CE7A00AAA897 /* XCTest.framework */; };
+		FB04F21A1814CE7A00AAA897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F61814CE7A00AAA897 /* Foundation.framework */; };
+		FB04F21B1814CE7A00AAA897 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1FA1814CE7A00AAA897 /* UIKit.framework */; };
+		FB04F2231814CE7A00AAA897 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2211814CE7A00AAA897 /* InfoPlist.strings */; };
+		FB04F2251814CE7A00AAA897 /* WalkItOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB04F21C1814CE7A00AAA897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB04F1EB1814CE7A00AAA897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB04F1F21814CE7A00AAA897;
+			remoteInfo = WalkItOut;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB04F1F31814CE7A00AAA897 /* WalkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB04F1F61814CE7A00AAA897 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FB04F1FA1814CE7A00AAA897 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FB04F1FE1814CE7A00AAA897 /* WalkItOut-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkItOut-Info.plist"; sourceTree = "<group>"; };
+		FB04F2001814CE7A00AAA897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB04F2021814CE7A00AAA897 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB04F2041814CE7A00AAA897 /* WalkItOut-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalkItOut-Prefix.pch"; sourceTree = "<group>"; };
+		FB04F2051814CE7A00AAA897 /* witAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witAppDelegate.h; sourceTree = "<group>"; };
+		FB04F2061814CE7A00AAA897 /* witAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witAppDelegate.m; sourceTree = "<group>"; };
+		FB04F2091814CE7A00AAA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB04F20B1814CE7A00AAA897 /* witFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witFirstViewController.h; sourceTree = "<group>"; };
+		FB04F20C1814CE7A00AAA897 /* witFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witFirstViewController.m; sourceTree = "<group>"; };
+		FB04F20E1814CE7A00AAA897 /* witSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witSecondViewController.h; sourceTree = "<group>"; };
+		FB04F20F1814CE7A00AAA897 /* witSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witSecondViewController.m; sourceTree = "<group>"; };
+		FB04F2111814CE7A00AAA897 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB04F2181814CE7A00AAA897 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FB04F2201814CE7A00AAA897 /* WalkItOutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkItOutTests-Info.plist"; sourceTree = "<group>"; };
+		FB04F2221814CE7A00AAA897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkItOutTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB04F1F01814CE7A00AAA897 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */,
+				FB04F1FB1814CE7A00AAA897 /* UIKit.framework in Frameworks */,
+				FB04F1F71814CE7A00AAA897 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB04F2141814CE7A00AAA897 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB04F2191814CE7A00AAA897 /* XCTest.framework in Frameworks */,
+				FB04F21B1814CE7A00AAA897 /* UIKit.framework in Frameworks */,
+				FB04F21A1814CE7A00AAA897 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB04F1EA1814CE7A00AAA897 = {
+			isa = PBXGroup;
+			children = (
+				FB04F1FC1814CE7A00AAA897 /* WalkItOut */,
+				FB04F21E1814CE7A00AAA897 /* WalkItOutTests */,
+				FB04F1F51814CE7A00AAA897 /* Frameworks */,
+				FB04F1F41814CE7A00AAA897 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB04F1F41814CE7A00AAA897 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F1F31814CE7A00AAA897 /* WalkItOut.app */,
+				FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB04F1F51814CE7A00AAA897 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F1F61814CE7A00AAA897 /* Foundation.framework */,
+				FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */,
+				FB04F1FA1814CE7A00AAA897 /* UIKit.framework */,
+				FB04F2181814CE7A00AAA897 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FB04F1FC1814CE7A00AAA897 /* WalkItOut */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F2051814CE7A00AAA897 /* witAppDelegate.h */,
+				FB04F2061814CE7A00AAA897 /* witAppDelegate.m */,
+				FB04F2081814CE7A00AAA897 /* Main.storyboard */,
+				FB04F20B1814CE7A00AAA897 /* witFirstViewController.h */,
+				FB04F20C1814CE7A00AAA897 /* witFirstViewController.m */,
+				FB04F20E1814CE7A00AAA897 /* witSecondViewController.h */,
+				FB04F20F1814CE7A00AAA897 /* witSecondViewController.m */,
+				FB04F2111814CE7A00AAA897 /* Images.xcassets */,
+				FB04F1FD1814CE7A00AAA897 /* Supporting Files */,
+			);
+			path = WalkItOut;
+			sourceTree = "<group>";
+		};
+		FB04F1FD1814CE7A00AAA897 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F1FE1814CE7A00AAA897 /* WalkItOut-Info.plist */,
+				FB04F1FF1814CE7A00AAA897 /* InfoPlist.strings */,
+				FB04F2021814CE7A00AAA897 /* main.m */,
+				FB04F2041814CE7A00AAA897 /* WalkItOut-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB04F21E1814CE7A00AAA897 /* WalkItOutTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */,
+				FB04F21F1814CE7A00AAA897 /* Supporting Files */,
+			);
+			path = WalkItOutTests;
+			sourceTree = "<group>";
+		};
+		FB04F21F1814CE7A00AAA897 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F2201814CE7A00AAA897 /* WalkItOutTests-Info.plist */,
+				FB04F2211814CE7A00AAA897 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB04F1F21814CE7A00AAA897 /* WalkItOut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB04F2281814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOut" */;
+			buildPhases = (
+				FB04F1EF1814CE7A00AAA897 /* Sources */,
+				FB04F1F01814CE7A00AAA897 /* Frameworks */,
+				FB04F1F11814CE7A00AAA897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalkItOut;
+			productName = WalkItOut;
+			productReference = FB04F1F31814CE7A00AAA897 /* WalkItOut.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB04F2161814CE7A00AAA897 /* WalkItOutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOutTests" */;
+			buildPhases = (
+				FB04F2131814CE7A00AAA897 /* Sources */,
+				FB04F2141814CE7A00AAA897 /* Frameworks */,
+				FB04F2151814CE7A00AAA897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB04F21D1814CE7A00AAA897 /* PBXTargetDependency */,
+			);
+			name = WalkItOutTests;
+			productName = WalkItOutTests;
+			productReference = FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB04F1EB1814CE7A00AAA897 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = wit;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Matthew Faluotico";
+				TargetAttributes = {
+					FB04F2161814CE7A00AAA897 = {
+						TestTargetID = FB04F1F21814CE7A00AAA897;
+					};
+				};
+			};
+			buildConfigurationList = FB04F1EE1814CE7A00AAA897 /* Build configuration list for PBXProject "WalkItOut" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB04F1EA1814CE7A00AAA897;
+			productRefGroup = FB04F1F41814CE7A00AAA897 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB04F1F21814CE7A00AAA897 /* WalkItOut */,
+				FB04F2161814CE7A00AAA897 /* WalkItOutTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB04F1F11814CE7A00AAA897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB04F2121814CE7A00AAA897 /* Images.xcassets in Resources */,
+				FB04F2011814CE7A00AAA897 /* InfoPlist.strings in Resources */,
+				FB04F20A1814CE7A00AAA897 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB04F2151814CE7A00AAA897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB04F2231814CE7A00AAA897 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB04F1EF1814CE7A00AAA897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB04F2031814CE7A00AAA897 /* main.m in Sources */,
+				FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */,
+				FB04F20D1814CE7A00AAA897 /* witFirstViewController.m in Sources */,
+				FB04F2101814CE7A00AAA897 /* witSecondViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB04F2131814CE7A00AAA897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB04F2251814CE7A00AAA897 /* WalkItOutTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB04F21D1814CE7A00AAA897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB04F1F21814CE7A00AAA897 /* WalkItOut */;
+			targetProxy = FB04F21C1814CE7A00AAA897 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB04F1FF1814CE7A00AAA897 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB04F2001814CE7A00AAA897 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FB04F2081814CE7A00AAA897 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB04F2091814CE7A00AAA897 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB04F2211814CE7A00AAA897 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB04F2221814CE7A00AAA897 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB04F2261814CE7A00AAA897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB04F2271814CE7A00AAA897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB04F2291814CE7A00AAA897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
+				INFOPLIST_FILE = "WalkItOut/WalkItOut-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FB04F22A1814CE7A00AAA897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
+				INFOPLIST_FILE = "WalkItOut/WalkItOut-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FB04F22C1814CE7A00AAA897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WalkItOut.app/WalkItOut";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WalkItOutTests/WalkItOutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FB04F22D1814CE7A00AAA897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WalkItOut.app/WalkItOut";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
+				INFOPLIST_FILE = "WalkItOutTests/WalkItOutTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB04F1EE1814CE7A00AAA897 /* Build configuration list for PBXProject "WalkItOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB04F2261814CE7A00AAA897 /* Debug */,
+				FB04F2271814CE7A00AAA897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB04F2281814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB04F2291814CE7A00AAA897 /* Debug */,
+				FB04F22A1814CE7A00AAA897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB04F22C1814CE7A00AAA897 /* Debug */,
+				FB04F22D1814CE7A00AAA897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB04F1EB1814CE7A00AAA897 /* Project object */;
+}
