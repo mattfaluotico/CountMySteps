@@ -1,5 +1,5 @@
 //
-//  witSecondViewController.h
+//  witFirstViewController.h
 //  WalkItOut
 //
 //  Created by Matthew Faluotico on 10/20/13.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface witSecondViewController : UIViewController
+@interface PedometerViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UILabel *showAppNameFade;
 
 @end

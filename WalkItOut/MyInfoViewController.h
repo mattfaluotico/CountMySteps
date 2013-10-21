@@ -1,5 +1,5 @@
 //
-//  witFirstViewController.h
+//  MyInfoViewController.h
 //  WalkItOut
 //
 //  Created by Matthew Faluotico on 10/20/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface witFirstViewController : UIViewController
+@interface MyInfoViewController : UIViewController
 
 @end

@@ -13,15 +13,16 @@
 		FB04F2011814CE7A00AAA897 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB04F1FF1814CE7A00AAA897 /* InfoPlist.strings */; };
 		FB04F2031814CE7A00AAA897 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2021814CE7A00AAA897 /* main.m */; };
 		FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2061814CE7A00AAA897 /* witAppDelegate.m */; };
-		FB04F20A1814CE7A00AAA897 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2081814CE7A00AAA897 /* Main.storyboard */; };
-		FB04F20D1814CE7A00AAA897 /* witFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F20C1814CE7A00AAA897 /* witFirstViewController.m */; };
-		FB04F2101814CE7A00AAA897 /* witSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F20F1814CE7A00AAA897 /* witSecondViewController.m */; };
+		FB04F20A1814CE7A00AAA897 /* WalkitOut.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */; };
+		FB04F20D1814CE7A00AAA897 /* PedometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F20C1814CE7A00AAA897 /* PedometerViewController.m */; };
+		FB04F2101814CE7A00AAA897 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F20F1814CE7A00AAA897 /* StatisticsViewController.m */; };
 		FB04F2121814CE7A00AAA897 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2111814CE7A00AAA897 /* Images.xcassets */; };
 		FB04F2191814CE7A00AAA897 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F2181814CE7A00AAA897 /* XCTest.framework */; };
 		FB04F21A1814CE7A00AAA897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F61814CE7A00AAA897 /* Foundation.framework */; };
 		FB04F21B1814CE7A00AAA897 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1FA1814CE7A00AAA897 /* UIKit.framework */; };
 		FB04F2231814CE7A00AAA897 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2211814CE7A00AAA897 /* InfoPlist.strings */; };
 		FB04F2251814CE7A00AAA897 /* WalkItOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */; };
+		FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F22F1814D94100AAA897 /* MyInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,17 +46,19 @@
 		FB04F2041814CE7A00AAA897 /* WalkItOut-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalkItOut-Prefix.pch"; sourceTree = "<group>"; };
 		FB04F2051814CE7A00AAA897 /* witAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witAppDelegate.h; sourceTree = "<group>"; };
 		FB04F2061814CE7A00AAA897 /* witAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witAppDelegate.m; sourceTree = "<group>"; };
-		FB04F2091814CE7A00AAA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FB04F20B1814CE7A00AAA897 /* witFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witFirstViewController.h; sourceTree = "<group>"; };
-		FB04F20C1814CE7A00AAA897 /* witFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witFirstViewController.m; sourceTree = "<group>"; };
-		FB04F20E1814CE7A00AAA897 /* witSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witSecondViewController.h; sourceTree = "<group>"; };
-		FB04F20F1814CE7A00AAA897 /* witSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witSecondViewController.m; sourceTree = "<group>"; };
+		FB04F2091814CE7A00AAA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WalkitOut.storyboard; sourceTree = "<group>"; };
+		FB04F20B1814CE7A00AAA897 /* PedometerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PedometerViewController.h; sourceTree = "<group>"; };
+		FB04F20C1814CE7A00AAA897 /* PedometerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PedometerViewController.m; sourceTree = "<group>"; };
+		FB04F20E1814CE7A00AAA897 /* StatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		FB04F20F1814CE7A00AAA897 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		FB04F2111814CE7A00AAA897 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB04F2181814CE7A00AAA897 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		FB04F2201814CE7A00AAA897 /* WalkItOutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkItOutTests-Info.plist"; sourceTree = "<group>"; };
 		FB04F2221814CE7A00AAA897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkItOutTests.m; sourceTree = "<group>"; };
+		FB04F22E1814D94100AAA897 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
+		FB04F22F1814D94100AAA897 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,13 +118,12 @@
 		FB04F1FC1814CE7A00AAA897 /* WalkItOut */ = {
 			isa = PBXGroup;
 			children = (
+				FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */,
+				FB04F2321814D98700AAA897 /* Pedometer */,
+				FB04F2311814D98200AAA897 /* Stats */,
+				FB04F2331814D98D00AAA897 /* My Info */,
 				FB04F2051814CE7A00AAA897 /* witAppDelegate.h */,
 				FB04F2061814CE7A00AAA897 /* witAppDelegate.m */,
-				FB04F2081814CE7A00AAA897 /* Main.storyboard */,
-				FB04F20B1814CE7A00AAA897 /* witFirstViewController.h */,
-				FB04F20C1814CE7A00AAA897 /* witFirstViewController.m */,
-				FB04F20E1814CE7A00AAA897 /* witSecondViewController.h */,
-				FB04F20F1814CE7A00AAA897 /* witSecondViewController.m */,
 				FB04F2111814CE7A00AAA897 /* Images.xcassets */,
 				FB04F1FD1814CE7A00AAA897 /* Supporting Files */,
 			);
@@ -155,6 +157,33 @@
 				FB04F2211814CE7A00AAA897 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB04F2311814D98200AAA897 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F20E1814CE7A00AAA897 /* StatisticsViewController.h */,
+				FB04F20F1814CE7A00AAA897 /* StatisticsViewController.m */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		FB04F2321814D98700AAA897 /* Pedometer */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F20B1814CE7A00AAA897 /* PedometerViewController.h */,
+				FB04F20C1814CE7A00AAA897 /* PedometerViewController.m */,
+			);
+			name = Pedometer;
+			sourceTree = "<group>";
+		};
+		FB04F2331814D98D00AAA897 /* My Info */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F22E1814D94100AAA897 /* MyInfoViewController.h */,
+				FB04F22F1814D94100AAA897 /* MyInfoViewController.m */,
+			);
+			name = "My Info";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +265,7 @@
 			files = (
 				FB04F2121814CE7A00AAA897 /* Images.xcassets in Resources */,
 				FB04F2011814CE7A00AAA897 /* InfoPlist.strings in Resources */,
-				FB04F20A1814CE7A00AAA897 /* Main.storyboard in Resources */,
+				FB04F20A1814CE7A00AAA897 /* WalkitOut.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +286,9 @@
 			files = (
 				FB04F2031814CE7A00AAA897 /* main.m in Sources */,
 				FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */,
-				FB04F20D1814CE7A00AAA897 /* witFirstViewController.m in Sources */,
-				FB04F2101814CE7A00AAA897 /* witSecondViewController.m in Sources */,
+				FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */,
+				FB04F20D1814CE7A00AAA897 /* PedometerViewController.m in Sources */,
+				FB04F2101814CE7A00AAA897 /* StatisticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,12 +319,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		FB04F2081814CE7A00AAA897 /* Main.storyboard */ = {
+		FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FB04F2091814CE7A00AAA897 /* Base */,
 			);
-			name = Main.storyboard;
+			name = WalkitOut.storyboard;
 			sourceTree = "<group>";
 		};
 		FB04F2211814CE7A00AAA897 /* InfoPlist.strings */ = {
@@ -388,7 +418,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
 				INFOPLIST_FILE = "WalkItOut/WalkItOut-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,7 +433,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
 				INFOPLIST_FILE = "WalkItOut/WalkItOut-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
