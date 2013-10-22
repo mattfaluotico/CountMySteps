@@ -7,11 +7,14 @@
 //
 
 #import "witAppDelegate.h"
+#import "PedometerViewController.h"
 
 @implementation witAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    
     // Override point for customization after application launch.
     return YES;
 }

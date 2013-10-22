@@ -23,6 +23,7 @@
 		FB04F2231814CE7A00AAA897 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB04F2211814CE7A00AAA897 /* InfoPlist.strings */; };
 		FB04F2251814CE7A00AAA897 /* WalkItOutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */; };
 		FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB04F22F1814D94100AAA897 /* MyInfoViewController.m */; };
+		FB81E40F18159A9F00253203 /* witTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FB81E40E18159A9F00253203 /* witTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkItOutTests.m; sourceTree = "<group>"; };
 		FB04F22E1814D94100AAA897 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
 		FB04F22F1814D94100AAA897 /* MyInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInfoViewController.m; sourceTree = "<group>"; };
+		FB81E40D18159A9F00253203 /* witTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witTabBar.h; sourceTree = "<group>"; };
+		FB81E40E18159A9F00253203 /* witTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = witTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */,
+				FB81E41018159AA400253203 /* TabBar */,
 				FB04F2321814D98700AAA897 /* Pedometer */,
 				FB04F2311814D98200AAA897 /* Stats */,
 				FB04F2331814D98D00AAA897 /* My Info */,
@@ -184,6 +188,15 @@
 				FB04F22F1814D94100AAA897 /* MyInfoViewController.m */,
 			);
 			name = "My Info";
+			sourceTree = "<group>";
+		};
+		FB81E41018159AA400253203 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FB81E40D18159A9F00253203 /* witTabBar.h */,
+				FB81E40E18159A9F00253203 /* witTabBar.m */,
+			);
+			name = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB81E40F18159A9F00253203 /* witTabBar.m in Sources */,
 				FB04F2031814CE7A00AAA897 /* main.m in Sources */,
 				FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */,
 				FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */,
@@ -501,6 +515,7 @@
 				FB04F22A1814CE7A00AAA897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOutTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +524,7 @@
 				FB04F22D1814CE7A00AAA897 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

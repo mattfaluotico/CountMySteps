@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PedometerViewController.h"
 
 @interface witAppDelegate : UIResponder <UIApplicationDelegate>
 

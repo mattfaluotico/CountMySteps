@@ -19,7 +19,7 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
 
-    //[self.tabBarController.tabBar setClipsToBounds:YES];
+    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
