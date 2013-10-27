@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.6684759259223938" green="0.13559268414974213" blue="0.85499149560928345" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Pedometer" image="second" id="u1e-5L-l1D"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -107,14 +107,14 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHx-nc-bn6">
-                                <rect key="frame" x="139" y="95" width="42" height="21"/>
+                                <rect key="frame" x="139" y="99" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Average:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7o0-Rm-VJA">
-                                <rect key="frame" x="126" y="144" width="68" height="21"/>
+                                <rect key="frame" x="126" y="147" width="68" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,11 +123,12 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3I2-3e-oTW">
                                 <rect key="frame" x="20" y="200" width="280" height="240"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="sectionIndexTrackingBackgroundColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="first" id="Z7h-1E-pvt"/>
@@ -148,7 +149,18 @@
                     <view key="view" contentMode="scaleToFill" id="xGZ-yU-sTH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IUF-Fe-sez">
+                                <rect key="frame" x="74" y="46" width="172" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Male"/>
+                                    <segment title="Female"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="second" id="m13-ad-IZd"/>
@@ -166,9 +178,9 @@
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.66847592590000005" green="0.1355926841" blue="0.85499149559999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
@@ -178,11 +190,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="184"/>
+            <point key="canvasLocation" x="-70" y="498"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
