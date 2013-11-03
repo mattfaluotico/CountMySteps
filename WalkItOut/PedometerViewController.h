@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface PedometerViewController : UIViewController 
 
-@property (strong, nonatomic) IBOutlet UILabel *showAppNameFade;
+@property (strong, nonatomic) IBOutlet UILabel *appNameLabel;
 
 @end

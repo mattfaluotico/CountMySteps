@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -36,9 +37,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
+
 
 @end

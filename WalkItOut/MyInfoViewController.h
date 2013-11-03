@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyInfoViewController : UIViewController
+@interface MyInfoViewController : UIViewController 
+
 
 @end
