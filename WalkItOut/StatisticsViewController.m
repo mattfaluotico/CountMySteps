@@ -33,4 +33,22 @@
     return UIStatusBarStyleLightContent;
 }
 
+#pragma mark Table
+
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+	// return size of database
+	return 10;
+}
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+	
+	return NULL;
+}
+
+- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+		
+	
+}
+
 @end

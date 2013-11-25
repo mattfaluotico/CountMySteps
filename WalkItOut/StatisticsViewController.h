@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StatisticsViewController : UIViewController
+@interface StatisticsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
 
 @end
