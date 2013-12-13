@@ -10,5 +10,10 @@
 
 @interface StatisticsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UILabel *bestDayLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *averageLabel;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentStepsMilesCalories;
+
 
 @end

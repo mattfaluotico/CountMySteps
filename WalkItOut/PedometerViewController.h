@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PedometerViewController : UIViewController 
+@interface PedometerViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *appNameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *caloriesLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *milesLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
+
+@property (weak, nonatomic) IBOutlet UIProgressView *goalProgress;
+
+- (id) initWIthTest: (NSString *) t ;
 
 @end

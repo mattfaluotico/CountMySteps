@@ -101,6 +101,10 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="appNameLabel" destination="Mrc-GA-X2i" id="3g2-9e-Coh"/>
+                        <outlet property="caloriesLabel" destination="hhF-f4-0a3" id="VLO-SF-ORm"/>
+                        <outlet property="goalProgress" destination="7pq-ZE-IQk" id="Q7g-lB-qbU"/>
+                        <outlet property="milesLabel" destination="YL2-K2-w7q" id="kRQ-QF-YMG"/>
+                        <outlet property="stepsLabel" destination="snM-N0-FN0" id="JQK-V9-tIW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -163,6 +167,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="first" id="Z7h-1E-pvt"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="averageLabel" destination="7o0-Rm-VJA" id="hMt-QD-tqz"/>
+                        <outlet property="bestDayLabel" destination="mmt-xY-WjE" id="08P-9p-r2j"/>
+                        <outlet property="segmentStepsMilesCalories" destination="QKT-4Q-qV1" id="USf-RH-qHd"/>
+                        <outlet property="totalLabel" destination="QHx-nc-bn6" id="bc2-Tw-Z7y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
             </objects>

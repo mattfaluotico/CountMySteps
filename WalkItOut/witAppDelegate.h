@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PedometerViewController.h"
+#import "witStepData.h"
 
 @interface witAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "witTabBar.h"
-
 @interface witTabBar ()
 
 @end
@@ -27,7 +26,7 @@
 {
     [super viewDidLoad];
     [self setSelectedIndex:1];
-    
+	
 	// Do any additional setup after loading the view.
 }
 

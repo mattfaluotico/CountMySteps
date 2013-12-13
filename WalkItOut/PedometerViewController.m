@@ -19,7 +19,7 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     
-    
+	
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,6 +32,16 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+	
+}
+
+- (id) initWIthTest:(NSString *)t {
+	
+	self = [super init];
+
+	NSLog(@"%@", t);
+	
+	return self;
 }
 
 @end
