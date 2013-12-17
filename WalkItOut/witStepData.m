@@ -10,5 +10,36 @@
 
 @implementation witStepData
 
+- (id) init {
+		
+	self = [super init];
+	
+	if (self) {
+		
+		self.weight = [[[NSUserDefaults standardUserDefaults] objectForKey:weight] integerValue];
+		self.heightInches = [[[NSUserDefaults standardUserDefaults] objectForKey:heightFeet] integerValue] * 12;
+		self.heightInches = self.heightInches + [[[NSUserDefaults standardUserDefaults] objectForKey:heightInches]integerValue];
+	}
+	
+	
+	return self;
+}
+
+-(double) stepsToCalories:(double)steps {
+	
+	// livestrong data = .57 * weight = calories per mile
+	return [self stepsToMiles:steps] * (self.weight * 0.57);
+}
+
+- (double) stepsToMiles:(double)steps {
+	
+	return steps / [self stepsPerMileForHeight];
+}
+
+- (double) stepsPerMileForHeight {
+	
+	return (-34.012 * self.heightInches) + 4545.7;
+	
+}
 
 @end

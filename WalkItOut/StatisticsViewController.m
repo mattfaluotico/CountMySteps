@@ -8,14 +8,11 @@
 
 #import "StatisticsViewController.h"
 #import "PedometerViewController.h"
+#import "witStepData.h"
 
 @interface StatisticsViewController ()
 
 - (void) setBestTotalAndAverage;
-- (void) setBestDayDate;
-- (void) setBestDayValue;
-- (void) setTotaValue;
-- (void) setAverageValue;
 
 @property (strong, nonatomic) NSArray *stepHistoryArray;
 
@@ -53,22 +50,37 @@
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 		
-	NSInteger cellValue = 0;
+	NSString *cellIdentifier = @"Cell";
+	
+	UITableViewCell *cellAtIndex = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+	
+	if (cellAtIndex == nil) {
+		cellAtIndex = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:cellIdentifier];
+	}
+	
+	double cellValue = 0;
+	cellValue = [[self.stepHistoryArray objectAtIndex:[indexPath row]][@"steps"] doubleValue];
+	NSString *date = [self.stepHistoryArray objectAtIndex:[indexPath row]][@"date"];
+	
+	
 	switch (self.segmentStepsMilesCalories.selectedSegmentIndex) {
-			
 			// 0 is steps
-		case 0 : cellValue = [[self.stepHistoryArray objectAtIndex:[indexPath row]] integerValue];
+		case 0 : cellValue = cellValue;
 			break;
-		case 1: cellValue = 0; // TODO: To Miles
+		case 1: cellValue = [witStepData stepsToMiles: cellValue]; // TODO: To Miles
 			break;
-		case 2: cellValue = 0; // TODO: To Calories
+		case 2: cellValue = [witStepData stepstoCalories: cellValue]; // TODO: To Calories
 			break;
 			default:
 			cellValue = 0;
 			break;
-			
 	}
-	return NULL;
+	
+	cellAtIndex.textLabel.text = date;
+	cellAtIndex.detailTextLabel.text = [NSString stringWithFormat:@"%f", cellValue];
+	
+	
+	return cellAtIndex;
 }
 
 - (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {

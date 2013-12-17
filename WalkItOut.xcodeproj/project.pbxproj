@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		563D5CC9185975F6001372F0 /* WriteToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CC8185975F6001372F0 /* WriteToFile.m */; };
 		563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CCD185A9FC0001372F0 /* witStepData.m */; };
+		563D5CD3185FD7BA001372F0 /* userSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CD2185FD7BA001372F0 /* userSettingConstants.m */; };
 		FB04F1F71814CE7A00AAA897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F61814CE7A00AAA897 /* Foundation.framework */; };
 		FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */; };
 		FB04F1FB1814CE7A00AAA897 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1FA1814CE7A00AAA897 /* UIKit.framework */; };
@@ -41,8 +42,10 @@
 /* Begin PBXFileReference section */
 		563D5CC7185975F6001372F0 /* WriteToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WriteToFile.h; path = WalkItOut/WriteToFile.h; sourceTree = "<group>"; };
 		563D5CC8185975F6001372F0 /* WriteToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WriteToFile.m; path = WalkItOut/WriteToFile.m; sourceTree = "<group>"; };
-		563D5CCC185A9FC0001372F0 /* witStepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witStepData.h; sourceTree = "<group>"; };
-		563D5CCD185A9FC0001372F0 /* witStepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = witStepData.m; sourceTree = "<group>"; };
+		563D5CCC185A9FC0001372F0 /* witStepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = witStepData.h; path = WalkItOut/witStepData.h; sourceTree = "<group>"; };
+		563D5CCD185A9FC0001372F0 /* witStepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = witStepData.m; path = WalkItOut/witStepData.m; sourceTree = "<group>"; };
+		563D5CD1185FD7BA001372F0 /* userSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userSettingConstants.h; path = WalkItOut/userSettingConstants.h; sourceTree = "<group>"; };
+		563D5CD2185FD7BA001372F0 /* userSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingConstants.m; path = WalkItOut/userSettingConstants.m; sourceTree = "<group>"; };
 		FB04F1F31814CE7A00AAA897 /* WalkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB04F1F61814CE7A00AAA897 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,11 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		563D5CD0185FD69E001372F0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				563D5CCC185A9FC0001372F0 /* witStepData.h */,
+				563D5CCD185A9FC0001372F0 /* witStepData.m */,
+				563D5CC7185975F6001372F0 /* WriteToFile.h */,
+				563D5CC8185975F6001372F0 /* WriteToFile.m */,
+				563D5CD1185FD7BA001372F0 /* userSettingConstants.h */,
+				563D5CD2185FD7BA001372F0 /* userSettingConstants.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 		FB04F1EA1814CE7A00AAA897 = {
 			isa = PBXGroup;
 			children = (
-				563D5CC7185975F6001372F0 /* WriteToFile.h */,
-				563D5CC8185975F6001372F0 /* WriteToFile.m */,
+				563D5CD0185FD69E001372F0 /* Data */,
 				FB04F1FC1814CE7A00AAA897 /* WalkItOut */,
 				FB04F21E1814CE7A00AAA897 /* WalkItOutTests */,
 				FB04F1F51814CE7A00AAA897 /* Frameworks */,
@@ -138,8 +153,6 @@
 				FB04F2061814CE7A00AAA897 /* witAppDelegate.m */,
 				FB04F2111814CE7A00AAA897 /* Images.xcassets */,
 				FB04F1FD1814CE7A00AAA897 /* Supporting Files */,
-				563D5CCC185A9FC0001372F0 /* witStepData.h */,
-				563D5CCD185A9FC0001372F0 /* witStepData.m */,
 			);
 			path = WalkItOut;
 			sourceTree = "<group>";
@@ -315,6 +328,7 @@
 				FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */,
 				FB04F20D1814CE7A00AAA897 /* PedometerViewController.m in Sources */,
 				FB04F2101814CE7A00AAA897 /* StatisticsViewController.m in Sources */,
+				563D5CD3185FD7BA001372F0 /* userSettingConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

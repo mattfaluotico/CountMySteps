@@ -10,7 +10,16 @@
 
 @interface witStepData : NSObject
 
-@property (strong, nonatomic) NSArray *stepHistoryData;
+@property NSArray *stepHistoryData;
+@property NSInteger heightInches;
+@property NSInteger weight;
 
+- (id) init;
+
+-(double) stepsToMiles: (double) steps;
+
+-(double) stepsToCalories: (double) steps;
+
+- (double) stepsPerMileForHeight;
 
 @end

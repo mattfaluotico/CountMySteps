@@ -9,11 +9,39 @@
 #import "witAppDelegate.h"
 #import "PedometerViewController.h"
 
+
+
 @implementation witAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+	if ([[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"]) {
+		
+		// launches before
+		
+	} else {
+		
+		[[NSUserDefaults standardUserDefaults ] setObject:@YES forKey:@"launchedPreviously"];
+		[[NSUserDefaults standardUserDefaults] synchronize];
+		
+		// first launch.
+		
+		// set all the defaults.
+		
+		NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+		[def setObject:@5 forKey:heightFeet];
+		[def setObject:@9 forKey:heightInches];
+		[def setObject:@145 forKey:weight];
+		[def setObject:@7800 forKey:goal];
+		[def setObject:@"steps"	forKey:goalUnits];
+		[def setObject:@YES forKey:male];
+		[def setObject:@0 forKey:bestDaySteps];
+		[def setObject:@0 forKey:averageDaySteps];
+		[def setObject:@0 forKey:totalSteps];
+		
+		
+	}
     
     // Override point for customization after application launch.
     return YES;

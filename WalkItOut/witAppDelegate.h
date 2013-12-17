@@ -10,9 +10,13 @@
 #import "PedometerViewController.h"
 #import "witStepData.h"
 
-@interface witAppDelegate : UIResponder <UIApplicationDelegate>
+@interface witAppDelegate : UIResponder <UIApplicationDelegate> {
+	
+
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
 
 
 @end

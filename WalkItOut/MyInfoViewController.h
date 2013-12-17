@@ -8,7 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MyInfoViewController : UIViewController 
+@interface MyInfoViewController : UIViewController
+
+- (IBAction)buttonReset:(UIButton *)sender;
+
+- (IBAction)buttonUpdate:(UIButton *)sender;
+
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentStepsMilesCalories;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentMaleFemale;
+@property (weak, nonatomic) IBOutlet UITextField *fieldHeightFeet;
+@property (weak, nonatomic) IBOutlet UITextField *fieldHeightInches;
+@property (weak, nonatomic) IBOutlet UITextField *fieldWeightInches;
+@property (weak, nonatomic) IBOutlet UITextField *fieldGoal;
+
 
 
 @end
