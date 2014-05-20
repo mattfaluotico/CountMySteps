@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-
-@interface userSettingConstants : NSObject
-extern NSString *const heightFeet;
+extern NSString * heightFeet;
 extern NSString *const heightInches;
 extern NSString *const goal;
 extern NSString *const goalUnits;
@@ -21,4 +19,7 @@ extern NSString *const male;
 extern NSString *const bestDaySteps;
 extern NSString *const averageDaySteps;
 extern NSString *const totalSteps;
+
+@interface userSettingConstants : NSObject
+
 @end

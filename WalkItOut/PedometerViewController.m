@@ -32,10 +32,9 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
-	
 }
 
-- (id) initWIthTest:(NSString *)t {
+- (id) initWithTest:(NSString *) t {
 	
 	self = [super init];
 

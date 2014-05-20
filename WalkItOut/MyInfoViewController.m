@@ -14,10 +14,14 @@
 
 @implementation MyInfoViewController
 
+// When the view becomes available
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"launchedPreviously"]) {
+        [self loadSettings];
+    }
     
 	// Do any additional setup after loading the view.
 }
@@ -28,29 +32,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-// storyboard init method
-- (id) initWithCoder:(NSCoder *)aDecoder {
-	
-	self = [super initWithCoder:aDecoder];
-	
-	if (self) {
-			
-		[self loadSettings];
-		
-	}
-	
-	return self;
-}
-
 // loads the user values into the fields
 - (void) loadSettings {
 	
 	NSUserDefaults *defaultSettings = [NSUserDefaults standardUserDefaults];
-	
-	// get height inches
-	[[NSUserDefaults standardUserDefaults] objectForKey:@"heightFeet"];
-	
-	// get height feet
+
+//	// get height inches
+    self.fieldHeightFeet.text = [defaultSettings objectForKey:heightFeet] ;
+    self.fieldHeightInches.text = [defaultSettings objectForKey:heightInches];
+    self.fieldWeight.text = [defaultSettings objectForKey:weight];
+    self.fieldGoal.text = [defaultSettings objectForKey:goal];
+    self.segmentMaleFemale.selectedSegmentIndex = [[defaultSettings objectForKey:male] integerValue];
+    self.segmentStepsMilesCalories.selectedSegmentIndex = [[defaultSettings objectForKey:goalUnits] integerValue];
+
 	
 }
 
@@ -65,9 +59,34 @@
     [super touchesBegan:touches withEvent:event];
 }
 
+
+// Erase all data from the Database.
 - (IBAction)buttonReset:(UIButton *)sender {
+    
 }
 
 - (IBAction)buttonUpdate:(UIButton *)sender {
+    NSUserDefaults *defaultSettings = [NSUserDefaults standardUserDefaults];
+    [defaultSettings setObject:self.fieldHeightFeet.text forKey:heightFeet];
+    [defaultSettings setObject:self.fieldHeightFeet.text forKey:heightInches];
+    [defaultSettings setObject:self.fieldGoal.text forKey:goal];
+    [defaultSettings setObject:self.fieldWeight.text forKey:weight];
+    
+    if (self.segmentMaleFemale.selectedSegmentIndex == 0) {
+        [defaultSettings setObject:@"0" forKey:male];
+    } else {
+        [defaultSettings setObject:@"1" forKey:male];
+    }
+    
+    NSInteger goalUnit = self.segmentStepsMilesCalories.selectedSegmentIndex;
+    if (goalUnit == 0) {
+        [defaultSettings setObject:@"0" forKey:goalUnits];
+    } else if (goalUnit == 1) {
+        [defaultSettings setObject:@"1" forKey:goalUnits];
+    } else {
+        [defaultSettings setObject:@"2" forKey:goalUnits];
+    }
+    
+    
 }
 @end

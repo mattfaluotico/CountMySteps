@@ -12,7 +12,8 @@
 
 
 @implementation userSettingConstants
-NSString *const heightFeet = @"heightFeet";
+
+NSString *heightFeet = @"heightFeet";
 NSString *const heightInches = @"heightInches";
 NSString *const goal = @"goalSteps";
 NSString *const goalUnits = @"goalUnits";

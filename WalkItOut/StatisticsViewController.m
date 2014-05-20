@@ -15,6 +15,7 @@
 - (void) setBestTotalAndAverage;
 
 @property (strong, nonatomic) NSArray *stepHistoryArray;
+@property witStepData * steps;
 
 @end
 
@@ -24,6 +25,7 @@
 {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    _steps = [[witStepData alloc] init];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -67,11 +69,11 @@
 			// 0 is steps
 		case 0 : cellValue = cellValue;
 			break;
-		case 1: cellValue = [witStepData stepsToMiles: cellValue]; // TODO: To Miles
+		case 1: cellValue = [_steps stepsToMiles: cellValue]; // TODO: To Miles
 			break;
-		case 2: cellValue = [witStepData stepstoCalories: cellValue]; // TODO: To Calories
+		case 2: cellValue = [_steps stepsToCalories: cellValue]; // TODO: To Calories
 			break;
-			default:
+        default:
 			cellValue = 0;
 			break;
 	}

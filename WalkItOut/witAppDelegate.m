@@ -22,7 +22,7 @@
 		
 	} else {
 		
-		[[NSUserDefaults standardUserDefaults ] setObject:@YES forKey:@"launchedPreviously"];
+		[[NSUserDefaults standardUserDefaults ] setBool:@YES forKey:@"launchedPreviously"];
 		[[NSUserDefaults standardUserDefaults] synchronize];
 		
 		// first launch.
@@ -37,7 +37,7 @@
 		[def setObject:@"steps"	forKey:goalUnits];
 		[def setObject:@YES forKey:male];
 		[def setObject:@0 forKey:bestDaySteps];
-		[def setObject:@0 forKey:averageDaySteps];
+//		[def setObject:@0 forKey:averageDaySteps];
 		[def setObject:@0 forKey:totalSteps];
 		
 		

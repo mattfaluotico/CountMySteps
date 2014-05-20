@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentMaleFemale;
 @property (weak, nonatomic) IBOutlet UITextField *fieldHeightFeet;
 @property (weak, nonatomic) IBOutlet UITextField *fieldHeightInches;
-@property (weak, nonatomic) IBOutlet UITextField *fieldWeightInches;
+@property (weak, nonatomic) IBOutlet UITextField *fieldWeight;
 @property (weak, nonatomic) IBOutlet UITextField *fieldGoal;
 
 

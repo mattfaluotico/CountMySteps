@@ -20,6 +20,6 @@
 
 -(double) stepsToCalories: (double) steps;
 
-- (double) stepsPerMileForHeight;
+-(double) stepsPerMileForHeight;
 
 @end
