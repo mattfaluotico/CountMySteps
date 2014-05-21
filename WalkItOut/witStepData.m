@@ -13,7 +13,8 @@
 - (id) init {
 		
 	self = [super init];
-	
+    
+//    Set the height and weight
 	if (self) {
 		
 		self.weight = [[[NSUserDefaults standardUserDefaults] objectForKey:weight] integerValue];
@@ -21,13 +22,12 @@
 		self.heightInches = self.heightInches + [[[NSUserDefaults standardUserDefaults] objectForKey:heightInches]integerValue];
 	}
 	
-	
 	return self;
 }
 
 -(double) stepsToCalories:(double)steps {
 	
-	// livestrong data = .57 * weight = calories per mile
+	// Livestrong data = .57 * weight = calories per mile
 	return [self stepsToMiles:steps] * (self.weight * 0.57);
 }
 

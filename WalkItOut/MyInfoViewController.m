@@ -32,7 +32,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-// loads the user values into the fields
+/**
+ *  Load all the user settings into the application view
+ */
 - (void) loadSettings {
 	
 	NSUserDefaults *defaultSettings = [NSUserDefaults standardUserDefaults];
