@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"launchedPreviously"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"]) {
         [self loadSettings];
     }
     

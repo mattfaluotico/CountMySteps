@@ -22,10 +22,15 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    [self setSelectedIndex:1];
+
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"]) {
+        [self setSelectedIndex:1];
+        
+    } else {
+        [self setSelectedIndex:2];
+    }
 	
 	// Do any additional setup after loading the view.
 }

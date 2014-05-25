@@ -8,6 +8,8 @@
 
 #import "witStepData.h"
 
+#define MILES_INCHES 63360
+
 @implementation witStepData
 
 - (id) init {
@@ -25,20 +27,30 @@
 	return self;
 }
 
--(double) stepsToCalories:(double)steps {
-	
-	// Livestrong data = .57 * weight = calories per mile
-	return [self stepsToMiles:steps] * (self.weight * 0.57);
+-(id) initWithSteps:(NSInteger)steps  {
+    
+    self = [self init];
+    [self setSteps:steps];
+    return self;
 }
 
-- (double) stepsToMiles:(double)steps {
+-(double) stepsToCalories{
 	
-	return steps / [self stepsPerMileForHeight];
+	// Livestrong data = .57 * weight = calories per mile
+	return [self stepsToMiles] * ([self weight] * 0.57);
+}
+
+- (double) stepsToMiles {
+	
+	return [self steps] / [self stepsPerMileForHeight];
 }
 
 - (double) stepsPerMileForHeight {
 	
-	return (-34.012 * self.heightInches) + 4545.7;
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:male] ) // male
+        return MILES_INCHES / (0.415 * [self heightInches]);
+    else  // Female
+        return MILES_INCHES / (0.413 * [self heightInches]);
 	
 }
 

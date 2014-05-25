@@ -13,12 +13,16 @@
 @property NSArray *stepHistoryData;
 @property NSInteger heightInches;
 @property NSInteger weight;
+// Steps is the standardize measurement
+@property NSInteger steps;
 
 - (id) init;
 
--(double) stepsToMiles: (double) steps;
+- (id) initWithSteps: (NSInteger) steps;
 
--(double) stepsToCalories: (double) steps;
+-(double) stepsToMiles;
+
+-(double) stepsToCalories;
 
 -(double) stepsPerMileForHeight;
 

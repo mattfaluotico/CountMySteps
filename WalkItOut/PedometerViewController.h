@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "witStepData.h"
 
 @interface PedometerViewController : UIViewController
 
@@ -21,6 +21,10 @@
 
 @property (weak, nonatomic) IBOutlet UIProgressView *goalProgress;
 
+@property (strong, nonatomic) witStepData * steps;
+
 - (id) initWIthTest: (NSString *) t ;
+
+
 
 @end

@@ -18,8 +18,12 @@
 {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
+    NSInteger stepsToday = 8000;
+    self.steps = [[witStepData alloc] initWithSteps:stepsToday];
+    self.stepsLabel.text = [NSString stringWithFormat:@"%li", (long)stepsToday ];
+    self.milesLabel.text = [NSString stringWithFormat:@"%.2f", [self.steps stepsToMiles]];
+    self.caloriesLabel.text = [NSString stringWithFormat:@"%.f", [self.steps stepsToCalories]];
     
-	
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33A779A2192FB103008B4D17 /* StepHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */; };
 		33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF70E192BEA7800781BEF /* userSettingConstants.m */; };
 		563D5CC9185975F6001372F0 /* WriteToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CC8185975F6001372F0 /* WriteToFile.m */; };
 		563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CCD185A9FC0001372F0 /* witStepData.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		33A779A1192FB103008B4D17 /* StepHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StepHistory.xcdatamodel; sourceTree = "<group>"; };
 		33DCF70D192BEA7800781BEF /* userSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userSettingConstants.h; path = WalkItOut/userSettingConstants.h; sourceTree = "<group>"; };
 		33DCF70E192BEA7800781BEF /* userSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingConstants.m; path = WalkItOut/userSettingConstants.m; sourceTree = "<group>"; };
 		563D5CC7185975F6001372F0 /* WriteToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WriteToFile.h; path = WalkItOut/WriteToFile.h; sourceTree = "<group>"; };
@@ -106,14 +108,15 @@
 				563D5CCD185A9FC0001372F0 /* witStepData.m */,
 				563D5CC7185975F6001372F0 /* WriteToFile.h */,
 				563D5CC8185975F6001372F0 /* WriteToFile.m */,
+				33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */,
 			);
 			name = Data;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		FB04F1EA1814CE7A00AAA897 = {
 			isa = PBXGroup;
 			children = (
-				563D5CD0185FD69E001372F0 /* Data */,
 				FB04F1FC1814CE7A00AAA897 /* WalkItOut */,
 				FB04F21E1814CE7A00AAA897 /* WalkItOutTests */,
 				FB04F1F51814CE7A00AAA897 /* Frameworks */,
@@ -144,6 +147,7 @@
 		FB04F1FC1814CE7A00AAA897 /* WalkItOut */ = {
 			isa = PBXGroup;
 			children = (
+				563D5CD0185FD69E001372F0 /* Data */,
 				FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */,
 				FB81E41018159AA400253203 /* TabBar */,
 				FB04F2321814D98700AAA897 /* Pedometer */,
@@ -320,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A779A2192FB103008B4D17 /* StepHistory.xcdatamodeld in Sources */,
 				FB81E40F18159A9F00253203 /* witTabBar.m in Sources */,
 				FB04F2031814CE7A00AAA897 /* main.m in Sources */,
 				563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */,
@@ -549,6 +554,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				33A779A1192FB103008B4D17 /* StepHistory.xcdatamodel */,
+			);
+			currentVersion = 33A779A1192FB103008B4D17 /* StepHistory.xcdatamodel */;
+			name = StepHistory.xcdatamodeld;
+			path = WalkItOut/StepHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FB04F1EB1814CE7A00AAA897 /* Project object */;
 }

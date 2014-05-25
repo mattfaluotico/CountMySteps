@@ -21,10 +21,23 @@
 
 @implementation StatisticsViewController
 
+- (id) initWithCoder:(NSCoder *)aDecoder {
+	
+	self = [super initWithCoder:aDecoder];
+	
+	if (self) {
+		self.stepHistoryArray = [StatisticsViewController loadStepData];
+
+        _steps = [[witStepData alloc] init];
+	}
+	
+	return self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
-    _steps = [[witStepData alloc] init];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -34,10 +47,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 // set statusbar color to white
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
+
 
 #pragma mark Table
 
@@ -67,9 +83,9 @@
 			// 0 is steps
 		case 0 : cellValue = cellValue;
 			break;
-		case 1: cellValue = [_steps stepsToMiles: cellValue]; // TODO: To Miles
+		case 1: cellValue = 12; //[_steps stepsToMiles: cellValue]; // TODO: To Miles
 			break;
-		case 2: cellValue = [_steps stepsToCalories: cellValue]; // TODO: To Calories
+		case 2: cellValue = 13; // [_steps stepsToCalories: cellValue]; // TODO: To Calories
 			break;
         default:
 			cellValue = 0;
@@ -88,16 +104,6 @@
 	
 }
 
-- (id) initWithCoder:(NSCoder *)aDecoder {
-	
-	self = [super initWithCoder:aDecoder];
-	
-	if (self) {
-		self.stepHistoryArray = [StatisticsViewController loadStepData];
-	}
-	
-	return self;
-}
 
 + (NSArray *) loadStepData {
 	

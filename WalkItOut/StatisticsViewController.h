@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *averageLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentStepsMilesCalories;
-@property (weak, nonatomic) witStepData *stepData;
+//@property (weak, nonatomic) witStepData *stepData;
+@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
 
 @end
