@@ -2,6 +2,8 @@
 
 **This project will build, but missing the majority of it's features**
 
+**This is some really messy code. As it was a learning process, some things are not done in the most efficient form. I plan on going back to polish and increase performance after the core features have been added**
+
 Walk **it** out is a simplistic pedometer for the iPhone 5S. Using the built in M7 motion chip, motion data for the past 7 days is stored on the device. This application reads the data and interprets it into steps, miles, and calories. 
 
 
