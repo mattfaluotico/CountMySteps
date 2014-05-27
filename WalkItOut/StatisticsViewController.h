@@ -25,4 +25,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *statsTable;
 
+- (IBAction)changeUnits:(id)sender;
+
 @end

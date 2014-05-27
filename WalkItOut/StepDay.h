@@ -10,6 +10,9 @@
 #import <CoreData/CoreData.h>
 
 
+/**
+ *  Step History SQLite
+ */
 @interface StepDay : NSManagedObject
 
 @property (nonatomic, retain) NSDate * day;

@@ -9,7 +9,7 @@
 #import "witAppDelegate.h"
 #import "PedometerViewController.h"
 #import "StepDay.h"
-
+#import <stdlib.h>
 
 @implementation witAppDelegate
 
@@ -21,29 +21,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    //    Load core data
+    //    TEST DATA
     NSManagedObjectContext *context = [self managedObjectContext];
     StepDay *stepEntry = [NSEntityDescription
                                        insertNewObjectForEntityForName:@"StepDay"
                                        inManagedObjectContext:context];
-    [stepEntry setValue:@1900 forKey:@"steps"];
+    
+    int l = arc4random() % 12000;
+    
+    [stepEntry setValue:[NSNumber numberWithInt:l] forKey:@"steps"];
     [stepEntry setValue:[[NSDate alloc] init] forKey:@"day"];
     
     NSError *error;
     
     if (![context save:&error]) {
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription
-                                   entityForName:@"StepDay" inManagedObjectContext:context];
-    [fetchRequest setEntity:entity];
-    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
-    
-    for (StepDay *info in fetchedObjects) {
-        NSLog(@"steps: %li", [[info valueForKey:@"steps"] integerValue]);
-        
     }
     
     // Override point for customization after application launch.
@@ -168,6 +160,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 - (NSURL *)applicationDocumentsDirectory

@@ -8,22 +8,24 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ *  Math for converting steps into miles and calories as the data is stored in 'steps'
+ */
 @interface witStepData : NSObject
 
 @property NSArray *stepHistoryData;
 @property NSInteger heightInches;
 @property NSInteger weight;
 // Steps is the standardize measurement
-@property NSInteger steps;
 
 - (id) init;
 
 - (id) initWithSteps: (NSInteger) steps;
 
--(double) stepsToMiles;
+- (double) stepsToMiles: (NSInteger) steps;
 
--(double) stepsToCalories;
+- (double) stepsToCalories:(NSInteger) steps;
 
--(double) stepsPerMileForHeight;
+- (double) stepsPerMileForHeight:(NSInteger) steps;
 
 @end

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Custom Cell for showing Date and Steps
+ */
 @interface witCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *dateData;

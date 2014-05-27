@@ -12,6 +12,8 @@
 
 @implementation witStepData
 
+// TODO: Make these all static methods that take steps and return a value 
+
 - (id) init {
 		
 	self = [super init];
@@ -27,25 +29,18 @@
 	return self;
 }
 
--(id) initWithSteps:(NSInteger)steps  {
-    
-    self = [self init];
-    [self setSteps:steps];
-    return self;
-}
-
--(double) stepsToCalories{
+-(double) stepsToCalories: (NSInteger) steps{
 	
 	// Livestrong data = .57 * weight = calories per mile
-	return [self stepsToMiles] * ([self weight] * 0.57);
+	return [self stepsToMiles: steps] * ([self weight] * 0.57);
 }
 
-- (double) stepsToMiles {
+- (double) stepsToMiles: (NSInteger) steps {
 	
-	return [self steps] / [self stepsPerMileForHeight];
+	return steps / [self stepsPerMileForHeight: steps];
 }
 
-- (double) stepsPerMileForHeight {
+- (double) stepsPerMileForHeight: (NSInteger ) steps {
 	
     if ([[NSUserDefaults standardUserDefaults] boolForKey:male] ) // male
         return MILES_INCHES / (0.415 * [self heightInches]);

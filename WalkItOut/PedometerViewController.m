@@ -17,12 +17,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Set status bar to white
     [self setNeedsStatusBarAppearanceUpdate];
     NSInteger stepsToday = 8000;
-    self.steps = [[witStepData alloc] initWithSteps:stepsToday];
+    
+    
+    self.steps = [[witStepData alloc] init];
+    
     self.stepsLabel.text = [NSString stringWithFormat:@"%li", (long)stepsToday ];
-    self.milesLabel.text = [NSString stringWithFormat:@"%.2f", [self.steps stepsToMiles]];
-    self.caloriesLabel.text = [NSString stringWithFormat:@"%.f", [self.steps stepsToCalories]];
+    self.milesLabel.text = [NSString stringWithFormat:@"%.2f", [self.steps stepsToMiles: stepsToday]];
+    self.caloriesLabel.text = [NSString stringWithFormat:@"%.f", [self.steps stepsToCalories: stepsToday]];
     
 	// Do any additional setup after loading the view, typically from a nib.
 }

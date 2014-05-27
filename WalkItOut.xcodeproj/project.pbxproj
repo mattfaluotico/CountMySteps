@@ -13,7 +13,6 @@
 		332563FF1934D27E005D0CA2 /* witCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 332563FE1934D27E005D0CA2 /* witCell.m */; };
 		33A779A2192FB103008B4D17 /* StepHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */; };
 		33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF70E192BEA7800781BEF /* userSettingConstants.m */; };
-		563D5CC9185975F6001372F0 /* WriteToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CC8185975F6001372F0 /* WriteToFile.m */; };
 		563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CCD185A9FC0001372F0 /* witStepData.m */; };
 		FB04F1F71814CE7A00AAA897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F61814CE7A00AAA897 /* Foundation.framework */; };
 		FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */; };
@@ -54,8 +53,6 @@
 		33A779A1192FB103008B4D17 /* StepHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StepHistory.xcdatamodel; sourceTree = "<group>"; };
 		33DCF70D192BEA7800781BEF /* userSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userSettingConstants.h; path = WalkItOut/userSettingConstants.h; sourceTree = "<group>"; };
 		33DCF70E192BEA7800781BEF /* userSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingConstants.m; path = WalkItOut/userSettingConstants.m; sourceTree = "<group>"; };
-		563D5CC7185975F6001372F0 /* WriteToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WriteToFile.h; path = WalkItOut/WriteToFile.h; sourceTree = "<group>"; };
-		563D5CC8185975F6001372F0 /* WriteToFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WriteToFile.m; path = WalkItOut/WriteToFile.m; sourceTree = "<group>"; };
 		563D5CCC185A9FC0001372F0 /* witStepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = witStepData.h; path = WalkItOut/witStepData.h; sourceTree = "<group>"; };
 		563D5CCD185A9FC0001372F0 /* witStepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = witStepData.m; path = WalkItOut/witStepData.m; sourceTree = "<group>"; };
 		FB04F1F31814CE7A00AAA897 /* WalkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +114,6 @@
 				33DCF70E192BEA7800781BEF /* userSettingConstants.m */,
 				563D5CCC185A9FC0001372F0 /* witStepData.h */,
 				563D5CCD185A9FC0001372F0 /* witStepData.m */,
-				563D5CC7185975F6001372F0 /* WriteToFile.h */,
-				563D5CC8185975F6001372F0 /* WriteToFile.m */,
 				33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */,
 				332563F5193436CB005D0CA2 /* StepDay.h */,
 				332563F6193436CB005D0CA2 /* StepDay.m */,
@@ -348,7 +343,6 @@
 				563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */,
 				332563FF1934D27E005D0CA2 /* witCell.m in Sources */,
 				FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */,
-				563D5CC9185975F6001372F0 /* WriteToFile.m in Sources */,
 				FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */,
 				FB04F20D1814CE7A00AAA897 /* PedometerViewController.m in Sources */,
 				FB04F2101814CE7A00AAA897 /* StatisticsViewController.m in Sources */,

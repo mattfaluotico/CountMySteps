@@ -68,7 +68,7 @@
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
 	NSInteger c = [self.stepHistory count];
-	return (c < 1) ? 1 : c;
+	return (c < 1) ? 0 : c;
 }
 
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,6 +82,8 @@
         cellAtIndex = [nib objectAtIndex:0];
 	}
 	
+    
+    
 	double cellValue = 0;
     StepDay *day = [self.stepHistory objectAtIndex:indexPath.row];
 	cellValue = [day.steps doubleValue];
@@ -91,21 +93,30 @@
 	NSString *date = [df stringFromDate:day.day];
 	
 	
-//	switch (self.segmentStepsMilesCalories.selectedSegmentIndex) {
-//			// 0 is steps
-//		case 0 : cellValue = cellValue;
-//			break;
-//		case 1: cellValue = 12; //[_steps stepsToMiles: cellValue]; // TODO: To Miles
-//			break;
-//		case 2: cellValue = 13; // [_steps stepsToCalories: cellValue]; // TODO: To Calories
-//			break;
-//        default:
-//			cellValue = 0;
-//			break;
-//	}
+	switch (self.segmentStepsMilesCalories.selectedSegmentIndex) {
+			// 0 is steps
+		case 0 : {
+            cellValue = cellValue;
+            cellAtIndex.stepData.text = [NSString stringWithFormat:@"%.f steps", cellValue];
+			break;
+        }
+		case 1: {
+            cellValue = [_steps stepsToMiles: cellValue];
+            cellAtIndex.stepData.text = [NSString stringWithFormat:@"%.2f mi", cellValue];
+            
+			break;
+        }
+		case 2: {
+            cellValue = [_steps stepsToCalories: cellValue]; // TODO: To Calories
+            cellAtIndex.stepData.text = [NSString stringWithFormat:@"%.f cal", cellValue];
+			break;
+        }
+        default:
+			cellValue = 0;
+			break;
+	}
 	
 	cellAtIndex.dateData.text = date;
-	cellAtIndex.stepData.text = [NSString stringWithFormat:@"%.2f", cellValue];
 	
 	
 	return cellAtIndex;
@@ -173,4 +184,7 @@
     self.title = @"Step History";
 }
 
+- (IBAction)changeUnits:(id)sender {
+    [self.statsTable reloadData];
+}
 @end

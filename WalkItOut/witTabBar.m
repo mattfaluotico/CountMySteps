@@ -26,6 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    Set appeatence
+    [[UITabBar appearance ] setTintColor: [UIColor whiteColor]];
+    
+    // Ensure that the user if first asked to enter data
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"]) {
         [self setSelectedIndex:1];
         
