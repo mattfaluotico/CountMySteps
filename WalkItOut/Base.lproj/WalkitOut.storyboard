@@ -159,7 +159,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QUy-BD-bpt" id="Gec-6z-DF5"/>
+                                    <outlet property="delegate" destination="QUy-BD-bpt" id="GMr-8d-BEd"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.43300840260000001" green="0.087447375059999999" blue="0.55827903749999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -171,6 +177,7 @@
                         <outlet property="averageLabel" destination="7o0-Rm-VJA" id="hMt-QD-tqz"/>
                         <outlet property="bestDayLabel" destination="mmt-xY-WjE" id="08P-9p-r2j"/>
                         <outlet property="segmentStepsMilesCalories" destination="QKT-4Q-qV1" id="USf-RH-qHd"/>
+                        <outlet property="statsTable" destination="3I2-3e-oTW" id="7mn-EW-L51"/>
                         <outlet property="totalLabel" destination="QHx-nc-bn6" id="bc2-Tw-Z7y"/>
                     </connections>
                 </viewController>

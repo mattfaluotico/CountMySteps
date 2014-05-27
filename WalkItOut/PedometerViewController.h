@@ -23,8 +23,4 @@
 
 @property (strong, nonatomic) witStepData * steps;
 
-- (id) initWIthTest: (NSString *) t ;
-
-
-
 @end

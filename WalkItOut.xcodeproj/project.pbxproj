@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		332563F4193398FA005D0CA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332563F3193398FA005D0CA2 /* CoreData.framework */; };
+		332563F7193436CB005D0CA2 /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 332563F6193436CB005D0CA2 /* StepDay.m */; };
+		332563F91934D16E005D0CA2 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332563F81934D16E005D0CA2 /* Cell.xib */; };
+		332563FF1934D27E005D0CA2 /* witCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 332563FE1934D27E005D0CA2 /* witCell.m */; };
 		33A779A2192FB103008B4D17 /* StepHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */; };
 		33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF70E192BEA7800781BEF /* userSettingConstants.m */; };
 		563D5CC9185975F6001372F0 /* WriteToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CC8185975F6001372F0 /* WriteToFile.m */; };
@@ -41,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		332563F3193398FA005D0CA2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		332563F5193436CB005D0CA2 /* StepDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDay.h; path = WalkItOut/StepDay.h; sourceTree = "<group>"; };
+		332563F6193436CB005D0CA2 /* StepDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDay.m; path = WalkItOut/StepDay.m; sourceTree = "<group>"; };
+		332563F81934D16E005D0CA2 /* Cell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Cell.xib; sourceTree = "<group>"; };
+		332563FD1934D27E005D0CA2 /* witCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witCell.h; sourceTree = "<group>"; };
+		332563FE1934D27E005D0CA2 /* witCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = witCell.m; sourceTree = "<group>"; };
 		33A779A1192FB103008B4D17 /* StepHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StepHistory.xcdatamodel; sourceTree = "<group>"; };
 		33DCF70D192BEA7800781BEF /* userSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userSettingConstants.h; path = WalkItOut/userSettingConstants.h; sourceTree = "<group>"; };
 		33DCF70E192BEA7800781BEF /* userSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingConstants.m; path = WalkItOut/userSettingConstants.m; sourceTree = "<group>"; };
@@ -80,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332563F4193398FA005D0CA2 /* CoreData.framework in Frameworks */,
 				FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */,
 				FB04F1FB1814CE7A00AAA897 /* UIKit.framework in Frameworks */,
 				FB04F1F71814CE7A00AAA897 /* Foundation.framework in Frameworks */,
@@ -109,6 +120,8 @@
 				563D5CC7185975F6001372F0 /* WriteToFile.h */,
 				563D5CC8185975F6001372F0 /* WriteToFile.m */,
 				33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */,
+				332563F5193436CB005D0CA2 /* StepDay.h */,
+				332563F6193436CB005D0CA2 /* StepDay.m */,
 			);
 			name = Data;
 			path = ..;
@@ -136,6 +149,7 @@
 		FB04F1F51814CE7A00AAA897 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				332563F3193398FA005D0CA2 /* CoreData.framework */,
 				FB04F1F61814CE7A00AAA897 /* Foundation.framework */,
 				FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */,
 				FB04F1FA1814CE7A00AAA897 /* UIKit.framework */,
@@ -149,6 +163,9 @@
 			children = (
 				563D5CD0185FD69E001372F0 /* Data */,
 				FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */,
+				332563F81934D16E005D0CA2 /* Cell.xib */,
+				332563FD1934D27E005D0CA2 /* witCell.h */,
+				332563FE1934D27E005D0CA2 /* witCell.m */,
 				FB81E41018159AA400253203 /* TabBar */,
 				FB04F2321814D98700AAA897 /* Pedometer */,
 				FB04F2311814D98200AAA897 /* Stats */,
@@ -304,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB04F2121814CE7A00AAA897 /* Images.xcassets in Resources */,
+				332563F91934D16E005D0CA2 /* Cell.xib in Resources */,
 				FB04F2011814CE7A00AAA897 /* InfoPlist.strings in Resources */,
 				FB04F20A1814CE7A00AAA897 /* WalkitOut.storyboard in Resources */,
 			);
@@ -328,11 +346,13 @@
 				FB81E40F18159A9F00253203 /* witTabBar.m in Sources */,
 				FB04F2031814CE7A00AAA897 /* main.m in Sources */,
 				563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */,
+				332563FF1934D27E005D0CA2 /* witCell.m in Sources */,
 				FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */,
 				563D5CC9185975F6001372F0 /* WriteToFile.m in Sources */,
 				FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */,
 				FB04F20D1814CE7A00AAA897 /* PedometerViewController.m in Sources */,
 				FB04F2101814CE7A00AAA897 /* StatisticsViewController.m in Sources */,
+				332563F7193436CB005D0CA2 /* StepDay.m in Sources */,
 				33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

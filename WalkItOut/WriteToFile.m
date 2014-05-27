@@ -22,7 +22,7 @@
 		self.path = [self.path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", name]];
 		
 		if (![fileManager fileExistsAtPath:self.path]) {
-			NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"WalkItOut-Info" ofType:@"plist"];
+//			NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"WalkItOut-Info" ofType:@"plist"];
 			//[fileManager copyItemAtPath:sourcePath toPath:destPath error:nil];
         
 			[@"Test" writeToFile:self.path atomically:NO encoding:NSStringEncodingConversionAllowLossy error:nil];

@@ -7,6 +7,7 @@
 //
 
 #import "witTabBar.h"
+
 @interface witTabBar ()
 
 @end
@@ -24,15 +25,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"]) {
         [self setSelectedIndex:1];
         
     } else {
         [self setSelectedIndex:2];
+        [[NSUserDefaults standardUserDefaults ] setBool:@YES forKey:@"launchedPreviously"];
     }
 	
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

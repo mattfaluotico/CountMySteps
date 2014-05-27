@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "witStepData.h"
+#import "StepDay.h"
+#import "witCell.h"
 
-@interface StatisticsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface StatisticsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *bestDayLabel;
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UILabel *averageLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentStepsMilesCalories;
-//@property (weak, nonatomic) witStepData *stepData;
-@property (nonatomic,strong) NSManagedObjectContext* managedObjectContext;
+
+@property (nonatomic, strong) NSArray *stepHistory;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (strong, nonatomic) IBOutlet UITableView *statsTable;
 
 @end

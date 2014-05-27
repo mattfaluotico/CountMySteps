@@ -38,13 +38,5 @@
     return UIStatusBarStyleLightContent;
 }
 
-- (id) initWithTest:(NSString *) t {
-	
-	self = [super init];
-
-	NSLog(@"%@", t);
-	
-	return self;
-}
 
 @end
