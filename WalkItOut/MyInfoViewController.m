@@ -70,7 +70,7 @@
 - (IBAction)buttonUpdate:(UIButton *)sender {
     NSUserDefaults *defaultSettings = [NSUserDefaults standardUserDefaults];
     [defaultSettings setObject:self.fieldHeightFeet.text forKey:heightFeet];
-    [defaultSettings setObject:self.fieldHeightFeet.text forKey:heightInches];
+    [defaultSettings setObject:self.fieldHeightInches.text forKey:heightInches];
     [defaultSettings setObject:self.fieldGoal.text forKey:goal];
     [defaultSettings setObject:self.fieldWeight.text forKey:weight];
     

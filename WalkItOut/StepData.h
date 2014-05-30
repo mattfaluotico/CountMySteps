@@ -11,7 +11,7 @@
 /**
  *  Math for converting steps into miles and calories as the data is stored in 'steps'
  */
-@interface witStepData : NSObject
+@interface StepData : NSObject
 
 @property NSArray *stepHistoryData;
 @property NSInteger heightInches;
@@ -20,12 +20,12 @@
 
 - (id) init;
 
-- (id) initWithSteps: (NSInteger) steps;
-
 - (double) stepsToMiles: (NSInteger) steps;
 
 - (double) stepsToCalories:(NSInteger) steps;
 
-- (double) stepsPerMileForHeight:(NSInteger) steps;
+- (double) stepsPerMile:(NSInteger) steps;
+
+
 
 @end

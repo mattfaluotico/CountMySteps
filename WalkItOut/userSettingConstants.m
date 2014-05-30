@@ -20,7 +20,9 @@ NSString *const goalUnits = @"goalUnits";
 NSString *const weight = @"weight";
 NSString *const male = @"isMale";
 NSString *const bestDaySteps = @"bestDaySteps";
-NSString *const averageDayStep = @"averageDaySteps";
+NSString *const bestDayDate = @"bestDayDate";
+NSString *const averageDaySteps = @"averageDaySteps";
 NSString *const totalSteps = @"totalSteps";
+NSString *const stepsToday = @"stepsToday";
 
 @end

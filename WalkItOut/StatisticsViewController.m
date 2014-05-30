@@ -8,7 +8,7 @@
 
 #import "StatisticsViewController.h"
 #import "PedometerViewController.h"
-#import "witStepData.h"
+#import "StepData.h"
 #import "witAppDelegate.h"
 
 
@@ -16,13 +16,15 @@
 
 - (void) setBestTotalAndAverage;
 
-@property witStepData * steps;
+@property StepData * steps;
+@property NSDateFormatter * df;
 
 @end
 
 @implementation StatisticsViewController
 
 @synthesize stepHistory;
+@synthesize df;
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
 	
@@ -33,7 +35,7 @@
         
         [self loadStepData];
         
-        _steps = [[witStepData alloc] init];
+        _steps = [[StepData alloc] init];
         
         
 	}
@@ -46,6 +48,13 @@
     [super viewDidLoad];
     [self setNeedsStatusBarAppearanceUpdate];
     
+    df = [[NSDateFormatter alloc] init];
+    [df setDateFormat:@"MM/dd/yyyy"];
+    
+    NSUserDefaults *myDefs = [NSUserDefaults standardUserDefaults];
+    self.bestDayLabel.text = [NSString stringWithFormat:@"%ld steps on %@", [myDefs integerForKey:bestDaySteps], [df stringFromDate: (NSDate* ) [myDefs objectForKey:bestDayDate]]];
+    self.totalLabel.text = [NSString stringWithFormat:@"%lld" , [[myDefs objectForKey:totalSteps] longLongValue]];
+                              
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -54,7 +63,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void) setBestTotalAndAverage {
+    
 
+
+}
 
 // set statusbar color to white
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -87,8 +100,7 @@
 	double cellValue = 0;
     StepDay *day = [self.stepHistory objectAtIndex:indexPath.row];
 	cellValue = [day.steps doubleValue];
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    [df setDateFormat:@"MM/dd/yyyy"];
+    
     
 	NSString *date = [df stringFromDate:day.day];
 	
@@ -127,60 +139,16 @@
 	
 }
 
-- (NSFetchedResultsController *)fetchedResultsController
-{
-    if (_fetchedResultsController != nil) {
-        return _fetchedResultsController;
-    }
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"StepDay" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
-    
-    // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"day" ascending:NO];
-    NSArray *sortDescriptors = @[sortDescriptor];
-    
-    [fetchRequest setSortDescriptors:sortDescriptors];
-    
-    // Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
-    aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
-    
-	NSError *error = nil;
-	if (![self.fetchedResultsController performFetch:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-	    abort();
-	}
-    
-    return _fetchedResultsController;
-}
-
 
 #pragma mark load data
 
 - (void) loadStepData {
-	
-    if (_managedObjectContext == nil) {
-        _managedObjectContext = [(witAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-    }
+	   
+//    if (_managedObjectContext == nil) {
+//        _managedObjectContext = [(witAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+//    }
+    self.stepHistory =  [(witAppDelegate *)[[UIApplication sharedApplication] delegate] fetchedResultsController].fetchedObjects;
     
-        
-    
-    NSFetchRequest *fetched = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"StepDay" inManagedObjectContext:[self.fetchedResultsController managedObjectContext]];
-    [fetched setEntity:entity];
-    
-    NSError *e;
-    self.stepHistory = [_managedObjectContext executeFetchRequest:fetched error:&e];
     self.title = @"Step History";
 }
 

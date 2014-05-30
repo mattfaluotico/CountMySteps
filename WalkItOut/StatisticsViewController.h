@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "witStepData.h"
+#import "StepData.h"
 #import "StepDay.h"
 #import "witCell.h"
 
@@ -19,9 +19,6 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentStepsMilesCalories;
 
 @property (nonatomic, strong) NSArray *stepHistory;
-
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @property (strong, nonatomic) IBOutlet UITableView *statsTable;
 

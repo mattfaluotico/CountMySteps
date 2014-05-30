@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Matthew Faluotico. All rights reserved.
 //
 
-#import "witStepData.h"
+#import "StepData.h"
 
 #define MILES_INCHES 63360
 
-@implementation witStepData
+@implementation StepData
 
 // TODO: Make these all static methods that take steps and return a value 
 
@@ -37,10 +37,10 @@
 
 - (double) stepsToMiles: (NSInteger) steps {
 	
-	return steps / [self stepsPerMileForHeight: steps];
+	return steps / [self stepsPerMile: steps];
 }
 
-- (double) stepsPerMileForHeight: (NSInteger ) steps {
+- (double) stepsPerMile: (NSInteger ) steps {
 	
     if ([[NSUserDefaults standardUserDefaults] boolForKey:male] ) // male
         return MILES_INCHES / (0.415 * [self heightInches]);
@@ -48,5 +48,7 @@
         return MILES_INCHES / (0.413 * [self heightInches]);
 	
 }
+
+
 
 @end

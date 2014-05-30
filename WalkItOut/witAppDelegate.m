@@ -38,6 +38,9 @@
         NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
     }
     
+    [self testingPurposes];
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -59,7 +62,6 @@
     }
     return _managedObjectContext;
 }
-
 
 // Returns the managed object model for the application.
 // If the model doesn't already exist, it is created from the application's model.
@@ -133,7 +135,45 @@
     }
 }
 
-//
+- (NSFetchedResultsController *)fetchedResultsController
+{
+    if (_fetchedResultsController != nil) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    // Edit the entity name as appropriate.
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"StepDay" inManagedObjectContext:self.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    // Set the batch size to a suitable number.
+    [fetchRequest setFetchBatchSize:20];
+    
+    // Edit the sort key as appropriate.
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"day" ascending:NO];
+    NSArray *sortDescriptors = @[sortDescriptor];
+    
+    [fetchRequest setSortDescriptors:sortDescriptors];
+    
+    // Edit the section name key path and cache name if appropriate.
+    // nil for section name key path means "no sections".
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    aFetchedResultsController.delegate = self;
+    self.fetchedResultsController = aFetchedResultsController;
+    
+	NSError *error = nil;
+	if (![self.fetchedResultsController performFetch:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	}
+    
+    //    NSLog(@"MOO: %@", ((StepDay *)[self.fetchedResultsController.fetchedObjects objectAtIndex:1]).day);
+    
+    return _fetchedResultsController;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -166,6 +206,32 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void) testingPurposes {
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit fromDate:now];
+    // start of today
+    NSDate *startOfDay = [calendar dateFromComponents:components];
+    
+    NSDate * previousDay = now;
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    
+    [df setDateFormat:@"hh:mm a | dd/MM/yyyy"];
+    
+    now = [now dateByAddingTimeInterval:-86400];
+    
+    NSLog([df stringFromDate:now]);
+    NSLog([df stringFromDate:startOfDay]);
+    
+    startOfDay = [now dateByAddingTimeInterval:-86400];
+    
+    NSLog([df stringFromDate:startOfDay]);
+    
+    
 }
 
 @end

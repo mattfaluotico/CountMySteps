@@ -30,8 +30,15 @@
     [[UITabBar appearance ] setTintColor: [UIColor whiteColor]];
     
     // Ensure that the user if first asked to enter data
+    // First time launching application
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"]) {
         [self setSelectedIndex:1];
+        // Set best, total, and aveage to zero
+        NSUserDefaults *myDefaults = [NSUserDefaults standardUserDefaults];
+        [myDefaults setInteger:0 forKey:averageDaySteps];
+        [myDefaults setObject:@0 forKey:totalSteps];
+        [myDefaults setInteger:0 forKey:bestDaySteps];
+        [myDefaults setObject:[[NSDate alloc] init] forKey:bestDayDate];
         
     } else {
         [self setSelectedIndex:2];

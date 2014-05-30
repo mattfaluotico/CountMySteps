@@ -12,8 +12,10 @@
 		332563F91934D16E005D0CA2 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332563F81934D16E005D0CA2 /* Cell.xib */; };
 		332563FF1934D27E005D0CA2 /* witCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 332563FE1934D27E005D0CA2 /* witCell.m */; };
 		33A779A2192FB103008B4D17 /* StepHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */; };
+		33D42D8C1936B6200064A2E7 /* MFGetSteps.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D42D8B1936B6200064A2E7 /* MFGetSteps.m */; };
+		33D42D8E1936B92A0064A2E7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D42D8D1936B92A0064A2E7 /* CoreMotion.framework */; };
 		33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCF70E192BEA7800781BEF /* userSettingConstants.m */; };
-		563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CCD185A9FC0001372F0 /* witStepData.m */; };
+		563D5CCE185A9FC0001372F0 /* StepData.m in Sources */ = {isa = PBXBuildFile; fileRef = 563D5CCD185A9FC0001372F0 /* StepData.m */; };
 		FB04F1F71814CE7A00AAA897 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F61814CE7A00AAA897 /* Foundation.framework */; };
 		FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */; };
 		FB04F1FB1814CE7A00AAA897 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB04F1FA1814CE7A00AAA897 /* UIKit.framework */; };
@@ -51,10 +53,13 @@
 		332563FD1934D27E005D0CA2 /* witCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = witCell.h; sourceTree = "<group>"; };
 		332563FE1934D27E005D0CA2 /* witCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = witCell.m; sourceTree = "<group>"; };
 		33A779A1192FB103008B4D17 /* StepHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StepHistory.xcdatamodel; sourceTree = "<group>"; };
+		33D42D8A1936B6200064A2E7 /* MFGetSteps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFGetSteps.h; sourceTree = "<group>"; };
+		33D42D8B1936B6200064A2E7 /* MFGetSteps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFGetSteps.m; sourceTree = "<group>"; };
+		33D42D8D1936B92A0064A2E7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		33DCF70D192BEA7800781BEF /* userSettingConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = userSettingConstants.h; path = WalkItOut/userSettingConstants.h; sourceTree = "<group>"; };
 		33DCF70E192BEA7800781BEF /* userSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingConstants.m; path = WalkItOut/userSettingConstants.m; sourceTree = "<group>"; };
-		563D5CCC185A9FC0001372F0 /* witStepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = witStepData.h; path = WalkItOut/witStepData.h; sourceTree = "<group>"; };
-		563D5CCD185A9FC0001372F0 /* witStepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = witStepData.m; path = WalkItOut/witStepData.m; sourceTree = "<group>"; };
+		563D5CCC185A9FC0001372F0 /* StepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepData.h; sourceTree = "<group>"; };
+		563D5CCD185A9FC0001372F0 /* StepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepData.m; sourceTree = "<group>"; };
 		FB04F1F31814CE7A00AAA897 /* WalkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB04F1F61814CE7A00AAA897 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33D42D8E1936B92A0064A2E7 /* CoreMotion.framework in Frameworks */,
 				332563F4193398FA005D0CA2 /* CoreData.framework in Frameworks */,
 				FB04F1F91814CE7A00AAA897 /* CoreGraphics.framework in Frameworks */,
 				FB04F1FB1814CE7A00AAA897 /* UIKit.framework in Frameworks */,
@@ -107,13 +113,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33D42D881936B45F0064A2E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */,
+				332563F81934D16E005D0CA2 /* Cell.xib */,
+				332563FD1934D27E005D0CA2 /* witCell.h */,
+				332563FE1934D27E005D0CA2 /* witCell.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		33D42D891936B5F40064A2E7 /* MFStep */ = {
+			isa = PBXGroup;
+			children = (
+				563D5CCC185A9FC0001372F0 /* StepData.h */,
+				563D5CCD185A9FC0001372F0 /* StepData.m */,
+				33D42D8A1936B6200064A2E7 /* MFGetSteps.h */,
+				33D42D8B1936B6200064A2E7 /* MFGetSteps.m */,
+			);
+			name = MFStep;
+			sourceTree = "<group>";
+		};
 		563D5CD0185FD69E001372F0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				33DCF70D192BEA7800781BEF /* userSettingConstants.h */,
 				33DCF70E192BEA7800781BEF /* userSettingConstants.m */,
-				563D5CCC185A9FC0001372F0 /* witStepData.h */,
-				563D5CCD185A9FC0001372F0 /* witStepData.m */,
 				33A779A0192FB103008B4D17 /* StepHistory.xcdatamodeld */,
 				332563F5193436CB005D0CA2 /* StepDay.h */,
 				332563F6193436CB005D0CA2 /* StepDay.m */,
@@ -144,6 +170,7 @@
 		FB04F1F51814CE7A00AAA897 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33D42D8D1936B92A0064A2E7 /* CoreMotion.framework */,
 				332563F3193398FA005D0CA2 /* CoreData.framework */,
 				FB04F1F61814CE7A00AAA897 /* Foundation.framework */,
 				FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */,
@@ -156,11 +183,9 @@
 		FB04F1FC1814CE7A00AAA897 /* WalkItOut */ = {
 			isa = PBXGroup;
 			children = (
+				33D42D891936B5F40064A2E7 /* MFStep */,
+				33D42D881936B45F0064A2E7 /* UI */,
 				563D5CD0185FD69E001372F0 /* Data */,
-				FB04F2081814CE7A00AAA897 /* WalkitOut.storyboard */,
-				332563F81934D16E005D0CA2 /* Cell.xib */,
-				332563FD1934D27E005D0CA2 /* witCell.h */,
-				332563FE1934D27E005D0CA2 /* witCell.m */,
 				FB81E41018159AA400253203 /* TabBar */,
 				FB04F2321814D98700AAA897 /* Pedometer */,
 				FB04F2311814D98200AAA897 /* Stats */,
@@ -340,12 +365,13 @@
 				33A779A2192FB103008B4D17 /* StepHistory.xcdatamodeld in Sources */,
 				FB81E40F18159A9F00253203 /* witTabBar.m in Sources */,
 				FB04F2031814CE7A00AAA897 /* main.m in Sources */,
-				563D5CCE185A9FC0001372F0 /* witStepData.m in Sources */,
+				563D5CCE185A9FC0001372F0 /* StepData.m in Sources */,
 				332563FF1934D27E005D0CA2 /* witCell.m in Sources */,
 				FB04F2071814CE7A00AAA897 /* witAppDelegate.m in Sources */,
 				FB04F2301814D94100AAA897 /* MyInfoViewController.m in Sources */,
 				FB04F20D1814CE7A00AAA897 /* PedometerViewController.m in Sources */,
 				FB04F2101814CE7A00AAA897 /* StatisticsViewController.m in Sources */,
+				33D42D8C1936B6200064A2E7 /* MFGetSteps.m in Sources */,
 				332563F7193436CB005D0CA2 /* StepDay.m in Sources */,
 				33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */,
 			);

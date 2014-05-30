@@ -21,12 +21,16 @@
     [self setNeedsStatusBarAppearanceUpdate];
     NSInteger stepsToday = 8000;
     
+    MFGetSteps * ma = [[MFGetSteps alloc]init];
+    [ma updateLabelToStepsToday:self.stepsLabel];
+
+    self.steps = [[StepData alloc] init];
     
-    self.steps = [[witStepData alloc] init];
-    
-    self.stepsLabel.text = [NSString stringWithFormat:@"%li", (long)stepsToday ];
     self.milesLabel.text = [NSString stringWithFormat:@"%.2f", [self.steps stepsToMiles: stepsToday]];
     self.caloriesLabel.text = [NSString stringWithFormat:@"%.f", [self.steps stepsToCalories: stepsToday]];
+    
+    
+    
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -41,6 +45,5 @@
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
-
 
 @end

@@ -17,8 +17,11 @@ extern NSString *const weight;
 extern NSString *const male;
 
 extern NSString *const bestDaySteps;
+extern NSString *const bestDayDate;
 extern NSString *const averageDaySteps;
 extern NSString *const totalSteps;
+
+extern NSString *const stepsToday;
 
 @interface userSettingConstants : NSObject
 
