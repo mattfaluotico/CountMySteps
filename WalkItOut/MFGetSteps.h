@@ -10,6 +10,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import "StepData.h"
 #import "witAppDelegate.h"
+#import "StepDay.h"
 
 @interface MFGetSteps : NSObject
 
@@ -22,7 +23,7 @@
 
 - (void) updateDatabase;
 
-- (void) updateLabelToStepsToday: (UILabel *) thisLabel;
+- (void) updateLabelToStepsToday: (PedometerViewController *) thisClassRef;
 
 + (void)updateStepsTodayFromHistoryLive;
 

@@ -12,7 +12,13 @@
 #import "witAppDelegate.h"
 
 
-@interface StatisticsViewController ()
+@interface StatisticsViewController () {
+    BOOL set;
+    NSInteger best;
+    NSInteger average;
+    NSDate *bestDay;
+    double total;
+}
 
 - (void) setBestTotalAndAverage;
 
@@ -43,6 +49,14 @@
 	return self;
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    self.stepHistory = [(witAppDelegate *)[[UIApplication sharedApplication] delegate] fetchedResultsController].fetchedObjects;
+    [self.statsTable reloadData];
+    
+    NSLog(@"BOOM!");
+    
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -54,6 +68,8 @@
     NSUserDefaults *myDefs = [NSUserDefaults standardUserDefaults];
     self.bestDayLabel.text = [NSString stringWithFormat:@"%ld steps on %@", [myDefs integerForKey:bestDaySteps], [df stringFromDate: (NSDate* ) [myDefs objectForKey:bestDayDate]]];
     self.totalLabel.text = [NSString stringWithFormat:@"%lld" , [[myDefs objectForKey:totalSteps] longLongValue]];
+    
+    [self setBestTotalAndAverage];
                               
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -65,8 +81,58 @@
 
 -(void) setBestTotalAndAverage {
     
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    
+    if (!set) {
+    
+        total = 0;
+        best = 0;
+        average = 0;
+        
+        for (NSObject *day in self.stepHistory) {
+            NSInteger steps = [((StepDay* )day).steps integerValue];
+            total += steps;
+            if (best < steps) {
+                best = steps;
+                bestDay = ((StepDay*)day).day;
+            }
+        }
+        
+        average = total / [self.stepHistory count];
+    
+        set = YES;
+        
+    }
+    
+    switch (self.segmentStepsMilesCalories.selectedSegmentIndex) {
+        case 0:
+        {
+            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %li steps on %@", best, [df stringFromDate:bestDay]];
+            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f steps", total];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %li steps", average];
+        }
+            break;
+        case 1:
+        {
+            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %f miles on %@", [self.steps stepsToMiles:best], [df stringFromDate:bestDay]];
+            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f miles", [self.steps stepsToMiles:total]];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %.2f miles", [self.steps stepsToMiles:average]];
+        }
+            break;
+        case 2: {
+            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %f calories on %@", [self.steps stepsToCalories:best], [df stringFromDate:bestDay]];
+            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f miles", [self.steps stepsToCalories:total]];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %.2f miles", [self.steps stepsToCalories:average]];
+        }
+            break;
+        default: {
+//            set steps
+        }
+    }
+    
 
-
+        
+    
 }
 
 // set statusbar color to white
@@ -134,25 +200,23 @@
 	return cellAtIndex;
 }
 
-- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-		
-	
-}
-
-
 #pragma mark load data
 
 - (void) loadStepData {
-	   
-//    if (_managedObjectContext == nil) {
-//        _managedObjectContext = [(witAppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
-//    }
-    self.stepHistory =  [(witAppDelegate *)[[UIApplication sharedApplication] delegate] fetchedResultsController].fetchedObjects;
     
+    NSManagedObjectContext *context = ((witAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+    
+    NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    
+    [request setEntity:[NSEntityDescription entityForName:@"StepDay" inManagedObjectContext:context]];
+    
+    NSError *e;
+    self.stepHistory = [context executeFetchRequest:request error:&e];
     self.title = @"Step History";
 }
 
 - (IBAction)changeUnits:(id)sender {
     [self.statsTable reloadData];
+    [self setBestTotalAndAverage];
 }
 @end

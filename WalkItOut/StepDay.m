@@ -14,4 +14,15 @@
 @dynamic day;
 @dynamic steps;
 
+
+- (NSString *) description {
+    
+    NSDateFormatter *df = [[NSDateFormatter alloc]init];
+    
+    [df setDateFormat:@"dd-MM-yyyy at hh:mm"];
+    
+    return [NSString stringWithFormat:@" %@ steps on %@", self.steps, [df stringFromDate:self.day]];
+
+}
+
 @end

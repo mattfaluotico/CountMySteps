@@ -29,8 +29,16 @@
     
     int l = arc4random() % 12000;
     
+    NSDate *now = [NSDate date];
+//    now = [now dateByAddingTimeInterval:l*100];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit fromDate:now];
+    // start of today
+    NSDate *startOfDay = [calendar dateFromComponents:components];
+    
     [stepEntry setValue:[NSNumber numberWithInt:l] forKey:@"steps"];
-    [stepEntry setValue:[[NSDate alloc] init] forKey:@"day"];
+    [stepEntry setValue:startOfDay forKey:@"day"];
     
     NSError *error;
     
@@ -209,6 +217,13 @@
 }
 
 - (void) testingPurposes {
+
+    NSError *e;
+    
+    NSFetchRequest *r = [[NSFetchRequest alloc]init];
+    
+    [r setEntity:[NSEntityDescription entityForName:@"StepDay" inManagedObjectContext:self.managedObjectContext]];
+    
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
     
@@ -216,21 +231,13 @@
     // start of today
     NSDate *startOfDay = [calendar dateFromComponents:components];
     
-    NSDate * previousDay = now;
+    NSPredicate *p = [NSPredicate predicateWithFormat:@"day == %@", startOfDay];
     
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    [r setPredicate:p];
     
-    [df setDateFormat:@"hh:mm a | dd/MM/yyyy"];
+    NSArray *my = [self.managedObjectContext executeFetchRequest:r error:&e];
     
-    now = [now dateByAddingTimeInterval:-86400];
-    
-    NSLog([df stringFromDate:now]);
-    NSLog([df stringFromDate:startOfDay]);
-    
-    startOfDay = [now dateByAddingTimeInterval:-86400];
-    
-    NSLog([df stringFromDate:startOfDay]);
-    
+    NSLog(@"%@", my);
     
 }
 
