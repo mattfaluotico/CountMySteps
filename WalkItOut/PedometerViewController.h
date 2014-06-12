@@ -23,9 +23,11 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *stepsLabel;
 
-@property (weak, nonatomic) IBOutlet UIProgressView *goalProgress;
+@property (strong, nonatomic) IBOutlet UILabel *goalLabel;
 
 // TODO remove, this is not required as they are static
 @property (strong, nonatomic) StepData * steps;
+
+- (void) viewFromNumberOfSteps: (NSInteger) numberOfSteps;
 
 @end

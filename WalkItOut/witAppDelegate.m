@@ -21,34 +21,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
-    //    TEST DATA
-    NSManagedObjectContext *context = [self managedObjectContext];
-    StepDay *stepEntry = [NSEntityDescription
-                                       insertNewObjectForEntityForName:@"StepDay"
-                                       inManagedObjectContext:context];
-    
-    int l = arc4random() % 12000;
-    
-    NSDate *now = [NSDate date];
-//    now = [now dateByAddingTimeInterval:l*100];
-    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
-    
-    NSDateComponents *components = [calendar components:NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit fromDate:now];
-    // start of today
-    NSDate *startOfDay = [calendar dateFromComponents:components];
-    
-    [stepEntry setValue:[NSNumber numberWithInt:l] forKey:@"steps"];
-    [stepEntry setValue:startOfDay forKey:@"day"];
-    
-    NSError *error;
-    
-    if (![context save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-    
-    [self testingPurposes];
-    
-    
     // Override point for customization after application launch.
     return YES;
 }
@@ -193,6 +165,7 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

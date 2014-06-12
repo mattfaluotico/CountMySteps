@@ -25,7 +25,6 @@
             _stepCounter = [[CMStepCounter alloc]init];
             _stepOperationQueue = [[NSOperationQueue alloc] init];
             _managedObjectContext = ((witAppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
-            _fetchedResultsController = ((witAppDelegate *)[UIApplication sharedApplication].delegate).fetchedResultsController;
             sd = [[StepData alloc]init];
         }
         
@@ -38,7 +37,6 @@
 }
 
 #pragma mark Core Functionality
-
 
 - (void) updateDatabase {
     
@@ -59,8 +57,6 @@
     NSDate * previousDay = now;
     
     for (int daysBehind = 0; daysBehind < 7; daysBehind ++) {
-        
-        __block NSDate * __startOfToday = startOfDay;
         
         [_stepCounter queryStepCountStartingFrom:startOfDay
                                               to:previousDay
@@ -90,9 +86,14 @@
                                                 [context save:&err];
                                             }
                                             
+                                            if (daysBehind == 6) {
+                                                [[NSNotificationCenter defaultCenter]
+                                                 postNotificationName:@"updatedDatabase"
+                                                 object:self];
+                                            }
                                             
                                          } else {
-                                             NSLog(error);
+                                             NSLog(@"error");
                                          }
                                      }];
         
@@ -101,7 +102,7 @@
         // subtract one day
         startOfDay = [startOfDay dateByAddingTimeInterval:-86400];
     }
-
+    
 }
 
 - (void) updateLabelToStepsToday: (PedometerViewController *) thisClassRef {
@@ -113,37 +114,18 @@
     NSDateComponents *components = [calendar components:NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit fromDate:now];
     
     NSDate *startOfDay = [calendar dateFromComponents:components];
-    
+        
     [_stepCounter queryStepCountStartingFrom:startOfDay
                                           to:now
                                      toQueue:_stepOperationQueue
                                  withHandler:^(NSInteger numberOfSteps, NSError *error) {
                                      if (error) {
                                          thisClassRef.stepsLabel.text = @"-1";
-                                         [thisClassRef.goalProgress setProgress:0];
+                                         thisClassRef.goalLabel.text = @"Goal is far away...";
                                      } else {
-                                         thisClassRef.stepsLabel.text = [NSString stringWithFormat:@"%ld", numberOfSteps ];
                                          
-                                         NSInteger units = [[NSUserDefaults standardUserDefaults] integerForKey:goalUnits];
-                                         
-                                         NSInteger closeToGoal = numberOfSteps;
-                                         
-                                         if (units == 0 ) {
-                                             
-                                         } else if (units == 1) {
-                                             closeToGoal = [sd stepsToMiles:numberOfSteps];
-                                         } else {
-                                             closeToGoal = [sd stepsToCalories:numberOfSteps];
-                                         }
-                                         
-                                         float g = [[NSUserDefaults standardUserDefaults] integerForKey:goal];
-                                         
-                                         if (closeToGoal/ g  > 1) {
-                                             [thisClassRef.goalProgress setProgress:1];
-                                         } else {
-                                             [thisClassRef.goalProgress setProgress:closeToGoal / g];
-                                         }
-                                         
+                                         [thisClassRef viewFromNumberOfSteps:numberOfSteps];
+ 
                                      }
                                  }];
     

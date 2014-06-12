@@ -45,15 +45,18 @@
         
         
 	}
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadStepData) name:@"updatedDatabase" object:nil];
+    
 	
 	return self;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
-    self.stepHistory = [(witAppDelegate *)[[UIApplication sharedApplication] delegate] fetchedResultsController].fetchedObjects;
+//    self.stepHistory = [(witAppDelegate *)[[UIApplication sharedApplication] delegate] fetchedResultsController].fetchedObjects;
     [self.statsTable reloadData];
     
-    NSLog(@"BOOM!");
+    
     
 }
 
@@ -64,6 +67,8 @@
     
     df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"MM/dd/yyyy"];
+    
+
     
     NSUserDefaults *myDefs = [NSUserDefaults standardUserDefaults];
     self.bestDayLabel.text = [NSString stringWithFormat:@"%ld steps on %@", [myDefs integerForKey:bestDaySteps], [df stringFromDate: (NSDate* ) [myDefs objectForKey:bestDayDate]]];
@@ -80,9 +85,7 @@
 }
 
 -(void) setBestTotalAndAverage {
-    
-    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
-    
+
     if (!set) {
     
         total = 0;
@@ -109,20 +112,20 @@
         {
             self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %li steps on %@", best, [df stringFromDate:bestDay]];
             self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f steps", total];
-            self.averageLabel.text = [NSString stringWithFormat:@"Average: %li steps", average];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %li steps per day", average];
         }
             break;
         case 1:
         {
-            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %f miles on %@", [self.steps stepsToMiles:best], [df stringFromDate:bestDay]];
-            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f miles", [self.steps stepsToMiles:total]];
-            self.averageLabel.text = [NSString stringWithFormat:@"Average: %.2f miles", [self.steps stepsToMiles:average]];
+            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %.2f miles on %@", [self.steps stepsToMiles:best], [df stringFromDate:bestDay]];
+            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.2f miles", [self.steps stepsToMiles:total]];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %.2f mi per day", [self.steps stepsToMiles:average]];
         }
             break;
         case 2: {
-            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %f calories on %@", [self.steps stepsToCalories:best], [df stringFromDate:bestDay]];
-            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f miles", [self.steps stepsToCalories:total]];
-            self.averageLabel.text = [NSString stringWithFormat:@"Average: %.2f miles", [self.steps stepsToCalories:average]];
+            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %.f calories on %@", [self.steps stepsToCalories:best], [df stringFromDate:bestDay]];
+            self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f calories", [self.steps stepsToCalories:total]];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %.f cal per day", [self.steps stepsToCalories:average]];
         }
             break;
         default: {
@@ -161,8 +164,6 @@
         cellAtIndex = [nib objectAtIndex:0];
 	}
 	
-    
-    
 	double cellValue = 0;
     StepDay *day = [self.stepHistory objectAtIndex:indexPath.row];
 	cellValue = [day.steps doubleValue];
@@ -207,12 +208,15 @@
     NSManagedObjectContext *context = ((witAppDelegate *)[[UIApplication sharedApplication] delegate]).managedObjectContext;
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
+    NSSortDescriptor *sortByDate = [[NSSortDescriptor alloc] initWithKey:@"day" ascending:NO];
     
     [request setEntity:[NSEntityDescription entityForName:@"StepDay" inManagedObjectContext:context]];
+    [request setSortDescriptors:[[NSArray alloc] initWithObjects:sortByDate, nil]];
     
     NSError *e;
     self.stepHistory = [context executeFetchRequest:request error:&e];
     self.title = @"Step History";
+    [self.statsTable reloadData];
 }
 
 - (IBAction)changeUnits:(id)sender {

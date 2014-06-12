@@ -11,12 +11,13 @@
 #import "StepData.h"
 #import "witAppDelegate.h"
 #import "StepDay.h"
+#import "PedometerViewController.h"
+
+@class PedometerViewController;
 
 @interface MFGetSteps : NSObject
 
-@property NSInteger stepsToday;
-
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+//@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (id) init;
@@ -24,7 +25,5 @@
 - (void) updateDatabase;
 
 - (void) updateLabelToStepsToday: (PedometerViewController *) thisClassRef;
-
-+ (void)updateStepsTodayFromHistoryLive;
 
 @end

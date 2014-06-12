@@ -13,7 +13,6 @@
  */
 @interface StepData : NSObject
 
-@property NSArray *stepHistoryData;
 @property NSInteger heightInches;
 @property NSInteger weight;
 // Steps is the standardize measurement

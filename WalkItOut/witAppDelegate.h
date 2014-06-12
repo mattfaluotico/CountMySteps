@@ -21,7 +21,6 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 
-
 @property (strong, nonatomic) UIWindow *window;
 
 - (NSURL *)applicationDocumentsDirectory;

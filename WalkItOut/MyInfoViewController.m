@@ -62,10 +62,10 @@
 }
 
 
-// Erase all data from the Database.
-- (IBAction)buttonReset:(UIButton *)sender {
-    
-}
+//// Erase all data from the Database.
+//- (IBAction)buttonReset:(UIButton *)sender {
+//    
+//}
 
 - (IBAction)buttonUpdate:(UIButton *)sender {
     NSUserDefaults *defaultSettings = [NSUserDefaults standardUserDefaults];
@@ -88,6 +88,7 @@
     } else {
         [defaultSettings setObject:@"2" forKey:goalUnits];
     }
+    
     
     
 }

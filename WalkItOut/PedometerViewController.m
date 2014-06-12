@@ -16,21 +16,14 @@
 
 - (void)viewDidLoad
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getMySteps) name:UIApplicationWillEnterForegroundNotification object:nil];
+    
     [super viewDidLoad];
     // Set status bar to white
     [self setNeedsStatusBarAppearanceUpdate];
-    NSInteger stepsToday = 8000;
+    [self getMySteps];
     
-    MFGetSteps * ma = [[MFGetSteps alloc]init];
-    [ma updateLabelToStepsToday:self.stepsLabel];
-
-    self.steps = [[StepData alloc] init];
-    
-    self.milesLabel.text = [NSString stringWithFormat:@"%.2f", [self.steps stepsToMiles: stepsToday]];
-    self.caloriesLabel.text = [NSString stringWithFormat:@"%.f", [self.steps stepsToCalories: stepsToday]];
-    
-    
-    
+    NSLog(@"View did load");
     
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -43,6 +36,54 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+- (void) viewFromNumberOfSteps: (NSInteger) numberOfSteps {
+    
+    NSLog(@"Updating Steps");
+    
+    StepData * sd = [[StepData alloc]init];
+    self.stepsLabel.text = [NSString stringWithFormat:@"%ld", numberOfSteps ];
+    double miles = [sd stepsToMiles:numberOfSteps];
+    self.milesLabel.text = [NSString stringWithFormat:@"%.2f", miles];
+    double cals = [sd stepsToCalories:numberOfSteps];
+    self.caloriesLabel.text = [NSString stringWithFormat:@"%.f", cals];
+    
+    NSInteger units = [[NSUserDefaults standardUserDefaults] integerForKey:goalUnits];
+    NSInteger usersGoal = [[NSUserDefaults standardUserDefaults] integerForKey:goal];
+    NSInteger closeToGoal = 0;
+    
+    NSString *unitsString;
+    
+    if (units == 0 ) {
+        closeToGoal = numberOfSteps;
+        unitsString = @"steps";
+    } else if (units == 1) {
+        closeToGoal = miles;
+        unitsString = @"miles";
+    } else {
+        closeToGoal = cals;
+        unitsString = @"calories";
+    }
+
+    long diff = closeToGoal - usersGoal;
+    
+    if (diff > 0) {
+        self.goalLabel.text = [NSString stringWithFormat:@"You reached your goal of %li %@", usersGoal, unitsString];
+    } else {
+        diff = -diff;
+        self.goalLabel.text = [NSString stringWithFormat:@"You're %li %@ away from your goal", diff, unitsString];
+    }
+    
+    
+    
+}
+
+- (void) getMySteps {
+    MFGetSteps * ma = [[MFGetSteps alloc]init];
+    [ma updateLabelToStepsToday:self];
+    [ma updateDatabase];
+    NSLog(@"Got your steps!");
 }
 
 @end
