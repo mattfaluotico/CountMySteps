@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB04F1F21814CE7A00AAA897"
-               BuildableName = "WalkItOut.app"
-               BlueprintName = "WalkItOut"
-               ReferencedContainer = "container:WalkItOut.xcodeproj">
+               BuildableName = "MySteps.app"
+               BlueprintName = "MySteps"
+               ReferencedContainer = "container:MySteps.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FB04F2161814CE7A00AAA897"
-               BuildableName = "WalkItOutTests.xctest"
-               BlueprintName = "WalkItOutTests"
-               ReferencedContainer = "container:WalkItOut.xcodeproj">
+               BuildableName = "MyStepsTests.xctest"
+               BlueprintName = "MyStepsTests"
+               ReferencedContainer = "container:MySteps.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB04F1F21814CE7A00AAA897"
-            BuildableName = "WalkItOut.app"
-            BlueprintName = "WalkItOut"
-            ReferencedContainer = "container:WalkItOut.xcodeproj">
+            BuildableName = "MySteps.app"
+            BlueprintName = "MySteps"
+            ReferencedContainer = "container:MySteps.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB04F1F21814CE7A00AAA897"
-            BuildableName = "WalkItOut.app"
-            BlueprintName = "WalkItOut"
-            ReferencedContainer = "container:WalkItOut.xcodeproj">
+            BuildableName = "MySteps.app"
+            BlueprintName = "MySteps"
+            ReferencedContainer = "container:MySteps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FB04F1F21814CE7A00AAA897"
-            BuildableName = "WalkItOut.app"
-            BlueprintName = "WalkItOut"
-            ReferencedContainer = "container:WalkItOut.xcodeproj">
+            BuildableName = "MySteps.app"
+            BlueprintName = "MySteps"
+            ReferencedContainer = "container:MySteps.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33184874194FD97C0021388F /* myinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3318486E194FD97C0021388F /* myinfo.png */; };
+		33184875194FD97C0021388F /* myinfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3318486F194FD97C0021388F /* myinfo@2x.png */; };
+		33184876194FD97C0021388F /* pedometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 33184870194FD97C0021388F /* pedometer.png */; };
+		33184877194FD97C0021388F /* pedometer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33184871194FD97C0021388F /* pedometer@2x.png */; };
+		33184878194FD97C0021388F /* stats.png in Resources */ = {isa = PBXBuildFile; fileRef = 33184872194FD97C0021388F /* stats.png */; };
+		33184879194FD97C0021388F /* stats@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33184873194FD97C0021388F /* stats@2x.png */; };
 		332563F4193398FA005D0CA2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 332563F3193398FA005D0CA2 /* CoreData.framework */; };
 		332563F7193436CB005D0CA2 /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 332563F6193436CB005D0CA2 /* StepDay.m */; };
 		332563F91934D16E005D0CA2 /* Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 332563F81934D16E005D0CA2 /* Cell.xib */; };
@@ -46,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3318486E194FD97C0021388F /* myinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myinfo.png; sourceTree = "<group>"; };
+		3318486F194FD97C0021388F /* myinfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myinfo@2x.png"; sourceTree = "<group>"; };
+		33184870194FD97C0021388F /* pedometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedometer.png; sourceTree = "<group>"; };
+		33184871194FD97C0021388F /* pedometer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pedometer@2x.png"; sourceTree = "<group>"; };
+		33184872194FD97C0021388F /* stats.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stats.png; sourceTree = "<group>"; };
+		33184873194FD97C0021388F /* stats@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stats@2x.png"; sourceTree = "<group>"; };
 		332563F3193398FA005D0CA2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		332563F5193436CB005D0CA2 /* StepDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDay.h; path = WalkItOut/StepDay.h; sourceTree = "<group>"; };
 		332563F6193436CB005D0CA2 /* StepDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDay.m; path = WalkItOut/StepDay.m; sourceTree = "<group>"; };
@@ -60,14 +72,14 @@
 		33DCF70E192BEA7800781BEF /* userSettingConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = userSettingConstants.m; path = WalkItOut/userSettingConstants.m; sourceTree = "<group>"; };
 		563D5CCC185A9FC0001372F0 /* StepData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StepData.h; sourceTree = "<group>"; };
 		563D5CCD185A9FC0001372F0 /* StepData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StepData.m; sourceTree = "<group>"; };
-		FB04F1F31814CE7A00AAA897 /* WalkItOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkItOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB04F1F31814CE7A00AAA897 /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB04F1F61814CE7A00AAA897 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FB04F1F81814CE7A00AAA897 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FB04F1FA1814CE7A00AAA897 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		FB04F1FE1814CE7A00AAA897 /* WalkItOut-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkItOut-Info.plist"; sourceTree = "<group>"; };
+		FB04F1FE1814CE7A00AAA897 /* MySteps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MySteps-Info.plist"; sourceTree = "<group>"; };
 		FB04F2001814CE7A00AAA897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB04F2021814CE7A00AAA897 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FB04F2041814CE7A00AAA897 /* WalkItOut-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WalkItOut-Prefix.pch"; sourceTree = "<group>"; };
+		FB04F2041814CE7A00AAA897 /* MySteps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySteps-Prefix.pch"; sourceTree = "<group>"; };
 		FB04F2051814CE7A00AAA897 /* witAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = witAppDelegate.h; sourceTree = "<group>"; };
 		FB04F2061814CE7A00AAA897 /* witAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = witAppDelegate.m; sourceTree = "<group>"; };
 		FB04F2091814CE7A00AAA897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WalkitOut.storyboard; sourceTree = "<group>"; };
@@ -76,9 +88,9 @@
 		FB04F20E1814CE7A00AAA897 /* StatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
 		FB04F20F1814CE7A00AAA897 /* StatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		FB04F2111814CE7A00AAA897 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkItOutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB04F2171814CE7A00AAA897 /* MyStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB04F2181814CE7A00AAA897 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		FB04F2201814CE7A00AAA897 /* WalkItOutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalkItOutTests-Info.plist"; sourceTree = "<group>"; };
+		FB04F2201814CE7A00AAA897 /* MyStepsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyStepsTests-Info.plist"; sourceTree = "<group>"; };
 		FB04F2221814CE7A00AAA897 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FB04F2241814CE7A00AAA897 /* WalkItOutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalkItOutTests.m; sourceTree = "<group>"; };
 		FB04F22E1814D94100AAA897 /* MyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInfoViewController.h; sourceTree = "<group>"; };
@@ -161,8 +173,8 @@
 		FB04F1F41814CE7A00AAA897 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FB04F1F31814CE7A00AAA897 /* WalkItOut.app */,
-				FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */,
+				FB04F1F31814CE7A00AAA897 /* MySteps.app */,
+				FB04F2171814CE7A00AAA897 /* MyStepsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,10 +213,16 @@
 		FB04F1FD1814CE7A00AAA897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB04F1FE1814CE7A00AAA897 /* WalkItOut-Info.plist */,
+				3318486E194FD97C0021388F /* myinfo.png */,
+				3318486F194FD97C0021388F /* myinfo@2x.png */,
+				33184870194FD97C0021388F /* pedometer.png */,
+				33184871194FD97C0021388F /* pedometer@2x.png */,
+				33184872194FD97C0021388F /* stats.png */,
+				33184873194FD97C0021388F /* stats@2x.png */,
+				FB04F1FE1814CE7A00AAA897 /* MySteps-Info.plist */,
 				FB04F1FF1814CE7A00AAA897 /* InfoPlist.strings */,
 				FB04F2021814CE7A00AAA897 /* main.m */,
-				FB04F2041814CE7A00AAA897 /* WalkItOut-Prefix.pch */,
+				FB04F2041814CE7A00AAA897 /* MySteps-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,7 +239,7 @@
 		FB04F21F1814CE7A00AAA897 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FB04F2201814CE7A00AAA897 /* WalkItOutTests-Info.plist */,
+				FB04F2201814CE7A00AAA897 /* MyStepsTests-Info.plist */,
 				FB04F2211814CE7A00AAA897 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -266,9 +284,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FB04F1F21814CE7A00AAA897 /* WalkItOut */ = {
+		FB04F1F21814CE7A00AAA897 /* MySteps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB04F2281814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOut" */;
+			buildConfigurationList = FB04F2281814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "MySteps" */;
 			buildPhases = (
 				FB04F1EF1814CE7A00AAA897 /* Sources */,
 				FB04F1F01814CE7A00AAA897 /* Frameworks */,
@@ -278,14 +296,14 @@
 			);
 			dependencies = (
 			);
-			name = WalkItOut;
+			name = MySteps;
 			productName = WalkItOut;
-			productReference = FB04F1F31814CE7A00AAA897 /* WalkItOut.app */;
+			productReference = FB04F1F31814CE7A00AAA897 /* MySteps.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FB04F2161814CE7A00AAA897 /* WalkItOutTests */ = {
+		FB04F2161814CE7A00AAA897 /* MyStepsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOutTests" */;
+			buildConfigurationList = FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "MyStepsTests" */;
 			buildPhases = (
 				FB04F2131814CE7A00AAA897 /* Sources */,
 				FB04F2141814CE7A00AAA897 /* Frameworks */,
@@ -296,9 +314,9 @@
 			dependencies = (
 				FB04F21D1814CE7A00AAA897 /* PBXTargetDependency */,
 			);
-			name = WalkItOutTests;
+			name = MyStepsTests;
 			productName = WalkItOutTests;
-			productReference = FB04F2171814CE7A00AAA897 /* WalkItOutTests.xctest */;
+			productReference = FB04F2171814CE7A00AAA897 /* MyStepsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -319,7 +337,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FB04F1EE1814CE7A00AAA897 /* Build configuration list for PBXProject "WalkItOut" */;
+			buildConfigurationList = FB04F1EE1814CE7A00AAA897 /* Build configuration list for PBXProject "MySteps" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -332,8 +350,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FB04F1F21814CE7A00AAA897 /* WalkItOut */,
-				FB04F2161814CE7A00AAA897 /* WalkItOutTests */,
+				FB04F1F21814CE7A00AAA897 /* MySteps */,
+				FB04F2161814CE7A00AAA897 /* MyStepsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -343,9 +361,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33184875194FD97C0021388F /* myinfo@2x.png in Resources */,
+				33184878194FD97C0021388F /* stats.png in Resources */,
 				FB04F2121814CE7A00AAA897 /* Images.xcassets in Resources */,
+				33184877194FD97C0021388F /* pedometer@2x.png in Resources */,
 				332563F91934D16E005D0CA2 /* Cell.xib in Resources */,
 				FB04F2011814CE7A00AAA897 /* InfoPlist.strings in Resources */,
+				33184879194FD97C0021388F /* stats@2x.png in Resources */,
+				33184876194FD97C0021388F /* pedometer.png in Resources */,
+				33184874194FD97C0021388F /* myinfo.png in Resources */,
 				FB04F20A1814CE7A00AAA897 /* WalkitOut.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +417,7 @@
 /* Begin PBXTargetDependency section */
 		FB04F21D1814CE7A00AAA897 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FB04F1F21814CE7A00AAA897 /* WalkItOut */;
+			target = FB04F1F21814CE7A00AAA897 /* MySteps */;
 			targetProxy = FB04F21C1814CE7A00AAA897 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -504,10 +528,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
-				INFOPLIST_FILE = "WalkItOut/WalkItOut-Info.plist";
+				GCC_PREFIX_HEADER = "WalkItOut/MySteps-Prefix.pch";
+				INFOPLIST_FILE = "WalkItOut/MySteps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MySteps;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -522,10 +546,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
-				INFOPLIST_FILE = "WalkItOut/WalkItOut-Info.plist";
+				GCC_PREFIX_HEADER = "WalkItOut/MySteps-Prefix.pch";
+				INFOPLIST_FILE = "WalkItOut/MySteps-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MySteps;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -547,8 +571,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "WalkItOutTests/WalkItOutTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "WalkItOutTests/MyStepsTests-Info.plist";
+				PRODUCT_NAME = MyStepsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -565,8 +589,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WalkItOut/WalkItOut-Prefix.pch";
-				INFOPLIST_FILE = "WalkItOutTests/WalkItOutTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "WalkItOutTests/MyStepsTests-Info.plist";
+				PRODUCT_NAME = MyStepsTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -575,7 +599,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FB04F1EE1814CE7A00AAA897 /* Build configuration list for PBXProject "WalkItOut" */ = {
+		FB04F1EE1814CE7A00AAA897 /* Build configuration list for PBXProject "MySteps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB04F2261814CE7A00AAA897 /* Debug */,
@@ -584,7 +608,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB04F2281814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOut" */ = {
+		FB04F2281814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "MySteps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB04F2291814CE7A00AAA897 /* Debug */,
@@ -593,7 +617,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "WalkItOutTests" */ = {
+		FB04F22B1814CE7A00AAA897 /* Build configuration list for PBXNativeTarget "MyStepsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FB04F22C1814CE7A00AAA897 /* Debug */,
