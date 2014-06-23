@@ -18,7 +18,7 @@ class Pedometer: NSObject {
         
     }
     
-    func getall() {
+    func getTodaysStep() {
         
         stepCounter.startPedometerUpdatesFromDate(NSDate(), withHandler: { data, error in
             if !error {

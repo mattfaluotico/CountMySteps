@@ -1,14 +1,14 @@
 //
-//  CellStats.swift
+//  CellStatsBest.swift
 //  MySteps
 //
-//  Created by Matthew Faluotico on 6/17/14.
+//  Created by Matthew Faluotico on 6/22/14.
 //  Copyright (c) 2014 Matthew Faluotico. All rights reserved.
 //
 
 import UIKit
 
-class CellStats: UITableViewCell {
+class CellStatsBest: UITableViewCell {
 
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

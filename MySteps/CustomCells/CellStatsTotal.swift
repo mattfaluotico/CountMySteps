@@ -1,24 +1,15 @@
 //
-//  CellHistory.swift
+//  CellStatsTotal.swift
 //  MySteps
 //
-//  Created by Matthew Faluotico on 6/17/14.
+//  Created by Matthew Faluotico on 6/22/14.
 //  Copyright (c) 2014 Matthew Faluotico. All rights reserved.
 //
 
 import UIKit
 
-class CellHistory: UITableViewCell {
+class CellStatsTotal: UITableViewCell {
 
-//    Labels
-    
-    @IBOutlet var LabalSteps: UILabel
-    @IBOutlet var LabelDistance: UILabel
-    @IBOutlet var LabelCalories: UILabel
-    @IBOutlet var LabelDate: UILabel
-    
-    
-    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code

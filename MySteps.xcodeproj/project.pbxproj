@@ -12,12 +12,8 @@
 		3318D34419512ACF005781FC /* StepConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34319512ACF005781FC /* StepConversion.swift */; };
 		3318D34619512B88005781FC /* CellToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34519512B88005781FC /* CellToday.swift */; };
 		3318D34819512B94005781FC /* CellHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34719512B94005781FC /* CellHistory.swift */; };
-		3318D34A19512BAB005781FC /* CellWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34919512BAB005781FC /* CellWeek.swift */; };
-		3318D34C19512C01005781FC /* CellStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34B19512C01005781FC /* CellStats.swift */; };
+		3318D34C19512C01005781FC /* CellStatsAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34B19512C01005781FC /* CellStatsAverage.swift */; };
 		3318D34E19513344005781FC /* CellToday.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3318D34D19513344005781FC /* CellToday.xib */; };
-		3318D350195133B8005781FC /* CellHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3318D34F195133B8005781FC /* CellHistory.xib */; };
-		3318D352195133C1005781FC /* CellWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3318D351195133C1005781FC /* CellWeek.xib */; };
-		3318D354195133CF005781FC /* CellStats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3318D353195133CF005781FC /* CellStats.xib */; };
 		33578B72194A56A600120216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B71194A56A600120216 /* AppDelegate.swift */; };
 		33578B75194A56A600120216 /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33578B73194A56A600120216 /* MySteps.xcdatamodeld */; };
 		33578B77194A56A600120216 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B76194A56A600120216 /* MasterViewController.swift */; };
@@ -25,6 +21,14 @@
 		33578B7C194A56A600120216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7A194A56A600120216 /* Main.storyboard */; };
 		33578B7E194A56A600120216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7D194A56A600120216 /* Images.xcassets */; };
 		33578B8A194A56A600120216 /* MyStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B89194A56A600120216 /* MyStepsTests.swift */; };
+		33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */; };
+		33EE8D1F1957D46F00C3AD0C /* CellStatsBest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */; };
+		33EE8D231957D52700C3AD0C /* CellStatsTotal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */; };
+		33EE8D291957D54D00C3AD0C /* CellHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D241957D54D00C3AD0C /* CellHistory.xib */; };
+		33EE8D2A1957D54D00C3AD0C /* CellStatsAverage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D251957D54D00C3AD0C /* CellStatsAverage.xib */; };
+		33EE8D2B1957D54D00C3AD0C /* CellStatsTotal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D261957D54D00C3AD0C /* CellStatsTotal.swift */; };
+		33EE8D2C1957D54D00C3AD0C /* CellWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D271957D54D00C3AD0C /* CellWeek.swift */; };
+		33EE8D2D1957D54D00C3AD0C /* CellWeek.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D281957D54D00C3AD0C /* CellWeek.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,12 +47,8 @@
 		3318D34319512ACF005781FC /* StepConversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StepConversion.swift; path = StepHandling/StepConversion.swift; sourceTree = "<group>"; };
 		3318D34519512B88005781FC /* CellToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellToday.swift; path = CustomCells/CellToday.swift; sourceTree = "<group>"; };
 		3318D34719512B94005781FC /* CellHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellHistory.swift; path = CustomCells/CellHistory.swift; sourceTree = "<group>"; };
-		3318D34919512BAB005781FC /* CellWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellWeek.swift; sourceTree = "<group>"; };
-		3318D34B19512C01005781FC /* CellStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStats.swift; path = CustomCells/CellStats.swift; sourceTree = "<group>"; };
+		3318D34B19512C01005781FC /* CellStatsAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsAverage.swift; path = CustomCells/CellStatsAverage.swift; sourceTree = "<group>"; };
 		3318D34D19513344005781FC /* CellToday.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellToday.xib; path = CustomCells/CellToday.xib; sourceTree = "<group>"; };
-		3318D34F195133B8005781FC /* CellHistory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellHistory.xib; sourceTree = "<group>"; };
-		3318D351195133C1005781FC /* CellWeek.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellWeek.xib; sourceTree = "<group>"; };
-		3318D353195133CF005781FC /* CellStats.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellStats.xib; sourceTree = "<group>"; };
 		33578B6C194A56A600120216 /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33578B70194A56A600120216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33578B71194A56A600120216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +60,14 @@
 		33578B83194A56A600120216 /* MyStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33578B88194A56A600120216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33578B89194A56A600120216 /* MyStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStepsTests.swift; sourceTree = "<group>"; };
+		33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsBest.swift; path = CustomCells/CellStatsBest.swift; sourceTree = "<group>"; };
+		33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsBest.xib; path = CustomCells/CellStatsBest.xib; sourceTree = "<group>"; };
+		33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsTotal.xib; path = CustomCells/CellStatsTotal.xib; sourceTree = "<group>"; };
+		33EE8D241957D54D00C3AD0C /* CellHistory.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellHistory.xib; path = CustomCells/CellHistory.xib; sourceTree = "<group>"; };
+		33EE8D251957D54D00C3AD0C /* CellStatsAverage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsAverage.xib; path = CustomCells/CellStatsAverage.xib; sourceTree = "<group>"; };
+		33EE8D261957D54D00C3AD0C /* CellStatsTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsTotal.swift; path = CustomCells/CellStatsTotal.swift; sourceTree = "<group>"; };
+		33EE8D271957D54D00C3AD0C /* CellWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellWeek.swift; path = CustomCells/CellWeek.swift; sourceTree = "<group>"; };
+		33EE8D281957D54D00C3AD0C /* CellWeek.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellWeek.xib; path = CustomCells/CellWeek.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +101,18 @@
 		3318D34219512A4F005781FC /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				33EE8D241957D54D00C3AD0C /* CellHistory.xib */,
+				33EE8D271957D54D00C3AD0C /* CellWeek.swift */,
+				33EE8D281957D54D00C3AD0C /* CellWeek.xib */,
 				3318D34519512B88005781FC /* CellToday.swift */,
 				3318D34D19513344005781FC /* CellToday.xib */,
 				3318D34719512B94005781FC /* CellHistory.swift */,
-				3318D34F195133B8005781FC /* CellHistory.xib */,
-				3318D34919512BAB005781FC /* CellWeek.swift */,
-				3318D351195133C1005781FC /* CellWeek.xib */,
-				3318D34B19512C01005781FC /* CellStats.swift */,
-				3318D353195133CF005781FC /* CellStats.xib */,
+				33EE8D251957D54D00C3AD0C /* CellStatsAverage.xib */,
+				3318D34B19512C01005781FC /* CellStatsAverage.swift */,
+				33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */,
+				33EE8D261957D54D00C3AD0C /* CellStatsTotal.swift */,
+				33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */,
+				33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */,
 			);
 			name = "Custom Cells";
 			sourceTree = "<group>";
@@ -244,12 +256,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3318D352195133C1005781FC /* CellWeek.xib in Resources */,
 				3318D34E19513344005781FC /* CellToday.xib in Resources */,
+				33EE8D2D1957D54D00C3AD0C /* CellWeek.xib in Resources */,
 				33578B7C194A56A600120216 /* Main.storyboard in Resources */,
-				3318D350195133B8005781FC /* CellHistory.xib in Resources */,
 				33578B7E194A56A600120216 /* Images.xcassets in Resources */,
-				3318D354195133CF005781FC /* CellStats.xib in Resources */,
+				33EE8D2A1957D54D00C3AD0C /* CellStatsAverage.xib in Resources */,
+				33EE8D1F1957D46F00C3AD0C /* CellStatsBest.xib in Resources */,
+				33EE8D291957D54D00C3AD0C /* CellHistory.xib in Resources */,
+				33EE8D231957D52700C3AD0C /* CellStatsTotal.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,17 +281,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33EE8D2C1957D54D00C3AD0C /* CellWeek.swift in Sources */,
 				3318D34819512B94005781FC /* CellHistory.swift in Sources */,
 				33578B72194A56A600120216 /* AppDelegate.swift in Sources */,
 				3318D33E195126C1005781FC /* StepDataHandler.swift in Sources */,
-				3318D34C19512C01005781FC /* CellStats.swift in Sources */,
+				3318D34C19512C01005781FC /* CellStatsAverage.swift in Sources */,
 				33578B75194A56A600120216 /* MySteps.xcdatamodeld in Sources */,
 				3318D34619512B88005781FC /* CellToday.swift in Sources */,
-				3318D34A19512BAB005781FC /* CellWeek.swift in Sources */,
+				33EE8D2B1957D54D00C3AD0C /* CellStatsTotal.swift in Sources */,
 				33578B77194A56A600120216 /* MasterViewController.swift in Sources */,
 				33578B79194A56A600120216 /* DetailViewController.swift in Sources */,
 				3318D34419512ACF005781FC /* StepConversion.swift in Sources */,
 				3318D341195128D6005781FC /* Pedometer.swift in Sources */,
+				33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

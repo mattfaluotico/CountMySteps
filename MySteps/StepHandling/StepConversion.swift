@@ -10,6 +10,7 @@ import UIKit
 
 class StepConversion: NSObject {
    
+    
     // Steps -> Distances
     
     // Steps -> Calories

@@ -1,5 +1,5 @@
 //
-//  CellHistory.swift
+//  CellStats.swift
 //  MySteps
 //
 //  Created by Matthew Faluotico on 6/17/14.
@@ -8,17 +8,8 @@
 
 import UIKit
 
-class CellHistory: UITableViewCell {
+class CellStatsAverage: UITableViewCell {
 
-//    Labels
-    
-    @IBOutlet var LabalSteps: UILabel
-    @IBOutlet var LabelDistance: UILabel
-    @IBOutlet var LabelCalories: UILabel
-    @IBOutlet var LabelDate: UILabel
-    
-    
-    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code

@@ -10,6 +10,9 @@ import UIKit
 
 class CellToday: UITableViewCell {
     
+    @IBOutlet var LabelGoalStatus: UILabel
+    
+    @IBOutlet var ButtonJumpToHistory: UIButton
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
