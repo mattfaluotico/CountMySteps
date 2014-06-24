@@ -18,7 +18,7 @@
                     </view>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are 4000 steps away from your goal!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="CSQ-e0-Yel">
                         <rect key="frame" x="40" y="268" width="241" height="89"/>
-                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand ITC TT" pointSize="19"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -35,7 +35,7 @@
                 <outlet property="ButtonJumpToHistory" destination="2yJ-Il-wpn" id="SwJ-0B-rWA"/>
                 <outlet property="LabelGoalStatus" destination="CSQ-e0-Yel" id="K9K-lD-GTI"/>
             </connections>
-            <point key="canvasLocation" x="232" y="629.5"/>
+            <point key="canvasLocation" x="-76" y="364.5"/>
         </tableViewCell>
     </objects>
 </document>

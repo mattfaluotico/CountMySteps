@@ -10,6 +10,8 @@ import UIKit
 
 class CellWeek: UITableViewCell {
 
+    @IBOutlet var LabelDateRange: UILabel
+    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code

@@ -10,6 +10,12 @@ import UIKit
 
 class CellStatsBest: UITableViewCell {
 
+    @IBOutlet var LabelBestDay: UILabel
+    @IBOutlet var LabelBestSteps: UILabel
+    @IBOutlet var LabelBestDistance: UILabel
+    @IBOutlet var LabelBestCals: UILabel
+    
+    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code

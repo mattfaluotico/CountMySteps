@@ -10,6 +10,9 @@ import UIKit
 
 class CellStatsAverage: UITableViewCell {
 
+    @IBOutlet var LabelAverageSteps: UILabel
+    @IBOutlet var LabelAverageCaloriesAndDistance: UILabel
+    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code

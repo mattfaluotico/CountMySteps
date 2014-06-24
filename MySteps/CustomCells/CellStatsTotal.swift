@@ -10,6 +10,10 @@ import UIKit
 
 class CellStatsTotal: UITableViewCell {
 
+    @IBOutlet var LabelTotal: UILabel
+    @IBOutlet var LabelTotalRef: UILabel
+    
+    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code
