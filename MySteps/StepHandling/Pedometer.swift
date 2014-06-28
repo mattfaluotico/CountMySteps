@@ -13,6 +13,11 @@ class Pedometer: NSObject {
    
     let stepCounter = CMPedometer();
     
+    var steps = NSNumber();
+    var distance = NSNumber?();
+    var floorsUp = NSNumber?();
+    var floorsDown = NSNumber?();
+    
     init() {
         
         
@@ -20,26 +25,33 @@ class Pedometer: NSObject {
     
     func getTodaysStep() {
         
-        stepCounter.startPedometerUpdatesFromDate(NSDate(), withHandler: { data, error in
-            if !error {
-            println("Steps Taken: \(data.numberOfSteps)")
+        var cal = NSCalendar.autoupdatingCurrentCalendar();
+        var components = cal.components(.DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit, fromDate:NSDate());
+        var startOfDay = cal.dateFromComponents(components);
+        
+        
+        stepCounter.startPedometerUpdatesFromDate(startOfDay, withHandler: { data, error in
             
-            let distance = data.distance.doubleValue
-            
-            let time = data.endDate.timeIntervalSinceDate(data.startDate)
-            
-            let speed = distance / time
+            if (!error) {
                 
+                self.steps = data.numberOfSteps;
+                
+                if CMPedometer.isDistanceAvailable() {
+                    self.distance = data.distance;
+                }
+                
+                if CMPedometer.isFloorCountingAvailable() {
+                    self.floorsUp = data.floorsAscended;
+                    self.floorsDown = data.floorsAscended;
+                }
+
+                
+            } else {
+                println("Error collecting steps");
             }
+            
+            
             });
     }
-    
-    // Get Steps Today
-    
-    // Get Floors Today
-    
-    // get distance today
-    
-    
     
 }

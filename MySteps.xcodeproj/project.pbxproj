@@ -14,6 +14,8 @@
 		3318D34819512B94005781FC /* CellHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34719512B94005781FC /* CellHistory.swift */; };
 		3318D34C19512C01005781FC /* CellStatsAverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34B19512C01005781FC /* CellStatsAverage.swift */; };
 		3318D34E19513344005781FC /* CellToday.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3318D34D19513344005781FC /* CellToday.xib */; };
+		335410EF195BBB8900E766D8 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335410EE195BBB8900E766D8 /* HealthKit.framework */; };
+		335410F1195BBB9300E766D8 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 335410F0195BBB9300E766D8 /* CoreMotion.framework */; };
 		33578B72194A56A600120216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B71194A56A600120216 /* AppDelegate.swift */; };
 		33578B75194A56A600120216 /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33578B73194A56A600120216 /* MySteps.xcdatamodeld */; };
 		33578B77194A56A600120216 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B76194A56A600120216 /* MasterViewController.swift */; };
@@ -49,6 +51,8 @@
 		3318D34719512B94005781FC /* CellHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellHistory.swift; path = CustomCells/CellHistory.swift; sourceTree = "<group>"; };
 		3318D34B19512C01005781FC /* CellStatsAverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsAverage.swift; path = CustomCells/CellStatsAverage.swift; sourceTree = "<group>"; };
 		3318D34D19513344005781FC /* CellToday.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellToday.xib; path = CustomCells/CellToday.xib; sourceTree = "<group>"; };
+		335410EE195BBB8900E766D8 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		335410F0195BBB9300E766D8 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		33578B6C194A56A600120216 /* MySteps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySteps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33578B70194A56A600120216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33578B71194A56A600120216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335410F1195BBB9300E766D8 /* CoreMotion.framework in Frameworks */,
+				335410EF195BBB8900E766D8 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,9 +123,19 @@
 			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
+		335410F2195BBBA800E766D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				335410F0195BBB9300E766D8 /* CoreMotion.framework */,
+				335410EE195BBB8900E766D8 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33578B63194A56A600120216 = {
 			isa = PBXGroup;
 			children = (
+				335410F2195BBBA800E766D8 /* Frameworks */,
 				33578B6E194A56A600120216 /* MySteps */,
 				33578B86194A56A600120216 /* MyStepsTests */,
 				33578B6D194A56A600120216 /* Products */,

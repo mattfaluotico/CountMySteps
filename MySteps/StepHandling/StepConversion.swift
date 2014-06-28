@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HealthKit
 
 class StepConversion: NSObject {
    
@@ -14,6 +15,7 @@ class StepConversion: NSObject {
     // Steps -> Distances
     
     // Steps -> Calories
+    
     
     //  ¿¿ Altitude ??
     
