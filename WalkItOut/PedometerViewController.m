@@ -43,7 +43,7 @@
     NSLog(@"Updating Steps");
     
     StepData * sd = [[StepData alloc]init];
-    self.stepsLabel.text = [NSString stringWithFormat:@"%ld", numberOfSteps ];
+    self.stepsLabel.text = [NSString stringWithFormat:@"%d", numberOfSteps ];
     double miles = [sd stepsToMiles:numberOfSteps];
     self.milesLabel.text = [NSString stringWithFormat:@"%.2f", miles];
     double cals = [sd stepsToCalories:numberOfSteps];
@@ -69,7 +69,7 @@
     long diff = closeToGoal - usersGoal;
     
     if (diff > 0) {
-        self.goalLabel.text = [NSString stringWithFormat:@"You reached your goal of %li %@", usersGoal, unitsString];
+        self.goalLabel.text = [NSString stringWithFormat:@"You reached your goal of %d%@", usersGoal, unitsString];
     } else {
         diff = -diff;
         self.goalLabel.text = [NSString stringWithFormat:@"You're %li %@ away from your goal", diff, unitsString];

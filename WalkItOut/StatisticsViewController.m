@@ -71,7 +71,7 @@
 
     
     NSUserDefaults *myDefs = [NSUserDefaults standardUserDefaults];
-    self.bestDayLabel.text = [NSString stringWithFormat:@"%ld steps on %@", [myDefs integerForKey:bestDaySteps], [df stringFromDate: (NSDate* ) [myDefs objectForKey:bestDayDate]]];
+    self.bestDayLabel.text = [NSString stringWithFormat:@"%d steps on %@", [myDefs integerForKey:bestDaySteps], [df stringFromDate: (NSDate* ) [myDefs objectForKey:bestDayDate]]];
     self.totalLabel.text = [NSString stringWithFormat:@"%lld" , [[myDefs objectForKey:totalSteps] longLongValue]];
     
     [self setBestTotalAndAverage];
@@ -110,9 +110,9 @@
     switch (self.segmentStepsMilesCalories.selectedSegmentIndex) {
         case 0:
         {
-            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %li steps on %@", best, [df stringFromDate:bestDay]];
+            self.bestDayLabel.text = [NSString stringWithFormat:@"Best: %d steps on %@", best, [df stringFromDate:bestDay]];
             self.totalLabel.text = [NSString stringWithFormat:@"Total: %.f steps", total];
-            self.averageLabel.text = [NSString stringWithFormat:@"Average: %li steps per day", average];
+            self.averageLabel.text = [NSString stringWithFormat:@"Average: %d steps per day", average];
         }
             break;
         case 1:

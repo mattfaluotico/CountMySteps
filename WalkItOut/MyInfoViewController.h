@@ -10,7 +10,6 @@
 
 @interface MyInfoViewController : UIViewController
 
-- (IBAction)buttonReset:(UIButton *)sender;
 
 - (IBAction)buttonUpdate:(UIButton *)sender;
 
