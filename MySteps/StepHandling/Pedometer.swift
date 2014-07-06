@@ -54,4 +54,8 @@ class Pedometer: NSObject {
             });
     }
     
+    class func canCountSteps() -> Bool {
+        return CMPedometer.isStepCountingAvailable()
+    }
+    
 }

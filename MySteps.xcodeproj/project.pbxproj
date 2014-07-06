@@ -19,10 +19,12 @@
 		33578B72194A56A600120216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B71194A56A600120216 /* AppDelegate.swift */; };
 		33578B75194A56A600120216 /* MySteps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 33578B73194A56A600120216 /* MySteps.xcdatamodeld */; };
 		33578B77194A56A600120216 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B76194A56A600120216 /* MasterViewController.swift */; };
-		33578B79194A56A600120216 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B78194A56A600120216 /* DetailViewController.swift */; };
+		33578B79194A56A600120216 /* ValidateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B78194A56A600120216 /* ValidateViewController.swift */; };
 		33578B7C194A56A600120216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7A194A56A600120216 /* Main.storyboard */; };
 		33578B7E194A56A600120216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7D194A56A600120216 /* Images.xcassets */; };
 		33578B8A194A56A600120216 /* MyStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B89194A56A600120216 /* MyStepsTests.swift */; };
+		338BE17B196742FA009C816A /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 338BE17A196742FA009C816A /* StepDay.m */; };
+		33C062371969876C005D9EFB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062361969876B005D9EFB /* NavigationViewController.swift */; };
 		33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */; };
 		33EE8D1F1957D46F00C3AD0C /* CellStatsBest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */; };
 		33EE8D231957D52700C3AD0C /* CellStatsTotal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */; };
@@ -58,12 +60,16 @@
 		33578B71194A56A600120216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33578B74194A56A600120216 /* MySteps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySteps.xcdatamodel; sourceTree = "<group>"; };
 		33578B76194A56A600120216 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		33578B78194A56A600120216 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		33578B78194A56A600120216 /* ValidateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateViewController.swift; sourceTree = "<group>"; };
 		33578B7B194A56A600120216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33578B7D194A56A600120216 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33578B83194A56A600120216 /* MyStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33578B88194A56A600120216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33578B89194A56A600120216 /* MyStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStepsTests.swift; sourceTree = "<group>"; };
+		338BE178196742FA009C816A /* MySteps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySteps-Bridging-Header.h"; sourceTree = "<group>"; };
+		338BE179196742FA009C816A /* StepDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDay.h; path = StepHandling/StepDay.h; sourceTree = "<group>"; };
+		338BE17A196742FA009C816A /* StepDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDay.m; path = StepHandling/StepDay.m; sourceTree = "<group>"; };
+		33C062361969876B005D9EFB /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsBest.swift; path = CustomCells/CellStatsBest.swift; sourceTree = "<group>"; };
 		33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsBest.xib; path = CustomCells/CellStatsBest.xib; sourceTree = "<group>"; };
 		33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsTotal.xib; path = CustomCells/CellStatsTotal.xib; sourceTree = "<group>"; };
@@ -108,11 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				33EE8D241957D54D00C3AD0C /* CellHistory.xib */,
+				3318D34719512B94005781FC /* CellHistory.swift */,
 				33EE8D271957D54D00C3AD0C /* CellWeek.swift */,
 				33EE8D281957D54D00C3AD0C /* CellWeek.xib */,
 				3318D34519512B88005781FC /* CellToday.swift */,
 				3318D34D19513344005781FC /* CellToday.xib */,
-				3318D34719512B94005781FC /* CellHistory.swift */,
 				33EE8D251957D54D00C3AD0C /* CellStatsAverage.xib */,
 				3318D34B19512C01005781FC /* CellStatsAverage.swift */,
 				33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */,
@@ -158,11 +164,15 @@
 				3318D33F195126D6005781FC /* StepHandling */,
 				33578B71194A56A600120216 /* AppDelegate.swift */,
 				33578B76194A56A600120216 /* MasterViewController.swift */,
-				33578B78194A56A600120216 /* DetailViewController.swift */,
+				33578B78194A56A600120216 /* ValidateViewController.swift */,
 				33578B7A194A56A600120216 /* Main.storyboard */,
+				33C062361969876B005D9EFB /* NavigationViewController.swift */,
 				33578B7D194A56A600120216 /* Images.xcassets */,
 				33578B73194A56A600120216 /* MySteps.xcdatamodeld */,
+				338BE179196742FA009C816A /* StepDay.h */,
+				338BE17A196742FA009C816A /* StepDay.m */,
 				33578B6F194A56A600120216 /* Supporting Files */,
+				338BE178196742FA009C816A /* MySteps-Bridging-Header.h */,
 			);
 			path = MySteps;
 			sourceTree = "<group>";
@@ -300,13 +310,15 @@
 				33EE8D2C1957D54D00C3AD0C /* CellWeek.swift in Sources */,
 				3318D34819512B94005781FC /* CellHistory.swift in Sources */,
 				33578B72194A56A600120216 /* AppDelegate.swift in Sources */,
+				33C062371969876C005D9EFB /* NavigationViewController.swift in Sources */,
 				3318D33E195126C1005781FC /* StepDataHandler.swift in Sources */,
 				3318D34C19512C01005781FC /* CellStatsAverage.swift in Sources */,
 				33578B75194A56A600120216 /* MySteps.xcdatamodeld in Sources */,
 				3318D34619512B88005781FC /* CellToday.swift in Sources */,
 				33EE8D2B1957D54D00C3AD0C /* CellStatsTotal.swift in Sources */,
 				33578B77194A56A600120216 /* MasterViewController.swift in Sources */,
-				33578B79194A56A600120216 /* DetailViewController.swift in Sources */,
+				33578B79194A56A600120216 /* ValidateViewController.swift in Sources */,
+				338BE17B196742FA009C816A /* StepDay.m in Sources */,
 				3318D34419512ACF005781FC /* StepConversion.swift in Sources */,
 				3318D341195128D6005781FC /* Pedometer.swift in Sources */,
 				33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */,
@@ -425,9 +437,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MySteps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MySteps/MySteps-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -436,9 +451,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MySteps/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MySteps/MySteps-Bridging-Header.h";
 			};
 			name = Release;
 		};

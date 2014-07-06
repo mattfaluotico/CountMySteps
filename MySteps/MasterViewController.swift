@@ -12,7 +12,8 @@ import CoreData
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     var managedObjectContext: NSManagedObjectContext? = nil
-
+    
+    var stepHandler = StepDataHandler(false)
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,11 +21,35 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        // Set Nav Label
+        var l = UILabel()
+        var titleLabelText = NSMutableAttributedString(string: "CountMySteps")
+        var boldAttDic = NSDictionary(object: UIFont.boldSystemFontOfSize(24.0), forKey: NSFontAttributeName)
+        var thinAttDic = NSDictionary(object: UIFont(name: "HelveticaNeue-Thin", size: 24.0), forKey: NSFontAttributeName);
+        titleLabelText.setAttributes(boldAttDic, range: NSMakeRange(5, 2))
+        titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(0, 5))
+        titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(7, 5))
+        
+        l.attributedText = titleLabelText
+        l.textColor = UIColor.whiteColor()
+        l.textAlignment = NSTextAlignment.Center
+        self.navigationItem.titleView = l;
+        l.sizeToFit()
+        
+        // set the settings button
+        
+//        let editButton = UIBarButtonItem(title: "set", style: .Bordered, target: self, action: "none")
+//        self.navigationItem.leftBarButtonItem = editButton
+        // set the share button
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "insertNewObject:")
+        addButton.style = .Bordered
+        addButton.tintColor = UIColor.whiteColor()
         self.navigationItem.rightBarButtonItem = addButton
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +64,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
              
         // If appropriate, configure the new managed object.
         // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate.date(), forKey: "timeStamp")
+        newManagedObject.setValue(NSDate.date(), forKey: "day")
              
         // Save the context.
         var error: NSError? = nil
@@ -51,30 +76,27 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         }
     }
 
-    // #pragma mark - Segues
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "showDetail" {
-            let indexPath = self.tableView.indexPathForSelectedRow()
-            let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
-            (segue.destinationViewController as DetailViewController).detailItem = object
-        }
-    }
-
     // #pragma mark - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.fetchedResultsController.sections.count
+        return 5
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let sectionInfo = self.fetchedResultsController.sections[section] as NSFetchedResultsSectionInfo
-        return sectionInfo.numberOfObjects
+//        let sectionInfo = self.fetchedResultsController.sections[section] as NSFetchedResultsSectionInfo
+//        return sectionInfo.numberOfObjects
+        return 5
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        self.configureCell(cell, atIndexPath: indexPath)
+        
+        var cell : CellHistory = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
+
+        if (cell == nil) {
+            var NIB = NSBundle.mainBundle().loadNibNamed("CellHistory", owner: self, options: nil) as NSArray
+            cell = NIB.objectAtIndex(0) as CellHistory
+            
+        }
         return cell
     }
 
@@ -100,7 +122,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
-        cell.textLabel.text = object.valueForKey("timeStamp").description
+        cell.textLabel.text = object.valueForKey("day").description
     }
 
     // #pragma mark - Fetched results controller
@@ -112,14 +134,14 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         let fetchRequest = NSFetchRequest()
         // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext)
+        let entity = NSEntityDescription.entityForName("StepDay", inManagedObjectContext: self.managedObjectContext)
         fetchRequest.entity = entity
         
         // Set the batch size to a suitable number.
         fetchRequest.fetchBatchSize = 20
         
         // Edit the sort key as appropriate.
-        let sortDescriptor = NSSortDescriptor(key: "timeStamp", ascending: false)
+        let sortDescriptor = NSSortDescriptor(key: "day", ascending: false)
         let sortDescriptors = [sortDescriptor]
         
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -139,7 +161,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     	}
         
         return _fetchedResultsController!
-    }    
+    }
+    
     var _fetchedResultsController: NSFetchedResultsController? = nil
 
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
@@ -185,6 +208,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
          self.tableView.reloadData()
      }
      */
+
 
 }
 

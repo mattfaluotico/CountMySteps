@@ -21,6 +21,10 @@ class StepDataHandler: NSObject {
     var numberOfFloorsUp = Int()
     var numberOfFloorsDown = Int()
     
+    init(Bool) {
+        
+    }
+    
     init() {
         
         var pedometer = Pedometer();
