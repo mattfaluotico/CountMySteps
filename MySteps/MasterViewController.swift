@@ -22,6 +22,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Register NIBS
+        var nib = UINib(nibName: "CellWeek", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellHistoryID")
+        
         // Set Nav Label
         var l = UILabel()
         var titleLabelText = NSMutableAttributedString(string: "CountMySteps")
@@ -43,7 +47,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 //        self.navigationItem.leftBarButtonItem = editButton
         // set the share button
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "insertNewObject:")
+        let addButton = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "l")
         addButton.style = .Bordered
         addButton.tintColor = UIColor.whiteColor()
         self.navigationItem.rightBarButtonItem = addButton
@@ -79,22 +83,23 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // #pragma mark - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        let sectionInfo = self.fetchedResultsController.sections[section] as NSFetchedResultsSectionInfo
 //        return sectionInfo.numberOfObjects
-        return 5
+        return 1
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell : CellHistory = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
+        var cell : CellWeek = tableView.dequeueReusableCellWithIdentifier("CellHistoryID") as CellWeek
 
         if (cell == nil) {
-            var NIB = NSBundle.mainBundle().loadNibNamed("CellHistory", owner: self, options: nil) as NSArray
-            cell = NIB.objectAtIndex(0) as CellHistory
+            var NIB = NSBundle.mainBundle().loadNibNamed("CellWeek", owner: self, options: nil) as NSArray
+            cell = NIB.objectAtIndex(0) as CellWeek
+//            cell = CellHistory(style: UITableViewStyle.Plain, reuseIdentifier: "CellHistory")
             
         }
         return cell

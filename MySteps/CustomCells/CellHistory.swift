@@ -21,6 +21,7 @@ class CellHistory: UITableViewCell {
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.awakeFromNib()
         // Initialization code
     }
 
