@@ -23,8 +23,25 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         super.viewDidLoad()
         
         // Register NIBS
-        var nib = UINib(nibName: "CellWeek", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: "CellHistoryID")
+        var nib = UINib(nibName: "CellToday", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellToday")
+        
+        nib = UINib(nibName: "CellWeek", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellWeek")
+        
+        nib = UINib(nibName: "CellStatsAverage", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellStatsAverage")
+        
+        nib = UINib(nibName: "CellStatsBest", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellStatsBest")
+        
+        nib = UINib(nibName: "CellStatsTotal", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellStatsTotal")
+        
+        nib = UINib(nibName: "CellHistory", bundle: nil)
+        tableView.registerNib(nib, forCellReuseIdentifier: "CellHistory")
+        
+        
         
         // Set Nav Label
         var l = UILabel()
@@ -61,27 +78,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         // Dispose of any resources that can be recreated.
     }
 
-    func insertNewObject(sender: AnyObject) {
-        let context = self.fetchedResultsController.managedObjectContext
-        let entity = self.fetchedResultsController.fetchRequest.entity
-        let newManagedObject = NSEntityDescription.insertNewObjectForEntityForName(entity.name, inManagedObjectContext: context) as NSManagedObject
-             
-        // If appropriate, configure the new managed object.
-        // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-        newManagedObject.setValue(NSDate.date(), forKey: "day")
-             
-        // Save the context.
-        var error: NSError? = nil
-        if !context.save(&error) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            //println("Unresolved error \(error), \(error.userInfo)")
-            abort()
-        }
-    }
-
     // #pragma mark - Table View
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -89,20 +87,36 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        let sectionInfo = self.fetchedResultsController.sections[section] as NSFetchedResultsSectionInfo
 //        return sectionInfo.numberOfObjects
-        return 1
+        return 7
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var cell : CellWeek = tableView.dequeueReusableCellWithIdentifier("CellHistoryID") as CellWeek
-
-        if (cell == nil) {
-            var NIB = NSBundle.mainBundle().loadNibNamed("CellWeek", owner: self, options: nil) as NSArray
-            cell = NIB.objectAtIndex(0) as CellWeek
-//            cell = CellHistory(style: UITableViewStyle.Plain, reuseIdentifier: "CellHistory")
-            
+        var cell = UITableViewCell()
+        
+        if (indexPath.row >= INDEX_HISTORY_CELL) {
+            cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
+            return cell;
         }
-        return cell
+        
+        switch(indexPath.row) {
+        
+        case INDEX_TODAY_CELL:
+            cell  = tableView.dequeueReusableCellWithIdentifier("CellToday") as CellToday
+        case INDEX_WEEK_CELL:
+            cell = tableView.dequeueReusableCellWithIdentifier("CellWeek") as CellWeek
+        case INDEX_STATS_AVERAGE_CELL:
+            cell = tableView.dequeueReusableCellWithIdentifier("CellStatsAverage") as CellStatsAverage
+        case INDEX_STATS_BEST_CELL:
+            cell = tableView.dequeueReusableCellWithIdentifier("CellStatsBest") as CellStatsBest
+        case INDEX_STATS_TOTAL_CELL:
+            cell = tableView.dequeueReusableCellWithIdentifier("CellStatsTotal") as CellStatsTotal
+        default:
+            cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
+        }
+        
+        return cell;
+        
     }
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -124,7 +138,34 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
             }
         }
     }
-
+    
+    override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        var height = CGFloat()
+        
+        if (indexPath.row >= INDEX_HISTORY_CELL) {
+            height = HEIGHT_HISTORY_CELL;
+            return height;
+        }
+        
+        switch (indexPath.row) {
+            case INDEX_TODAY_CELL:
+            height = HEIGHT_TODAY_CELL
+            case INDEX_WEEK_CELL:
+            height = HEIGHT_WEEK_CELL
+            case INDEX_STATS_AVERAGE_CELL:
+            height = HEIGHT_STATS_AVERAGE_CELL
+            case INDEX_STATS_BEST_CELL:
+            height = HEIGHT_STATS_BEST_CELL
+            case INDEX_STATS_TOTAL_CELL:
+            height = HEIGHT_STATS_TOTAL_CELL
+            default:
+            height = HEIGHT_HISTORY_CELL
+        }
+            
+        return height
+            
+    }
+    
     func configureCell(cell: UITableViewCell, atIndexPath indexPath: NSIndexPath) {
         let object = self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject
         cell.textLabel.text = object.valueForKey("day").description
