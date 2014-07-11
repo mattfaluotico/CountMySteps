@@ -11,6 +11,9 @@ import UIKit
 class CellWeek: UITableViewCell {
 
     @IBOutlet var LabelDateRange: UILabel
+    @IBOutlet var weeklyReviewLabel: UILabel
+    
+    
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -19,13 +22,21 @@ class CellWeek: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.configCell()
         // Initialization code
+
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configCell() {
+        self.weeklyReviewLabel.font = UIFont.boldSystemFontOfSize(20)
+        self.LabelDateRange.text = "From MM/dd/yyy"
+        
     }
 
 }

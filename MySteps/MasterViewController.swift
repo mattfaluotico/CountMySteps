@@ -45,12 +45,12 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         // Set Nav Label
         var l = UILabel()
-        var titleLabelText = NSMutableAttributedString(string: "CountMySteps")
+        var titleLabelText = NSMutableAttributedString(string: "Count My Steps")
         var boldAttDic = NSDictionary(object: UIFont.boldSystemFontOfSize(24.0), forKey: NSFontAttributeName)
         var thinAttDic = NSDictionary(object: UIFont(name: "HelveticaNeue-Thin", size: 24.0), forKey: NSFontAttributeName);
-        titleLabelText.setAttributes(boldAttDic, range: NSMakeRange(5, 2))
+        titleLabelText.setAttributes(boldAttDic, range: NSMakeRange(6, 2))
         titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(0, 5))
-        titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(7, 5))
+        titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(9, 5))
         
         l.attributedText = titleLabelText
         l.textColor = UIColor.whiteColor()
@@ -246,6 +246,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.tableView.endUpdates()
     }
 
+    
+    func scroll() {
+        self.tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 5, inSection: 0), atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+    }
+    
     /*
      // Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
      

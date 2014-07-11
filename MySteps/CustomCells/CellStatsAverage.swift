@@ -20,13 +20,35 @@ class CellStatsAverage: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.configCell()
         // Initialization code
+        
+        
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func configCell() {
+        var numString = "\(125234)"
+        var numStringLength = countElements(numString)
+        var boldAttDic = NSDictionary(object: UIFont(name: "HelveticaNeue-Bold", size: 17), forKey: NSFontAttributeName)
+        
+        
+        var averageSteps = NSMutableAttributedString(string: "On average, you walk \(numString) steps a day")
+        averageSteps.setAttributes(boldAttDic, range: NSMakeRange(3, 7))
+        averageSteps.setAttributes(boldAttDic, range: NSMakeRange(21, numStringLength))
+        self.LabelAverageSteps.attributedText = averageSteps
+        
+        var caloriesAndDistanceAttributeString = NSMutableAttributedString(string: "That's \(numString) calories and \(numString) miles")
+        caloriesAndDistanceAttributeString.setAttributes(boldAttDic, range: NSMakeRange(7, numStringLength))
+        self.LabelAverageCaloriesAndDistance.attributedText = caloriesAndDistanceAttributeString
+
     }
 
 }
