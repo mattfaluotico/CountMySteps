@@ -1,6 +1,6 @@
 # Walkitout
 
-**Released to the app store! This is still a beta test**
+**Released to the [App Store!](https://itunes.apple.com/us/app/count-my-steps/id894425464?mt=8) This is still a beta test**
 
 **When iOS 8 comes out, expect a new and imporoved version!** Check out the iOS 8 branch for progress. 
 
