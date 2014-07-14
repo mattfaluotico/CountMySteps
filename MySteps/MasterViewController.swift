@@ -59,17 +59,16 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         l.sizeToFit()
         
         // set the settings button
-        
+
 //        let editButton = UIBarButtonItem(title: "set", style: .Bordered, target: self, action: "none")
 //        self.navigationItem.leftBarButtonItem = editButton
         // set the share button
 
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "l")
-        addButton.style = .Bordered
-        addButton.tintColor = UIColor.whiteColor()
-        self.navigationItem.rightBarButtonItem = addButton
-        
-        
+        let shareButton = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "l")
+        shareButton.style = .Bordered
+        shareButton.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = shareButton
+                
         
     }
 

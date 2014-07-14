@@ -30,9 +30,9 @@ class ValidateViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         
-        self.navigationItem.title = "Validating"
+        self.navigationItem.title = "Validating..."
         nextButton.addTarget(self, action: "validated", forControlEvents: UIControlEvents.TouchUpInside)
-        self.nextButton.layer.backgroundColor = UIColor.redColor().CGColor
+        self.nextButton.layer.backgroundColor = DAT_MAROON.CGColor
         self.nextButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         self.nextButton.layer.cornerRadius = 5
         self.navigationItem.setHidesBackButton(true, animated: false)

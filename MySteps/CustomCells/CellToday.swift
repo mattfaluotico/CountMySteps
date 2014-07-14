@@ -71,7 +71,7 @@ class CellToday: UITableViewCell {
         
         self.ButtonJumpToHistory.addTarget(parentTable, action: "scroll", forControlEvents: UIControlEvents.TouchUpInside)
     
-        
+        drawChart()
     }
     
     
@@ -102,6 +102,27 @@ class CellToday: UITableViewCell {
             }
         
         return motivateString
+    }
+    
+    
+    func drawChart() {
+        
+//        var cirlceChart = P`(frame: CGRectMake(0, 135.0, 320.0, 200.0))
+//        barChart.backgroundColor = UIColor.clearColor()
+//        barChart.yLabelFormatter = ({(yValue: CGFloat) -> NSString in
+//            var yValueParsed:CGFloat = yValue
+//            var labelText:NSString = NSString(format:"%1.f",yValueParsed)
+//            return labelText;
+//            })
+//        barChart.labelMarginTop = 5.0
+//        barChart.xLabels = ["SEP 1","SEP 2","SEP 3","SEP 4","SEP 5","SEP 6","SEP 7"]
+//        barChart.yValues = [1,24,12,18,30,10,21]
+//        barChart.strokeChart()
+//        
+////        barChart.delegate = self
+//        
+//        self.addSubview(barChart)
+        
     }
 
     

@@ -26,7 +26,7 @@
                                     <rect key="frame" x="106" y="443" width="108" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="rS3-R9-Ivy" kind="show" id="DB2-Un-k0O"/>
+                                    <segue destination="oMW-0r-xYM" kind="show" id="ZCp-40-gMg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Looks like I can't count your steps  :(" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="241" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-88-4uR">
@@ -61,6 +61,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8V-HU-h7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-372" y="-492.75"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="AGL-IO-6pm">
+            <objects>
+                <tableViewController title="Settings" id="oMW-0r-xYM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hNE-BJ-Eq1">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7YK-BY-PSw">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7YK-BY-PSw" id="nhR-q2-BRp">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
+                        </variation>
+                        <connections>
+                            <outlet property="dataSource" destination="oMW-0r-xYM" id="aZe-dO-JWX"/>
+                            <outlet property="delegate" destination="oMW-0r-xYM" id="R9H-cc-fBf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Profile" id="RKT-42-egc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2P-bR-AX2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="-519.75"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="cUi-kZ-frf">
@@ -128,12 +157,21 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="CountMySteps" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="CountMySteps" id="tQt-TN-PWz">
+                        <barButtonItem key="leftBarButtonItem" title="Settings" id="IfK-RK-jag">
+                            <connections>
+                                <segue destination="oMW-0r-xYM" kind="show" id="fRf-7p-dW6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605" y="64"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fRf-7p-dW6"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.59188179350000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
