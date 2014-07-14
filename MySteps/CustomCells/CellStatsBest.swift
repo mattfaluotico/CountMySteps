@@ -31,5 +31,17 @@ class CellStatsBest: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+    func configCell(stepData: StepDataHandler) {
+        
+        var bestDay = NSMutableAttributedString (string: "Your best day was MM/dd/yyyy")
+        LabelBestSteps.text = "Steps: 542345"
+        LabelBestDistance.text = "Distance: 23 mi"
+        LabelBestCals.text = "Calories: 452 cal"
+        
+        
+    }
 
 }
+	

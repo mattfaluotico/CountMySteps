@@ -29,5 +29,26 @@ class CellStatsTotal: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configCell(stepHandler: StepDataHandler) {
+        
+        var steps = "\(2900)"
+        var distance = "\(4323)"
+        var calories = "\(3434)"
+        
+        var stepsLength = countElements(steps)
+        var distanceLength = countElements(distance)
+        var caloriesLength = countElements(calories)
+        
+        
+        var s = NSMutableAttributedString(string: "You've walked a total of \(steps) steps, \(distance) miles, and \(calories) calories.")
+        var bold = NSDictionary(object: DAT_MAROON, forKey: NSForegroundColorAttributeName)
+        s.addAttributes(bold, range: NSMakeRange(25, stepsLength))
+        s.addAttributes(bold, range: NSMakeRange(25 + stepsLength +  8, distanceLength))
+        s.addAttributes(bold, range: NSMakeRange(25 + stepsLength + 8 + distanceLength + 12, caloriesLength))
+        
+        self.LabelTotalRef.text = stepHandler.realWorldDistance()
+        self.LabelTotal.attributedText = s
+    }
 
 }

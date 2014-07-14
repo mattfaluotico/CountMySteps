@@ -14,6 +14,8 @@ class CellToday: UITableViewCell {
     
     @IBOutlet var ButtonJumpToHistory: UIButton
     
+//    var parentTable = UITableViewController()
+    
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         // Initialization code
@@ -21,7 +23,6 @@ class CellToday: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configCell()
         // Initialization code
     }
 
@@ -32,42 +33,80 @@ class CellToday: UITableViewCell {
     }
     
     
-    func configCell() {
+    func configCell(stepData: StepDataHandler, parentTable: UITableViewController) {
 //        self.ButtonJumpToHistory.frame.size = CGSizeMake(250, 40)
+        
+//        self.parentTable = parentTable
         
         self.ButtonJumpToHistory.layer.backgroundColor = DAT_MAROON.CGColor
         self.ButtonJumpToHistory.layer.cornerRadius = self.ButtonJumpToHistory.frame.height / 2
         self.ButtonJumpToHistory.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        self.ButtonJumpToHistory.layer.shadowOffset = CGSizeMake(3, 0)
+        self.ButtonJumpToHistory.layer.shadowColor = UIColor.darkGrayColor().CGColor
+        self.ButtonJumpToHistory.layer.shadowOpacity = 0.8
+        self.ButtonJumpToHistory.layer.shadowRadius = 4
         
-        var goalReached = true;
-        self.LabelGoalStatus.text = self.motivateForGoalReach(goalReached)
         
-        self.ButtonJumpToHistory.addTarget(self.superview, action: "scroll", forControlEvents: UIControlEvents.TouchUpInside)
+        var goal = stepData.temp_goal
+        var todaySteps = stepData.temp_todaySteps
+        
+        var goalReached = (goal < todaySteps);
+        var goalLabel = CellToday.motivateForGoalReach(goalReached)
+        
+        var l : Int  = countElements(goalLabel)
+        
+        var boldAttDic = NSDictionary(object: UIFont.boldSystemFontOfSize(19.0), forKey: NSFontAttributeName)
+        
+        
+        if (!goalReached) {
+            goalLabel+="\nYou're \(goal-todaySteps) steps away from your goal."
+        } else {
+            goalLabel+="\nYou reached your goal."
+        }
+        
+        var goalLabelAtt = NSMutableAttributedString(string: goalLabel)
+        goalLabelAtt.addAttributes(boldAttDic, range: NSMakeRange(0, l))
+        
+        self.LabelGoalStatus.attributedText = goalLabelAtt
+        
+        self.ButtonJumpToHistory.addTarget(parentTable, action: "scroll", forControlEvents: UIControlEvents.TouchUpInside)
+    
+        
     }
     
     
-    func motivateForGoalReach(goalReached: Bool) -> String {
+    class func motivateForGoalReach(goalReached: Bool) -> String {
         var motivateString = String()
         
-        if (goalReached) {
-            var randOut = rand();
+        if (!goalReached) {
+            var randOut = rand() % 4
             
             switch (randOut) {
-            case 0: motivateString = "You got this!"
-            case 1: motivateString = "You can do it!"
-            case 2: motivateString = "You're close!"
-            case 3: motivateString = "Make it look easy"
-            default: motivateString = "woohoo!"
+                case 0: motivateString = "You got this!"
+                case 1: motivateString = "You can do it!"
+                case 2: motivateString = "You're close!"
+                case 3: motivateString = "Make it look easy!"
+                default: motivateString = "Woohoo!"
             }
             
         } else {
-                motivateString = "Nice job"
+            var randOut = rand() % 4;
+            
+            switch (randOut) {
+                case 0: motivateString = "Nice job!"
+                case 1: motivateString = "High five!"
+                case 2: motivateString = "You made it!"
+                case 3: motivateString = "You made that look easy"
+                default: motivateString = "Woohoo!"
+                }
             }
         
         return motivateString
     }
 
-}
+    
+    
+    }
 
 
 

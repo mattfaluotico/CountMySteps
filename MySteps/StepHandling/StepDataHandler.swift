@@ -12,7 +12,17 @@ class StepDataHandler: NSObject {
     
     
     var numberOfSteps = Int()
-    var distance = Double()
+    var distance : Double {
+        get {
+            // check if distance is available
+            return 6
+        }
+        
+        set(setDistnace) {
+            self.distance = setDistnace
+        }
+    }
+    
     var numberOfCalories = Int()
 //    var stepHistoryArray = Int[]()
     var totalAsSteps = Double()
@@ -21,11 +31,27 @@ class StepDataHandler: NSObject {
     var numberOfFloorsUp = Int()
     var numberOfFloorsDown = Int()
     
+    
+//    Temp data
+    
+    var temp_todaySteps = 3454
+    var temp_todayCals = 354
+    var temp_todayMiles = 3
+    var temp_goal = 4000
+    
+    var temp_best_date = NSDate()
+    var temp_besr_steps = 32424
+    
     init(Bool) {
+        
+        super.init()
+        
         
     }
     
     init() {
+        
+        super.init()
         
         var pedometer = Pedometer();
         pedometer.getTodaysStep();

@@ -20,7 +20,6 @@ class CellStatsAverage: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configCell()
         // Initialization code
         
         
@@ -34,19 +33,21 @@ class CellStatsAverage: UITableViewCell {
     }
     
     
-    func configCell() {
+    func configCell(stepHandler: StepDataHandler) {
         var numString = "\(125234)"
         var numStringLength = countElements(numString)
-        var boldAttDic = NSDictionary(object: UIFont(name: "HelveticaNeue-Bold", size: 17), forKey: NSFontAttributeName)
+        var redFont = NSDictionary(object: DAT_MAROON, forKey: NSForegroundColorAttributeName)
         
+        var averageSteps = NSMutableAttributedString(string: "On average, you're walking \(numString) steps a day")
+        averageSteps.setAttributes(redFont, range: NSMakeRange(27, numStringLength))
         
-        var averageSteps = NSMutableAttributedString(string: "On average, you walk \(numString) steps a day")
-        averageSteps.setAttributes(boldAttDic, range: NSMakeRange(3, 7))
-        averageSteps.setAttributes(boldAttDic, range: NSMakeRange(21, numStringLength))
         self.LabelAverageSteps.attributedText = averageSteps
         
+        
         var caloriesAndDistanceAttributeString = NSMutableAttributedString(string: "That's \(numString) calories and \(numString) miles")
-        caloriesAndDistanceAttributeString.setAttributes(boldAttDic, range: NSMakeRange(7, numStringLength))
+        caloriesAndDistanceAttributeString.setAttributes(redFont, range: NSMakeRange(7, numStringLength))
+        caloriesAndDistanceAttributeString.setAttributes(redFont, range: NSMakeRange(7 + numStringLength + 14, numStringLength))
+        
         self.LabelAverageCaloriesAndDistance.attributedText = caloriesAndDistanceAttributeString
 
     }

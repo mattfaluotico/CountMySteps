@@ -22,7 +22,6 @@ class CellWeek: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.configCell()
         // Initialization code
 
     }
@@ -33,9 +32,13 @@ class CellWeek: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configCell() {
+    func configCell(stepHandler: StepDataHandler) {
+        var weekAgo: NSDate = NSDate()
+        weekAgo.dateByAddingTimeInterval(-604800)
         self.weeklyReviewLabel.font = UIFont.boldSystemFontOfSize(20)
-        self.LabelDateRange.text = "From MM/dd/yyy"
+        let df = NSDateFormatter()
+        df.dateFormat = "MMMM dd"
+        self.LabelDateRange.text = "From \(df.stringFromDate(weekAgo))"
         
     }
 

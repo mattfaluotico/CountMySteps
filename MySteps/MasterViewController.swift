@@ -102,15 +102,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         switch(indexPath.row) {
         
         case INDEX_TODAY_CELL:
-            cell  = tableView.dequeueReusableCellWithIdentifier("CellToday") as CellToday
+            cell = tableView.dequeueReusableCellWithIdentifier("CellToday") as CellToday
+            (cell as CellToday).configCell(stepHandler, parentTable: self)
         case INDEX_WEEK_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellWeek") as CellWeek
+            (cell as CellWeek).configCell(stepHandler)
         case INDEX_STATS_AVERAGE_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellStatsAverage") as CellStatsAverage
+            (cell as CellStatsAverage).configCell(stepHandler)
         case INDEX_STATS_BEST_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellStatsBest") as CellStatsBest
+            (cell as CellStatsBest).configCell(stepHandler)
         case INDEX_STATS_TOTAL_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellStatsTotal") as CellStatsTotal
+            (cell as CellStatsTotal).configCell(stepHandler)
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
         }
@@ -121,22 +126,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return true
-    }
-
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            let context = self.fetchedResultsController.managedObjectContext
-            context.deleteObject(self.fetchedResultsController.objectAtIndexPath(indexPath) as NSManagedObject)
-                
-            var error: NSError? = nil
-            if !context.save(&error) {
-                // Replace this implementation with code to handle the error appropriately.
-                // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                //println("Unresolved error \(error), \(error.userInfo)")
-                abort()
-            }
-        }
+        return false
     }
     
     override func tableView(tableView: UITableView!, heightForRowAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
@@ -215,32 +205,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         self.tableView.beginUpdates()
     }
 
-    func controller(controller: NSFetchedResultsController, didChangeSection sectionInfo: NSFetchedResultsSectionInfo, atIndex sectionIndex: Int, forChangeType type: NSFetchedResultsChangeType) {
-        switch type {
-            case NSFetchedResultsChangeInsert:
-                self.tableView.insertSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            case NSFetchedResultsChangeDelete:
-                self.tableView.deleteSections(NSIndexSet(index: sectionIndex), withRowAnimation: .Fade)
-            default:
-                return
-        }
-    }
 
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath) {
-        switch type {
-            case NSFetchedResultsChangeInsert:
-                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
-            case NSFetchedResultsChangeDelete:
-                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            case NSFetchedResultsChangeUpdate:
-                self.configureCell(tableView.cellForRowAtIndexPath(indexPath), atIndexPath: indexPath)
-            case NSFetchedResultsChangeMove:
-                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-                tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Fade)
-            default:
-                return
-        }
-    }
 
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         self.tableView.endUpdates()
