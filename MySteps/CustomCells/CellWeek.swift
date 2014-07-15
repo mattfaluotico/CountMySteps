@@ -42,23 +42,18 @@ class CellWeek: UITableViewCell {
         
         drawChart()
         
+        
     }
-
     
     func drawChart() {
         
         var barChart = PNBarChart(frame: CGRectMake(0, 75, 320.0, 240.0))
         barChart.backgroundColor = UIColor.clearColor()
-        barChart.yLabelFormatter = ({(yValue: CGFloat) -> NSString in
-            var yValueParsed:CGFloat = yValue
-            var labelText:NSString = NSString(format:"%1.f",yValueParsed/1000)
-            return labelText;
-            })
         barChart.xLabels = [" 1"," 2"," 3"," 4"," 5"," 6"]
         barChart.yValues = [132,12324,13222,11238,33210,1320]
-        barChart.strokeChart()
         
-        //        barChart.delegate = self
+        
+        barChart.strokeChart()
         
         self.addSubview(barChart)
         

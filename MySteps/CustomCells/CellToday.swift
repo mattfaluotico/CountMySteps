@@ -12,6 +12,8 @@ class CellToday: UITableViewCell {
     
     @IBOutlet var LabelGoalStatus: UILabel
     
+    @IBOutlet var LabelCalories: UICountingLabel
+    @IBOutlet var LabelMiles: UICountingLabel
     @IBOutlet var ButtonJumpToHistory: UIButton
     
 //    var parentTable = UITableViewController()
@@ -70,6 +72,11 @@ class CellToday: UITableViewCell {
         self.LabelGoalStatus.attributedText = goalLabelAtt
         
         self.ButtonJumpToHistory.addTarget(parentTable, action: "scroll", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.LabelCalories.format = "%d cal"
+        self.LabelMiles.format = "%d mi"
+        self.LabelCalories.countFrom(0, to: 2234, withDuration: 2)
+        self.LabelMiles.countFrom(0, to: 4224, withDuration: 2)
     
         drawChart()
     }
@@ -107,21 +114,14 @@ class CellToday: UITableViewCell {
     
     func drawChart() {
         
-//        var cirlceChart = P`(frame: CGRectMake(0, 135.0, 320.0, 200.0))
-//        barChart.backgroundColor = UIColor.clearColor()
-//        barChart.yLabelFormatter = ({(yValue: CGFloat) -> NSString in
-//            var yValueParsed:CGFloat = yValue
-//            var labelText:NSString = NSString(format:"%1.f",yValueParsed)
-//            return labelText;
-//            })
-//        barChart.labelMarginTop = 5.0
-//        barChart.xLabels = ["SEP 1","SEP 2","SEP 3","SEP 4","SEP 5","SEP 6","SEP 7"]
-//        barChart.yValues = [1,24,12,18,30,10,21]
-//        barChart.strokeChart()
-//        
-////        barChart.delegate = self
-//        
-//        self.addSubview(barChart)
+        var circleChart = PNCircleChart(frame: CGRectMake(30, 20, 200, 200), andTotal: 100020, andCurrent: 80293)
+        circleChart.backgroundColor = UIColor.clearColor()
+        circleChart.strokeColor = DAT_MAROON
+        circleChart.lineWidth = 20
+        circleChart.labelColor = UIColor.darkGrayColor()
+        circleChart.strokeChart()
+        
+        self.addSubview(circleChart)
         
     }
 

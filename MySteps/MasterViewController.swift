@@ -41,10 +41,20 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         nib = UINib(nibName: "CellHistory", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: "CellHistory")
         
+        // Background view
+        var backgroundView = UIView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+        backgroundView.backgroundColor = UIColor.grayColor()
+        var label = UILabel(frame: CGRectMake(0, UIScreen.mainScreen().bounds.height - 50, UIScreen.mainScreen().bounds.width, 50))
+        label.text = "Always Keep Moving :)"
+        label.font = UIFont(name: "HelveticaNeue-Thin", size: 19)
+        label.textColor = UIColor.whiteColor()
+        label.textAlignment = NSTextAlignment.Center
+        backgroundView.addSubview(label)
         
+        self.tableView.backgroundView = backgroundView
         
         // Set Nav Label
-        var l = UILabel()
+        var fancyNavLabel = UILabel()
         var titleLabelText = NSMutableAttributedString(string: "Count My Steps")
         var boldAttDic = NSDictionary(object: UIFont.boldSystemFontOfSize(24.0), forKey: NSFontAttributeName)
         var thinAttDic = NSDictionary(object: UIFont(name: "HelveticaNeue-Thin", size: 24.0), forKey: NSFontAttributeName);
@@ -52,18 +62,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(0, 5))
         titleLabelText.setAttributes(thinAttDic, range: NSMakeRange(9, 5))
         
-        l.attributedText = titleLabelText
-        l.textColor = UIColor.whiteColor()
-        l.textAlignment = NSTextAlignment.Center
-        self.navigationItem.titleView = l;
-        l.sizeToFit()
+        fancyNavLabel.attributedText = titleLabelText
+        fancyNavLabel.textColor = UIColor.whiteColor()
+        fancyNavLabel.textAlignment = NSTextAlignment.Center
+        self.navigationItem.titleView = fancyNavLabel;
+        fancyNavLabel.sizeToFit()
         
-        // set the settings button
-
-//        let editButton = UIBarButtonItem(title: "set", style: .Bordered, target: self, action: "none")
-//        self.navigationItem.leftBarButtonItem = editButton
-        // set the share button
-
+        // Settings button setup
+        
+        // Share button setup
         let shareButton = UIBarButtonItem(barButtonSystemItem: .Action, target: self, action: "l")
         shareButton.style = .Bordered
         shareButton.tintColor = UIColor.whiteColor()

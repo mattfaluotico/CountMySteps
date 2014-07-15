@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16898952A35A4E1BA16E894C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAFAF51F68D445A8C1C0E85 /* libPods.a */; };
 		3318D33E195126C1005781FC /* StepDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D33D195126C1005781FC /* StepDataHandler.swift */; };
 		3318D341195128D6005781FC /* Pedometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D340195128D6005781FC /* Pedometer.swift */; };
 		3318D34419512ACF005781FC /* StepConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318D34319512ACF005781FC /* StepConversion.swift */; };
@@ -24,14 +25,6 @@
 		33578B7C194A56A600120216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7A194A56A600120216 /* Main.storyboard */; };
 		33578B7E194A56A600120216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7D194A56A600120216 /* Images.xcassets */; };
 		33578B8A194A56A600120216 /* MyStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B89194A56A600120216 /* MyStepsTests.swift */; };
-		335D86D3197362360033521E /* PNBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86CA197362360033521E /* PNBar.swift */; };
-		335D86D4197362360033521E /* PNBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86CB197362360033521E /* PNBarChart.swift */; };
-		335D86D5197362360033521E /* PNChartConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86CC197362360033521E /* PNChartConfig.swift */; };
-		335D86D6197362360033521E /* PNChartDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86CD197362360033521E /* PNChartDelegate.swift */; };
-		335D86D7197362360033521E /* PNChartLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86CF197362360033521E /* PNChartLabel.swift */; };
-		335D86D8197362360033521E /* PNLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86D0197362360033521E /* PNLineChart.swift */; };
-		335D86D9197362360033521E /* PNLineChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86D1197362360033521E /* PNLineChartData.swift */; };
-		335D86DA197362360033521E /* PNValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D86D2197362360033521E /* PNValue.swift */; };
 		338BE17B196742FA009C816A /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 338BE17A196742FA009C816A /* StepDay.m */; };
 		33C062371969876C005D9EFB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062361969876B005D9EFB /* NavigationViewController.swift */; };
 		33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */; };
@@ -76,14 +69,6 @@
 		33578B83194A56A600120216 /* MyStepsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyStepsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33578B88194A56A600120216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33578B89194A56A600120216 /* MyStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStepsTests.swift; sourceTree = "<group>"; };
-		335D86CA197362360033521E /* PNBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBar.swift; sourceTree = "<group>"; };
-		335D86CB197362360033521E /* PNBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNBarChart.swift; sourceTree = "<group>"; };
-		335D86CC197362360033521E /* PNChartConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartConfig.swift; sourceTree = "<group>"; };
-		335D86CD197362360033521E /* PNChartDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartDelegate.swift; sourceTree = "<group>"; };
-		335D86CF197362360033521E /* PNChartLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNChartLabel.swift; sourceTree = "<group>"; };
-		335D86D0197362360033521E /* PNLineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChart.swift; sourceTree = "<group>"; };
-		335D86D1197362360033521E /* PNLineChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNLineChartData.swift; sourceTree = "<group>"; };
-		335D86D2197362360033521E /* PNValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PNValue.swift; sourceTree = "<group>"; };
 		338BE178196742FA009C816A /* MySteps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySteps-Bridging-Header.h"; sourceTree = "<group>"; };
 		338BE179196742FA009C816A /* StepDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDay.h; path = StepHandling/StepDay.h; sourceTree = "<group>"; };
 		338BE17A196742FA009C816A /* StepDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDay.m; path = StepHandling/StepDay.m; sourceTree = "<group>"; };
@@ -96,6 +81,8 @@
 		33EE8D261957D54D00C3AD0C /* CellStatsTotal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsTotal.swift; path = CustomCells/CellStatsTotal.swift; sourceTree = "<group>"; };
 		33EE8D271957D54D00C3AD0C /* CellWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellWeek.swift; path = CustomCells/CellWeek.swift; sourceTree = "<group>"; };
 		33EE8D281957D54D00C3AD0C /* CellWeek.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellWeek.xib; path = CustomCells/CellWeek.xib; sourceTree = "<group>"; };
+		6BAFAF51F68D445A8C1C0E85 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA74A4B613174FC8AB12E28A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +92,7 @@
 			files = (
 				335410F1195BBB9300E766D8 /* CoreMotion.framework in Frameworks */,
 				335410EF195BBB8900E766D8 /* HealthKit.framework in Frameworks */,
+				16898952A35A4E1BA16E894C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +140,7 @@
 			children = (
 				335410F0195BBB9300E766D8 /* CoreMotion.framework */,
 				335410EE195BBB8900E766D8 /* HealthKit.framework */,
+				6BAFAF51F68D445A8C1C0E85 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -163,7 +152,7 @@
 				33578B6E194A56A600120216 /* MySteps */,
 				33578B86194A56A600120216 /* MyStepsTests */,
 				33578B6D194A56A600120216 /* Products */,
-				335D86C8197362360033521E /* PNChart */,
+				CA74A4B613174FC8AB12E28A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,37 +211,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		335D86C8197362360033521E /* PNChart */ = {
-			isa = PBXGroup;
-			children = (
-				335D86C9197362360033521E /* PNBarChart */,
-				335D86CC197362360033521E /* PNChartConfig.swift */,
-				335D86CD197362360033521E /* PNChartDelegate.swift */,
-				335D86CE197362360033521E /* PNLineChart */,
-				335D86D2197362360033521E /* PNValue.swift */,
-			);
-			path = PNChart;
-			sourceTree = "<group>";
-		};
-		335D86C9197362360033521E /* PNBarChart */ = {
-			isa = PBXGroup;
-			children = (
-				335D86CA197362360033521E /* PNBar.swift */,
-				335D86CB197362360033521E /* PNBarChart.swift */,
-			);
-			path = PNBarChart;
-			sourceTree = "<group>";
-		};
-		335D86CE197362360033521E /* PNLineChart */ = {
-			isa = PBXGroup;
-			children = (
-				335D86CF197362360033521E /* PNChartLabel.swift */,
-				335D86D0197362360033521E /* PNLineChart.swift */,
-				335D86D1197362360033521E /* PNLineChartData.swift */,
-			);
-			path = PNLineChart;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -260,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33578B8D194A56A600120216 /* Build configuration list for PBXNativeTarget "MySteps" */;
 			buildPhases = (
+				00E3DAB77F03425391FF1E98 /* Check Pods Manifest.lock */,
 				33578B68194A56A600120216 /* Sources */,
 				33578B69194A56A600120216 /* Frameworks */,
 				33578B6A194A56A600120216 /* Resources */,
+				22A6FDBCECBF41E59C701D21 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -353,21 +313,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00E3DAB77F03425391FF1E98 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		22A6FDBCECBF41E59C701D21 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33578B68194A56A600120216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				33EE8D2C1957D54D00C3AD0C /* CellWeek.swift in Sources */,
-				335D86D5197362360033521E /* PNChartConfig.swift in Sources */,
-				335D86D3197362360033521E /* PNBar.swift in Sources */,
 				3318D34819512B94005781FC /* CellHistory.swift in Sources */,
 				33578B72194A56A600120216 /* AppDelegate.swift in Sources */,
 				33C062371969876C005D9EFB /* NavigationViewController.swift in Sources */,
-				335D86D9197362360033521E /* PNLineChartData.swift in Sources */,
 				3318D33E195126C1005781FC /* StepDataHandler.swift in Sources */,
 				3318D34C19512C01005781FC /* CellStatsAverage.swift in Sources */,
-				335D86D8197362360033521E /* PNLineChart.swift in Sources */,
 				33578B75194A56A600120216 /* MySteps.xcdatamodeld in Sources */,
 				3318D34619512B88005781FC /* CellToday.swift in Sources */,
 				33EE8D2B1957D54D00C3AD0C /* CellStatsTotal.swift in Sources */,
@@ -377,11 +366,7 @@
 				3318D34419512ACF005781FC /* StepConversion.swift in Sources */,
 				33293D53196CC0870019C255 /* CMSConstants.swift in Sources */,
 				3318D341195128D6005781FC /* Pedometer.swift in Sources */,
-				335D86DA197362360033521E /* PNValue.swift in Sources */,
-				335D86D4197362360033521E /* PNBarChart.swift in Sources */,
 				33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */,
-				335D86D6197362360033521E /* PNChartDelegate.swift in Sources */,
-				335D86D7197362360033521E /* PNChartLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,8 +479,8 @@
 		};
 		33578B8E194A56A600120216 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA74A4B613174FC8AB12E28A /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -509,8 +494,8 @@
 		};
 		33578B8F194A56A600120216 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA74A4B613174FC8AB12E28A /* Pods.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
