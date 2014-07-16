@@ -102,6 +102,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         if (indexPath.row >= INDEX_HISTORY_CELL) {
             cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
+            (cell as CellHistory).configCell(stepHandler, index: 1)
             return cell;
         }
         
