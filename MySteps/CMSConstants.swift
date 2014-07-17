@@ -26,3 +26,11 @@ let HEIGHT_STATS_TOTAL_CELL: CGFloat = 180
 let HEIGHT_HISTORY_CELL: CGFloat = 65
 
 let DAT_MAROON = UIColor(red: 0.59, green: 0, blue: 0 , alpha: 1)
+
+// User Settings Stirngs
+
+let USER_HEIGHT  = "height"
+let USER_WEIGHT  = "weight"
+let USER_GOAL    = "goal"
+let USER_GENDER  = "gender"
+
