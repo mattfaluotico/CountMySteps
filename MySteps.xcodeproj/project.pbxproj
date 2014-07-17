@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331388B5197755DF00948961 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 331388B4197755DF00948961 /* ConfirmViewController.m */; };
 		33184874194FD97C0021388F /* myinfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3318486E194FD97C0021388F /* myinfo.png */; };
 		33184875194FD97C0021388F /* myinfo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3318486F194FD97C0021388F /* myinfo@2x.png */; };
 		33184876194FD97C0021388F /* pedometer.png in Resources */ = {isa = PBXBuildFile; fileRef = 33184870194FD97C0021388F /* pedometer.png */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		331388B3197755DF00948961 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
+		331388B4197755DF00948961 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		3318486E194FD97C0021388F /* myinfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myinfo.png; sourceTree = "<group>"; };
 		3318486F194FD97C0021388F /* myinfo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myinfo@2x.png"; sourceTree = "<group>"; };
 		33184870194FD97C0021388F /* pedometer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pedometer.png; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				FB04F2061814CE7A00AAA897 /* witAppDelegate.m */,
 				FB04F2111814CE7A00AAA897 /* Images.xcassets */,
 				FB04F1FD1814CE7A00AAA897 /* Supporting Files */,
+				331388B3197755DF00948961 /* ConfirmViewController.h */,
+				331388B4197755DF00948961 /* ConfirmViewController.m */,
 			);
 			path = WalkItOut;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				33D42D8C1936B6200064A2E7 /* MFGetSteps.m in Sources */,
 				332563F7193436CB005D0CA2 /* StepDay.m in Sources */,
 				33DCF70F192BEA7800781BEF /* userSettingConstants.m in Sources */,
+				331388B5197755DF00948961 /* ConfirmViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -69,7 +69,7 @@
     long diff = closeToGoal - usersGoal;
     
     if (diff > 0) {
-        self.goalLabel.text = [NSString stringWithFormat:@"You reached your goal of %d%@", usersGoal, unitsString];
+        self.goalLabel.text = [NSString stringWithFormat:@"You reached your goal of %d %@", usersGoal, unitsString];
     } else {
         diff = -diff;
         self.goalLabel.text = [NSString stringWithFormat:@"You're %li %@ away from your goal", diff, unitsString];

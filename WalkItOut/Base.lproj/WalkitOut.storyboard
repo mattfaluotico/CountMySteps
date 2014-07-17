@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.7" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qVi-3R-XLs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
     </dependencies>
     <scenes>
-        <!--Pedometer View Controller - Pedometer-->
+        <!--Pedometer-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
                 <viewController title="Pedometer" id="CZ4-MO-1fc" customClass="PedometerViewController" sceneMemberID="viewController">
@@ -103,7 +104,7 @@
             </objects>
             <point key="canvasLocation" x="653" y="-212"/>
         </scene>
-        <!--Statistics View Controller - Statistics-->
+        <!--Statistics-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
                 <viewController title="Statistics" id="QUy-BD-bpt" customClass="StatisticsViewController" sceneMemberID="viewController">
@@ -175,7 +176,7 @@
             </objects>
             <point key="canvasLocation" x="653" y="498"/>
         </scene>
-        <!--My Info View Controller - MyInfo-->
+        <!--MyInfo-->
         <scene sceneID="rsQ-dA-r3H">
             <objects>
                 <viewController title="MyInfo" id="AG8-mD-bew" customClass="MyInfoViewController" sceneMemberID="viewController">
@@ -289,10 +290,51 @@
             </objects>
             <point key="canvasLocation" x="653" y="1186"/>
         </scene>
-        <!--Wit Tab Bar - MySteps-->
+        <!--Confirm View Controller-->
+        <scene sceneID="a1K-No-twh">
+            <objects>
+                <viewController storyboardIdentifier="confirm" id="qVi-3R-XLs" customClass="ConfirmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hcn-Hg-d9p"/>
+                        <viewControllerLayoutGuide type="bottom" id="o04-Gl-E4s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DMZ-Ef-9EJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="235" translatesAutoresizingMaskIntoConstraints="NO" id="UjU-ud-Yb1">
+                                <rect key="frame" x="43" y="84" width="235" height="255"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIH-1E-CHQ">
+                                <rect key="frame" x="110" y="373" width="100" height="100"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Let's go! ">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8YX-ce-x5E" kind="modal" id="14Z-oZ-uPf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59188179350000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="cIH-1E-CHQ" id="Vta-G6-4bh"/>
+                        <outlet property="labelAlert" destination="UjU-ud-Yb1" id="fBG-9s-OMS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tzl-0N-VPj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-458" y="972"/>
+        </scene>
+        <!--MySteps-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <tabBarController title="MySteps" id="8YX-ce-x5E" customClass="witTabBar" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tab" title="MySteps" id="8YX-ce-x5E" customClass="witTabBar" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Qy0-JO-OtE"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="JQR-rB-NYL">
@@ -321,6 +363,9 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4">
+            <size key="portraitSize" width="320" height="568"/>
+            <size key="landscapeSize" width="568" height="320"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
 </document>

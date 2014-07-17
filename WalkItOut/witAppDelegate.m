@@ -20,7 +20,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WalkitOut" bundle:nil];
+    
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"launchedPreviously"] || ![CMStepCounter isStepCountingAvailable]) {
+        UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"confirm"];
+        self.window.rootViewController = viewController;
+        [self.window makeKeyAndVisible];
+    } else {
+        UIViewController *viewController =  [storyboard instantiateViewControllerWithIdentifier:@"tab"];
+        self.window.rootViewController = viewController;
+        [self.window makeKeyAndVisible];
+    }
+    
+    
     // Override point for customization after application launch.
     return YES;
 }

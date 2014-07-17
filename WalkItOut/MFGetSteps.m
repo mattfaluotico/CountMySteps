@@ -102,7 +102,6 @@
         // subtract one day
         startOfDay = [startOfDay dateByAddingTimeInterval:-86400];
     }
-    
 }
 
 - (void) updateLabelToStepsToday: (PedometerViewController *) thisClassRef {
@@ -114,7 +113,7 @@
     NSDateComponents *components = [calendar components:NSYearCalendarUnit| NSMonthCalendarUnit| NSDayCalendarUnit fromDate:now];
     
     NSDate *startOfDay = [calendar dateFromComponents:components];
-        
+    
     [_stepCounter queryStepCountStartingFrom:startOfDay
                                           to:now
                                      toQueue:_stepOperationQueue
@@ -125,10 +124,11 @@
                                      } else {
                                          
                                          [thisClassRef viewFromNumberOfSteps:numberOfSteps];
+
  
                                      }
                                  }];
-    
+
 }
 
 
