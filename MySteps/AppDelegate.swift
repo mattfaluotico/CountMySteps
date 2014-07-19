@@ -20,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = self.window!.rootViewController as UINavigationController
         let controller = navigationController.topViewController as MasterViewController
         controller.managedObjectContext = self.managedObjectContext
+        
+        if (true) {
+            // set the root view as the main
+        } else {
+            // set the root view as splash screen
+        }
+        
+        
         return true
     }
 

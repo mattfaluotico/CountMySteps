@@ -78,6 +78,9 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <variation key="widthClass=compact" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        </variation>
                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
                         </variation>
@@ -150,6 +153,9 @@
                             </tableViewCell>
                         </prototypes>
                         <sections/>
+                        <variation key="widthClass=compact" ambiguous="YES">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        </variation>
                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="640"/>
                         </variation>
@@ -172,7 +178,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fRf-7p-dW6"/>
+        <segue reference="ZCp-40-gMg"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.59188179350000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

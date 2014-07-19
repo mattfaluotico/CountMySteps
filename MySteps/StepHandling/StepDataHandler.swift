@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class StepDataHandler: NSObject {
     
+    var managedObject: NSManagedObjectContext?
     
     var numberOfSteps = Int()
     var distance : Double {
@@ -46,6 +48,7 @@ class StepDataHandler: NSObject {
         
         super.init()
         
+        self.managedObject = APP_DELEGATE.managedObjectContext
         
     }
     

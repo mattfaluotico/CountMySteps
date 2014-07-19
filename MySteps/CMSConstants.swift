@@ -34,3 +34,6 @@ let USER_WEIGHT  = "weight"
 let USER_GOAL    = "goal"
 let USER_GENDER  = "gender"
 
+let APP_DELEGATE = UIApplication.sharedApplication().delegate as AppDelegate
+
+// YourAppDelegate *appDelegate = (YourAppDelegate *)[[UIApplication sharedApplication] delegate];
