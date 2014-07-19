@@ -1,6 +1,8 @@
 # Walkitout
 
-**This project will build, but missing the majority of it's features**
+**Released to the [App Store!](https://itunes.apple.com/us/app/count-my-steps/id894425464?mt=8) This is still a beta test**
+
+**When iOS 8 comes out, expect a new and imporoved version!** Check out the iOS 8 branch for progress. 
 
 **This is some really messy code. As it was a learning process, some things are not done in the most efficient form. I plan on going back to polish and increase performance after the core features have been added**
 
