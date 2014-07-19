@@ -28,7 +28,7 @@
         self.labelAlert.text = @"Looks like I can count your steps!\nMake sure you allow me to use your Motion Data";
         self.button.enabled = YES;
     } else {
-        self.labelAlert.text = @"Your device or device settins do not allow me to count your steps.";
+        self.labelAlert.text = @"Your device or device settigs do not allow me to count your steps.";
         self.button.enabled = NO;
         self.button.layer.backgroundColor = [[UIColor darkGrayColor] CGColor];
         [self.button setTitle:@":(" forState:UIControlStateDisabled];
