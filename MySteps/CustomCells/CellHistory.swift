@@ -12,10 +12,10 @@ class CellHistory: UITableViewCell {
 
 //    Labels
     
-    @IBOutlet var LabalSteps: UILabel
-    @IBOutlet var LabelDistance: UILabel
-    @IBOutlet var LabelCalories: UILabel
-    @IBOutlet var LabelDate: UILabel
+    @IBOutlet var LabalSteps: UILabel?
+    @IBOutlet var LabelDistance: UILabel?
+    @IBOutlet var LabelCalories: UILabel?
+    @IBOutlet var LabelDate: UILabel?
     
     
     
@@ -59,9 +59,10 @@ class CellHistory: UITableViewCell {
         stepsAttString.addAttributes(largeFont, range: NSMakeRange(0, countElements(stepsValue)))
         stepsAttString.addAttributes(smallFont, range: NSMakeRange(countElements(stepsValue), 6))
         
-        LabelCalories.attributedText = calAttString
-        LabelDistance.attributedText = distAttString
-        LabalSteps.attributedText = stepsAttString
+
+        LabelCalories!.attributedText = calAttString
+        LabelDistance!.attributedText = distAttString
+        LabalSteps!.attributedText = stepsAttString
     }
 
 }

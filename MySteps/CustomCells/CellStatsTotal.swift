@@ -10,8 +10,8 @@ import UIKit
 
 class CellStatsTotal: UITableViewCell {
 
-    @IBOutlet var LabelTotal: UILabel
-    @IBOutlet var LabelTotalRef: UILabel
+    @IBOutlet var LabelTotal: UILabel?
+    @IBOutlet var LabelTotalRef: UILabel?
     
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
@@ -47,8 +47,8 @@ class CellStatsTotal: UITableViewCell {
         s.addAttributes(bold, range: NSMakeRange(25 + stepsLength +  8, distanceLength))
         s.addAttributes(bold, range: NSMakeRange(25 + stepsLength + 8 + distanceLength + 12, caloriesLength))
         
-        self.LabelTotalRef.text = stepHandler.realWorldDistance()
-        self.LabelTotal.attributedText = s
+        self.LabelTotalRef!.text = stepHandler.realWorldDistance()
+        self.LabelTotal!.attributedText = s
     }
 
 }

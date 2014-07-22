@@ -1,1 +1,1 @@
-../../PNChart/PNChart/PNBar.h
+../../PNChart/PNChart/PNBarChart/PNBar.h

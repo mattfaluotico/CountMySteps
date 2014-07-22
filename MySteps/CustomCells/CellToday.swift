@@ -10,11 +10,11 @@ import UIKit
 
 class CellToday: UITableViewCell {
     
-    @IBOutlet var LabelGoalStatus: UILabel
+    @IBOutlet var LabelGoalStatus: UILabel!
     
-    @IBOutlet var LabelCalories: UICountingLabel
-    @IBOutlet var LabelMiles: UICountingLabel
-    @IBOutlet var ButtonJumpToHistory: UIButton
+    @IBOutlet var LabelCalories: UICountingLabel!
+    @IBOutlet var LabelMiles: UICountingLabel!
+    @IBOutlet var ButtonJumpToHistory: UIButton!
     
 //    var parentTable = UITableViewController()
     
@@ -40,13 +40,12 @@ class CellToday: UITableViewCell {
         
 //        self.parentTable = parentTable
         
+        println("Config Today")
+        
         self.ButtonJumpToHistory.layer.backgroundColor = DAT_MAROON.CGColor
         self.ButtonJumpToHistory.layer.cornerRadius = self.ButtonJumpToHistory.frame.height / 2
         self.ButtonJumpToHistory.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        self.ButtonJumpToHistory.layer.shadowOffset = CGSizeMake(3, 0)
-        self.ButtonJumpToHistory.layer.shadowColor = UIColor.darkGrayColor().CGColor
-        self.ButtonJumpToHistory.layer.shadowOpacity = 0.8
-        self.ButtonJumpToHistory.layer.shadowRadius = 4
+      
         
         
         var goal = stepData.temp_goal
@@ -114,7 +113,8 @@ class CellToday: UITableViewCell {
     
     func drawChart() {
         
-        var circleChart = PNCircleChart(frame: CGRectMake(30, 20, 200, 200), andTotal: 100020, andCurrent: 80293)
+        
+        var circleChart = PNCircleChart(frame: CGRectMake(30, 20, 200, 200), andTotal: 100, andCurrent: 200, andClockwise: true, andShadow: true)
         circleChart.backgroundColor = UIColor.clearColor()
         circleChart.strokeColor = DAT_MAROON
         circleChart.lineWidth = 20

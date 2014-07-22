@@ -10,8 +10,8 @@ import UIKit
 
 class CellStatsAverage: UITableViewCell {
 
-    @IBOutlet var LabelAverageSteps: UILabel
-    @IBOutlet var LabelAverageCaloriesAndDistance: UILabel
+    @IBOutlet var LabelAverageSteps: UILabel?
+    @IBOutlet var LabelAverageCaloriesAndDistance: UILabel?
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -41,14 +41,14 @@ class CellStatsAverage: UITableViewCell {
         var averageSteps = NSMutableAttributedString(string: "On average, you're walking \(numString) steps a day")
         averageSteps.setAttributes(redFont, range: NSMakeRange(27, numStringLength))
         
-        self.LabelAverageSteps.attributedText = averageSteps
+        self.LabelAverageSteps!.attributedText = averageSteps
         
         
         var caloriesAndDistanceAttributeString = NSMutableAttributedString(string: "That's \(numString) calories and \(numString) miles")
         caloriesAndDistanceAttributeString.setAttributes(redFont, range: NSMakeRange(7, numStringLength))
         caloriesAndDistanceAttributeString.setAttributes(redFont, range: NSMakeRange(7 + numStringLength + 14, numStringLength))
         
-        self.LabelAverageCaloriesAndDistance.attributedText = caloriesAndDistanceAttributeString
+        self.LabelAverageCaloriesAndDistance!.attributedText = caloriesAndDistanceAttributeString
 
     }
 

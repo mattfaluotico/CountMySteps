@@ -14,13 +14,18 @@
  * When user click on the chart line
  *
  */
-- (void)userClickedOnLinePoint:(CGPoint )point lineIndex:(NSInteger)lineIndex;
+- (void)userClickedOnLinePoint:(CGPoint)point lineIndex:(NSInteger)lineIndex;
 
 /**
  * When user click on the chart line key point
  *
  */
-- (void)userClickedOnLineKeyPoint:(CGPoint )point lineIndex:(NSInteger)lineIndex andPointIndex:(NSInteger)pointIndex;
+- (void)userClickedOnLineKeyPoint:(CGPoint)point lineIndex:(NSInteger)lineIndex andPointIndex:(NSInteger)pointIndex;
 
+/**
+ * When user click on a chart bar
+ *
+ */
+- (void)userClickedOnBarCharIndex:(NSInteger)barIndex;
 
 @end

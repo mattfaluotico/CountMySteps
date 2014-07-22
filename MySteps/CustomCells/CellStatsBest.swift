@@ -10,10 +10,10 @@ import UIKit
 
 class CellStatsBest: UITableViewCell {
 
-    @IBOutlet var LabelBestDay: UILabel
-    @IBOutlet var LabelBestSteps: UILabel
-    @IBOutlet var LabelBestDistance: UILabel
-    @IBOutlet var LabelBestCals: UILabel
+    @IBOutlet var LabelBestDay: UILabel?
+    @IBOutlet var LabelBestSteps: UILabel?
+    @IBOutlet var LabelBestDistance: UILabel?
+    @IBOutlet var LabelBestCals: UILabel?
     
     
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
@@ -36,9 +36,9 @@ class CellStatsBest: UITableViewCell {
     func configCell(stepData: StepDataHandler) {
         
         var bestDay = NSMutableAttributedString (string: "Your best day was MM/dd/yyyy")
-        LabelBestSteps.text = "Steps: 542345"
-        LabelBestDistance.text = "Distance: 23 mi"
-        LabelBestCals.text = "Calories: 452 cal"
+        LabelBestSteps!.text = "Steps: 542345"
+        LabelBestDistance!.text = "Distance: 23 mi"
+        LabelBestCals!.text = "Calories: 452 cal"
         
         
     }

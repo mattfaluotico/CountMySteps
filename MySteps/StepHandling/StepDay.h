@@ -15,4 +15,6 @@
 @property (nonatomic, retain) NSNumber * steps;
 @property (nonatomic, retain) NSDate * day;
 
+- (NSString *) description;
+
 @end

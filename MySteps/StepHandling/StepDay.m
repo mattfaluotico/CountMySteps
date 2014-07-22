@@ -14,4 +14,10 @@
 @dynamic steps;
 @dynamic day;
 
+- (NSString *) description {
+    
+    return [NSString stringWithFormat:@"Steps: %@ Day: %@", self.steps, self.day];
+
+}
+
 @end

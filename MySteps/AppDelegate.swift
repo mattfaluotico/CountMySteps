@@ -17,9 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
-        let navigationController = self.window!.rootViewController as UINavigationController
-        let controller = navigationController.topViewController as MasterViewController
-        controller.managedObjectContext = self.managedObjectContext
+//        let navigationController = self.window!.rootViewController as UINavigationController
+//        let controller = navigationController.topViewController as MasterViewController
+//        controller.managedObjectContext = self.managedObjectContext
+        
+                
+        var mp = Pedometer()
+        mp.loadStep()
         
         if (true) {
             // set the root view as the main

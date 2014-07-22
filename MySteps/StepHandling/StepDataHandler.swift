@@ -57,7 +57,7 @@ class StepDataHandler: NSObject {
         super.init()
         
         var pedometer = Pedometer();
-        pedometer.getTodaysStep();
+//        pedometer.getTodaysStep();
         numberOfSteps = pedometer.steps.integerValue;
         
         if (pedometer.distance) {
