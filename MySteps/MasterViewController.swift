@@ -92,7 +92,15 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-
+    
+    override func tableView(tableView: UITableView!, didEndDisplayingCell cell: UITableViewCell!, forRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        if (indexPath.row < INDEX_HISTORY_CELL ) {
+            println("remove cell")
+            cell.removeFromSuperview()
+        }
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        let sectionInfo = self.fetchedResultsController.sections[section] as NSFetchedResultsSectionInfo
 //        return sectionInfo.numberOfObjects
@@ -102,6 +110,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = UITableViewCell()
+        
+        if (cell == nil) {
+            println("the cell be null")
+        }
         
         if (indexPath.row >= INDEX_HISTORY_CELL) {
             cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory

@@ -135,13 +135,6 @@
 			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
-		33499133197C54A800C5F27F /* CMSTodayWidget */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = CMSTodayWidget;
-			sourceTree = "<group>";
-		};
 		335410F2195BBBA800E766D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +148,6 @@
 		33578B63194A56A600120216 = {
 			isa = PBXGroup;
 			children = (
-				33499133197C54A800C5F27F /* CMSTodayWidget */,
 				335410F2195BBBA800E766D8 /* Frameworks */,
 				33578B6E194A56A600120216 /* MySteps */,
 				33578B86194A56A600120216 /* MyStepsTests */,
