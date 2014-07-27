@@ -28,10 +28,12 @@
         self.labelAlert.text = @"Looks like I can count your steps!\nMake sure you allow me to use your Motion Data";
         self.button.enabled = YES;
     } else {
-        self.labelAlert.text = @"Your device or device settigs do not allow me to count your steps.";
+        self.labelAlert.text = @"Your device or device settings do not allow me to count your steps.";
         self.button.enabled = NO;
         self.button.layer.backgroundColor = [[UIColor darkGrayColor] CGColor];
         [self.button setTitle:@":(" forState:UIControlStateDisabled];
+        self.button.layer.borderColor = [[UIColor whiteColor] CGColor];
+        self.button.layer.borderWidth = 3;
     }
     
     NSUserDefaults  *defaultSettings = [NSUserDefaults standardUserDefaults ];
