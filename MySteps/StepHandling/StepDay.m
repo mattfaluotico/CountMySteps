@@ -2,7 +2,7 @@
 //  StepDay.m
 //  MySteps
 //
-//  Created by Matthew Faluotico on 7/4/14.
+//  Created by Matthew Faluotico on 8/11/14.
 //  Copyright (c) 2014 Matthew Faluotico. All rights reserved.
 //
 
@@ -11,13 +11,7 @@
 
 @implementation StepDay
 
-@dynamic steps;
 @dynamic day;
-
-- (NSString *) description {
-    
-    return [NSString stringWithFormat:@"Steps: %@ Day: %@", self.steps, self.day];
-
-}
+@dynamic steps;
 
 @end

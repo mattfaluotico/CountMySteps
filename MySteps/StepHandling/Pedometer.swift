@@ -24,6 +24,43 @@ class Pedometer: NSObject {
     }
     
     
+    public func quertyStepsFromLastDate() {
+        
+        // gets the start of the day
+        var cal = NSCalendar.autoupdatingCurrentCalendar()
+        var components = cal.components(.DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit, fromDate:NSDate())
+        var today = cal.dateFromComponents(components)
+        
+        var lastDate : NSDate? = NSUserDefaults.standardUserDefaults().objectForKey(LAST_TOUCHED_DAY) as? NSDate
+        
+        if(!lastDate) {
+            lastDate = today
+        }
+        
+        println("Diff: \(lastDate!.timeIntervalSinceNow)")
+        
+        if (lastDate!.timeIntervalSinceNow >= 604800) {
+            println("More than 7 days ago")
+            lastDate = today.dateByAddingTimeInterval(604800);
+            components = cal.components(.DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit, fromDate:lastDate)
+            lastDate = cal.dateFromComponents(components)
+        }
+        
+        // Get all entried in database after lastTouchedDate
+        var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext as NSManagedObjectContext
+        
+        
+        while (lastDate?.compare(today) != NSComparisonResult.OrderedSame) {
+            
+        }
+        
+        
+        
+        NSUserDefaults.standardUserDefaults().setObject(today, forKey: LAST_TOUCHED_DAY)
+    }
+    
+    
+    
     var weeklySteps = NSMutableDictionary()
     
     
@@ -61,37 +98,6 @@ class Pedometer: NSObject {
         println(weeklySteps)
         
     }
-    
-//        stepCounter.startPedometerUpdatesFromDate(startOfDay, withHandler: { data, error in
-//            
-//            if (!error) {
-//                
-//                self.steps = data.numberOfSteps;
-//                
-//                self.steps = data.numberOfSteps
-////                self.day = data.startDate
-//                
-//                if CMPedometer.isDistanceAvailable() {
-//                    self.distance = data.distance;
-//                }
-//                
-//                if CMPedometer.isFloorCountingAvailable() {
-//                    self.floorsUp = data.floorsAscended;
-//                    self.floorsDown = data.floorsAscended;
-//                }
-//
-//                dispatch_semaphore_signal(waitForSteps)
-//            } else {
-//                println("Error collecting steps");
-//            }
-//            
-//            
-//            });
-//        
-//        dispatch_semaphore_wait(waitForSteps, DISPATCH_TIME_FOREVER)
-//        
-//        print(self.steps)
-//    }
     
     class func canCountSteps() -> Bool {
         return CMPedometer.isStepCountingAvailable()

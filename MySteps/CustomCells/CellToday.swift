@@ -12,9 +12,9 @@ class CellToday: UITableViewCell {
     
     @IBOutlet var LabelGoalStatus: UILabel!
     
-    @IBOutlet var LabelCalories: UICountingLabel!
-    @IBOutlet var LabelMiles: UICountingLabel!
-    @IBOutlet var ButtonJumpToHistory: UIButton!
+    @IBOutlet var LabelCalories: UICountingLabel?
+    @IBOutlet var LabelMiles: UICountingLabel?
+    @IBOutlet var ButtonJumpToHistory: UIButton?
     
 //    var parentTable = UITableViewController()
     
@@ -40,11 +40,11 @@ class CellToday: UITableViewCell {
         
 //        self.parentTable = parentTable
         
-        println("Config Today")
+        println("Config Today Cell")
         
-        self.ButtonJumpToHistory.layer.backgroundColor = DAT_MAROON.CGColor
-        self.ButtonJumpToHistory.layer.cornerRadius = self.ButtonJumpToHistory.frame.height / 2
-        self.ButtonJumpToHistory.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        self.ButtonJumpToHistory!.layer.backgroundColor = DAT_MAROON.CGColor
+        self.ButtonJumpToHistory!.layer.cornerRadius = self.ButtonJumpToHistory!.frame.height / 2
+        self.ButtonJumpToHistory!.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
       
         
         
@@ -70,12 +70,12 @@ class CellToday: UITableViewCell {
         
         self.LabelGoalStatus.attributedText = goalLabelAtt
         
-        self.ButtonJumpToHistory.addTarget(parentTable, action: "scroll", forControlEvents: UIControlEvents.TouchUpInside)
+        self.ButtonJumpToHistory!.addTarget(parentTable, action: "scroll", forControlEvents: UIControlEvents.TouchUpInside)
         
-        self.LabelCalories.format = "%d cal"
-        self.LabelMiles.format = "%d mi"
-        self.LabelCalories.countFrom(0, to: 2234, withDuration: 2)
-        self.LabelMiles.countFrom(0, to: 4224, withDuration: 2)
+        self.LabelCalories!.format = "%d cal"
+        self.LabelMiles!.format = "%d mi"
+        self.LabelCalories!.countFrom(0, to: 2234, withDuration: 2)
+        self.LabelMiles!.countFrom(0, to: 4224, withDuration: 2)
     
         drawChart()
     }

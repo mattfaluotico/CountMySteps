@@ -25,8 +25,9 @@
 		33578B7C194A56A600120216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7A194A56A600120216 /* Main.storyboard */; };
 		33578B7E194A56A600120216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7D194A56A600120216 /* Images.xcassets */; };
 		33578B8A194A56A600120216 /* MyStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B89194A56A600120216 /* MyStepsTests.swift */; };
-		338BE17B196742FA009C816A /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 338BE17A196742FA009C816A /* StepDay.m */; };
 		33C062371969876C005D9EFB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062361969876B005D9EFB /* NavigationViewController.swift */; };
+		33CCB771199904EC009132AE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CCB770199904EC009132AE /* libc++.dylib */; };
+		33CCB77419990BC7009132AE /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB77319990BC7009132AE /* StepDay.m */; };
 		33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */; };
 		33EE8D1F1957D46F00C3AD0C /* CellStatsBest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */; };
 		33EE8D231957D52700C3AD0C /* CellStatsTotal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */; };
@@ -70,9 +71,10 @@
 		33578B88194A56A600120216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33578B89194A56A600120216 /* MyStepsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStepsTests.swift; sourceTree = "<group>"; };
 		338BE178196742FA009C816A /* MySteps-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySteps-Bridging-Header.h"; sourceTree = "<group>"; };
-		338BE179196742FA009C816A /* StepDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDay.h; path = StepHandling/StepDay.h; sourceTree = "<group>"; };
-		338BE17A196742FA009C816A /* StepDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDay.m; path = StepHandling/StepDay.m; sourceTree = "<group>"; };
 		33C062361969876B005D9EFB /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		33CCB770199904EC009132AE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		33CCB77219990BC7009132AE /* StepDay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StepDay.h; path = StepHandling/StepDay.h; sourceTree = "<group>"; };
+		33CCB77319990BC7009132AE /* StepDay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StepDay.m; path = StepHandling/StepDay.m; sourceTree = "<group>"; };
 		33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellStatsBest.swift; path = CustomCells/CellStatsBest.swift; sourceTree = "<group>"; };
 		33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsBest.xib; path = CustomCells/CellStatsBest.xib; sourceTree = "<group>"; };
 		33EE8D221957D52700C3AD0C /* CellStatsTotal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CellStatsTotal.xib; path = CustomCells/CellStatsTotal.xib; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33CCB771199904EC009132AE /* libc++.dylib in Frameworks */,
 				335410F1195BBB9300E766D8 /* CoreMotion.framework in Frameworks */,
 				335410EF195BBB8900E766D8 /* HealthKit.framework in Frameworks */,
 				16898952A35A4E1BA16E894C /* libPods.a in Frameworks */,
@@ -109,6 +112,8 @@
 		3318D33F195126D6005781FC /* StepHandling */ = {
 			isa = PBXGroup;
 			children = (
+				33CCB77219990BC7009132AE /* StepDay.h */,
+				33CCB77319990BC7009132AE /* StepDay.m */,
 				3318D33D195126C1005781FC /* StepDataHandler.swift */,
 				3318D340195128D6005781FC /* Pedometer.swift */,
 				3318D34319512ACF005781FC /* StepConversion.swift */,
@@ -138,6 +143,7 @@
 		335410F2195BBBA800E766D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				33CCB770199904EC009132AE /* libc++.dylib */,
 				335410F0195BBB9300E766D8 /* CoreMotion.framework */,
 				335410EE195BBB8900E766D8 /* HealthKit.framework */,
 				6BAFAF51F68D445A8C1C0E85 /* libPods.a */,
@@ -177,8 +183,6 @@
 				33C062361969876B005D9EFB /* NavigationViewController.swift */,
 				33578B7D194A56A600120216 /* Images.xcassets */,
 				33578B73194A56A600120216 /* MySteps.xcdatamodeld */,
-				338BE179196742FA009C816A /* StepDay.h */,
-				338BE17A196742FA009C816A /* StepDay.m */,
 				33578B6F194A56A600120216 /* Supporting Files */,
 				338BE178196742FA009C816A /* MySteps-Bridging-Header.h */,
 				33293D52196CC0870019C255 /* CMSConstants.swift */,
@@ -362,10 +366,10 @@
 				33EE8D2B1957D54D00C3AD0C /* CellStatsTotal.swift in Sources */,
 				33578B77194A56A600120216 /* MasterViewController.swift in Sources */,
 				33578B79194A56A600120216 /* ValidateViewController.swift in Sources */,
-				338BE17B196742FA009C816A /* StepDay.m in Sources */,
 				3318D34419512ACF005781FC /* StepConversion.swift in Sources */,
 				33293D53196CC0870019C255 /* CMSConstants.swift in Sources */,
 				3318D341195128D6005781FC /* Pedometer.swift in Sources */,
+				33CCB77419990BC7009132AE /* StepDay.m in Sources */,
 				33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

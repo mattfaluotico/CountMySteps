@@ -13,7 +13,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     var managedObjectContext: NSManagedObjectContext? = nil
     
-    var stepHandler = StepDataHandler(false)
+    var stepHandler : StepDataHandler? = nil;
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +24,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stepHandler = StepDataHandler(self.fetchedResultsController);
         
         // Register NIBS
         var nib = UINib(nibName: "CellToday", bundle: nil)
@@ -96,7 +98,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView!, didEndDisplayingCell cell: UITableViewCell!, forRowAtIndexPath indexPath: NSIndexPath!) {
         
         if (indexPath.row < INDEX_HISTORY_CELL ) {
-            println("remove cell")
+            println("remove cell at index \(indexPath.row)")
             cell.removeFromSuperview()
         }
     }
@@ -126,7 +128,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         case INDEX_TODAY_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellToday") as CellToday
             (cell as CellToday).configCell(stepHandler, parentTable: self)
-            println("deque")
         case INDEX_WEEK_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellWeek") as CellWeek
             (cell as CellWeek).configCell(stepHandler)

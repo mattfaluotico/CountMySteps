@@ -11,7 +11,8 @@ import CoreData
 
 class StepDataHandler: NSObject {
     
-    var managedObject: NSManagedObjectContext?
+    var context: NSManagedObjectContext?
+    var fetchedData: NSFetchedResultsController;
     
     var numberOfSteps = Int()
     var distance : Double {
@@ -48,14 +49,16 @@ class StepDataHandler: NSObject {
         
         super.init()
         
-        self.managedObject = APP_DELEGATE.managedObjectContext
+        self.context = APP_DELEGATE.managedObjectContext
         
     }
     
-    init() {
+    init(NSFetchedResultsController) {
         
         super.init()
         
+        // ---------
+                
         var pedometer = Pedometer();
 //        pedometer.getTodaysStep();
         numberOfSteps = pedometer.steps.integerValue;
@@ -78,6 +81,14 @@ class StepDataHandler: NSObject {
             numberOfFloorsUp = 0;
         }
     }
+    
+    func loadDatabase() -> [StepDay]  {
+        var delegate = UIApplication.sharedApplication().delegate as AppDelegate
+        self.context = delegate.managedObjectContext as NSManagedObjectContext
+        
+        
+    }
+    
 
     // MARK: Sending information back to the view controllers
     

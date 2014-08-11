@@ -47,7 +47,7 @@ class CellWeek: UITableViewCell {
     
     func drawChart() {
         
-        println("Stroke Chart")
+        println("Stroke Bar Chart")
         
         var barChart = PNBarChart(frame: CGRectMake(0, 75, 320.0, 240.0))
         barChart.xLabels = [" 1"," 2"," 3"," 4"," 5"," 6"]
