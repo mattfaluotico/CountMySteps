@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Pods/Realm/realm-cocoapods-0.82.0/ios/Realm.framework/Headers/Realm-Bridge.h">
-   </FileRef>
-   <FileRef
       location = "group:MySteps.xcodeproj">
    </FileRef>
    <FileRef
