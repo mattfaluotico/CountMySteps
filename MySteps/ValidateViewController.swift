@@ -15,7 +15,7 @@ class ValidateViewController: UIViewController {
     @IBOutlet var nextButton: UIButton?
     @IBOutlet var countingStatusLabel: UILabel?
     
-    init(coder aDecoder: NSCoder!)  {
+    required init(coder aDecoder: NSCoder)  {
         super.init(coder: aDecoder)
         
     }
@@ -36,11 +36,11 @@ class ValidateViewController: UIViewController {
         self.nextButton!.layer.cornerRadius = 5
         self.navigationItem!.setHidesBackButton(true, animated: false)
         
-        var canCountSteps = Pedometer.canCountSteps()
+        var canCountSteps = true;
         
         if (!canCountSteps) {
             
-            self.countingStatusLabel!.text = "Awesome! Looks like I will be able to count your steps for you\n :)"
+            self.countingStatusLabel!.text = "Awesome! Looks like I will be able to count steps for you\n :)"
             self.nextButton!.enabled = true
             // set NSUser Defaults for validated
             

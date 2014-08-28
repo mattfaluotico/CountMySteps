@@ -6,13 +6,21 @@
 //  Copyright (c) 2014 Matthew Faluotico. All rights reserved.
 //
 
+
+// This holds the array contaiing all steps
+
 import UIKit
 import CoreData
+import CoreMotion
 
 class StepDataHandler: NSObject {
     
+    var stepCounter: CMPedometer?;
+    
     var context: NSManagedObjectContext?
-    var fetchedData: NSFetchedResultsController;
+    var fetchedData: NSFetchedResultsController?;
+    
+    var history = NSArray();
     
     var numberOfSteps = Int()
     var distance : Double {
@@ -48,67 +56,13 @@ class StepDataHandler: NSObject {
     init(Bool) {
         
         super.init()
+        self.stepCounter = CMPedometer();
+        self.context = APP_DELEGATE.managedObjectContext;
         
-        self.context = APP_DELEGATE.managedObjectContext
-        
+        self.queryStepsFromLastTouchedDayToToday();
+        self.loadAll();
+        // TODO: Post notification
     }
-    
-    init(NSFetchedResultsController) {
-        
-        super.init()
-        
-        // ---------
-                
-        var pedometer = Pedometer();
-//        pedometer.getTodaysStep();
-        numberOfSteps = pedometer.steps.integerValue;
-        
-        if (pedometer.distance) {
-            distance = pedometer.distance!.doubleValue;
-        } else {
-//            distance = StepConversion.stepsToMiles(numberOfSteps)
-        }
-        
-        if (pedometer.floorsDown) {
-            numberOfFloorsDown = pedometer.floorsDown!.integerValue;
-        } else {
-            numberOfFloorsDown = 0;
-        }
-        
-        if (pedometer.floorsUp) {
-            numberOfFloorsUp = pedometer.floorsUp!.integerValue;
-        } else {
-            numberOfFloorsUp = 0;
-        }
-    }
-    
-    func loadDatabase() -> [StepDay]  {
-        var delegate = UIApplication.sharedApplication().delegate as AppDelegate
-        self.context = delegate.managedObjectContext as NSManagedObjectContext
-        
-        
-    }
-    
-
-    // MARK: Sending information back to the view controllers
-    
-    // Return Todays Steps
-    
-    // Return Today distance 
-    
-    // Return Today calories
-    
-    // Return Last 7 days as array
-    
-    // Return all days as sorted array HISTORY
-    
-    // Return Best Day
-    
-    // Return Average
-    
-    // Return Total
-    
-    // Return Total as it relates to real world walking
     
     func realWorldDistance() -> String {
         
@@ -173,22 +127,148 @@ class StepDataHandler: NSObject {
         return "That's a whole ton of walking!";
     }
     
-    // ------------------------------------------------------------------
+    // queries all of the steps into an array
+    func loadAll() {
     
-    // MARK: Getting step data from the Pedometer class
+        var fetchRequest = NSFetchRequest(entityName: "StepDay");
     
-    // Get Step Data
+        let sortDescriptor = NSSortDescriptor(key: "day", ascending: false);
+        let sortDescriptors = [sortDescriptor];
+        fetchRequest.sortDescriptors = [sortDescriptor];
     
-    // MARK: Updating the database
+        let e = NSErrorPointer();
     
-    // Get access to the database
+        // Array of all dates
+        self.history = self.context!.executeFetchRequest(fetchRequest, error: e);
+        
+        
+    }
     
-    // Update the database
+    // This is only called if there are more than 7 days between the last date and today.
+    // This should only happen if the user disables background refresh and has not opened
+    // the app in 7 days or more
+    // or on the first launch
+    private func queryStepsFromTheLast7Days() {
+        
+        var cal = NSCalendar.autoupdatingCurrentCalendar()
+        var components = cal.components(.DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit, fromDate:NSDate())
+        var today = cal.dateFromComponents(components)
+        
+        var comp = NSDateComponents()
+        comp.day = -7
+        
+        var sevenDaysAgo : NSDate = cal.dateByAddingComponents(comp, toDate: today!, options: NSCalendarOptions.MatchNextTime);
+        
+        var iteratorDay = sevenDaysAgo;
+        
+        // update components to add date
+        comp.day = 1;
+        
+        do {
+            
+            var startOfNextDay : NSDate = cal.dateByAddingComponents(comp, toDate: iteratorDay, options: NSCalendarOptions.MatchNextTime);
+            
+            stepCounter?.queryPedometerDataFromDate(iteratorDay, toDate: startOfNextDay, withHandler: { data, error in
+            
+            if(!(error != nil)) {
+                
+                var newSteps : StepDay = NSEntityDescription.insertNewObjectForEntityForName("StepDay", inManagedObjectContext: self.context) as StepDay;
+                
+                newSteps.day = iteratorDay;
+                newSteps.steps = data.numberOfSteps;
+                
+                var e = NSErrorPointer();
+                
+                self.context?.save(e);
+                
+            } else {
+                println("Error getting steps");
+                }
+            
+                });
+                
+                iteratorDay = startOfNextDay;
+            
+        } while(iteratorDay.compare(today!) == NSComparisonResult.OrderedAscending);
+
+        NSUserDefaults.standardUserDefaults().setObject(today!, forKey: LAST_TOUCHED_DAY);
+        NSUserDefaults.standardUserDefaults().synchronize();
+    }
     
-    // MARK: Getting information from the Database
-    
-    // Iterate over DB and assign best, average, and total
-    
-    // MARK: Get stats from user settings
+    // This update the database will all the new steps
+    private func queryStepsFromLastTouchedDayToToday() {
+        
+        var lastTouchedDate = NSUserDefaults.standardUserDefaults().objectForKey(LAST_TOUCHED_DAY) as? NSDate;
+        
+        var cal = NSCalendar.autoupdatingCurrentCalendar()
+        var components = cal.components(.DayCalendarUnit | .MonthCalendarUnit | .YearCalendarUnit, fromDate:NSDate())
+        var today = cal.dateFromComponents(components)
+        
+        var comp = NSDateComponents()
+        comp.day = -7
+        
+        var sevenDaysAgo : NSDate = cal.dateByAddingComponents(comp, toDate: today!, options: NSCalendarOptions.MatchNextTime);
+        
+        if (lastTouchedDate != nil || lastTouchedDate!.compare(sevenDaysAgo) == NSComparisonResult.OrderedAscending ) {
+            self.queryStepsFromTheLast7Days();
+        } else {
+            
+            var fetchRequest = NSFetchRequest(entityName: "StepDay")
+            comp.day = 1;
+            
+            // always the most recent day in the database
+            let predicate = NSPredicate(format: "day >= %@", lastTouchedDate!);
+            let sortDescriptor = NSSortDescriptor(key: "day", ascending: true)
+            let sortDescriptors = [sortDescriptor]
+            fetchRequest.sortDescriptors = [sortDescriptor]
+            fetchRequest.predicate = predicate;
+            
+            let e = NSErrorPointer()
+            
+            // Array of all dates
+            var stepDays : NSMutableArray = (self.context!.executeFetchRequest(fetchRequest, error: e) as NSArray).mutableCopy() as NSMutableArray
+
+            var lastStepDay : StepDay = stepDays.objectAtIndex(0) as StepDay;
+            
+            var startOfNextDay : NSDate = cal.dateByAddingComponents(comp, toDate: lastStepDay.day, options: NSCalendarOptions.MatchNextTime);
+            
+            // update the last day
+            self.stepCounter!.queryPedometerDataFromDate(lastStepDay.day, toDate: startOfNextDay, withHandler: {
+                data, error in
+                
+                if (error != nil) {
+                    lastStepDay.steps = data.numberOfSteps;
+                    
+                }
+                
+                var e = NSErrorPointer();
+                self.context!.save(e);
+                });
+            
+            var iteratorDate: NSDate = startOfNextDay;
+            
+            do {
+                
+                startOfNextDay = cal.dateByAddingComponents(comp, toDate: iteratorDate, options: NSCalendarOptions.MatchNextTime);
+                
+            stepCounter!.queryPedometerDataFromDate(iteratorDate, toDate: startOfNextDay, withHandler: { data, error in
+                
+                var newSteps : StepDay = NSEntityDescription.insertNewObjectForEntityForName("StepDay", inManagedObjectContext: self.context) as StepDay;
+                
+                newSteps.day = iteratorDate;
+                newSteps.steps = data.numberOfSteps;
+                
+                var e = NSErrorPointer();
+                
+                self.context?.save(e);
+                
+                });
+            
+                iteratorDate = startOfNextDay;
+                
+            } while (iteratorDate.compare(today!) == NSComparisonResult.OrderedAscending)
+        }
+        
+    }
    
 }

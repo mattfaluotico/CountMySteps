@@ -26,7 +26,6 @@
 		33578B7E194A56A600120216 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33578B7D194A56A600120216 /* Images.xcassets */; };
 		33578B8A194A56A600120216 /* MyStepsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33578B89194A56A600120216 /* MyStepsTests.swift */; };
 		33C062371969876C005D9EFB /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C062361969876B005D9EFB /* NavigationViewController.swift */; };
-		33CCB771199904EC009132AE /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33CCB770199904EC009132AE /* libc++.dylib */; };
 		33CCB77419990BC7009132AE /* StepDay.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CCB77319990BC7009132AE /* StepDay.m */; };
 		33EE8D1B1957D3DF00C3AD0C /* CellStatsBest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EE8D1A1957D3DF00C3AD0C /* CellStatsBest.swift */; };
 		33EE8D1F1957D46F00C3AD0C /* CellStatsBest.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33EE8D1E1957D46F00C3AD0C /* CellStatsBest.xib */; };
@@ -92,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33CCB771199904EC009132AE /* libc++.dylib in Frameworks */,
 				335410F1195BBB9300E766D8 /* CoreMotion.framework in Frameworks */,
 				335410EF195BBB8900E766D8 /* HealthKit.framework in Frameworks */,
 				16898952A35A4E1BA16E894C /* libPods.a in Frameworks */,

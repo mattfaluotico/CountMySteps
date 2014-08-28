@@ -25,7 +25,8 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stepHandler = StepDataHandler(self.fetchedResultsController);
+        stepHandler = StepDataHandler(true);
+        
         
         // Register NIBS
         var nib = UINib(nibName: "CellToday", bundle: nil)
@@ -112,14 +113,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = UITableViewCell()
-        
-        if (cell == nil) {
-            println("the cell be null")
-        }
+
         
         if (indexPath.row >= INDEX_HISTORY_CELL) {
             cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
-            (cell as CellHistory).configCell(stepHandler, index: 1)
+            (cell as CellHistory).configCell(stepHandler!, index: 1)
             return cell;
         }
         
@@ -127,19 +125,19 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         case INDEX_TODAY_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellToday") as CellToday
-            (cell as CellToday).configCell(stepHandler, parentTable: self)
+            (cell as CellToday).configCell(stepHandler!, parentTable: self)
         case INDEX_WEEK_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellWeek") as CellWeek
-            (cell as CellWeek).configCell(stepHandler)
+            (cell as CellWeek).configCell(stepHandler!)
         case INDEX_STATS_AVERAGE_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellStatsAverage") as CellStatsAverage
-            (cell as CellStatsAverage).configCell(stepHandler)
+            (cell as CellStatsAverage).configCell(stepHandler!)
         case INDEX_STATS_BEST_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellStatsBest") as CellStatsBest
-            (cell as CellStatsBest).configCell(stepHandler)
+            (cell as CellStatsBest).configCell(stepHandler!)
         case INDEX_STATS_TOTAL_CELL:
             cell = tableView.dequeueReusableCellWithIdentifier("CellStatsTotal") as CellStatsTotal
-            (cell as CellStatsTotal).configCell(stepHandler)
+            (cell as CellStatsTotal).configCell(stepHandler!)
         default:
             cell = tableView.dequeueReusableCellWithIdentifier("CellHistory") as CellHistory
         }

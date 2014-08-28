@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+    
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
         // Override point for customization after application launch.
 //        let navigationController = self.window!.rootViewController as UINavigationController
@@ -22,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        controller.managedObjectContext = self.managedObjectContext
         
                 
-        var mp = Pedometer()
-        mp.loadStep()
+//        var mp = Pedometer()
+//        mp.loadStep()
         
         if (true) {
             // set the root view as the main
@@ -61,8 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func saveContext () {
         var error: NSError? = nil
-        let managedObjectContext = self.managedObjectContext
-        if managedObjectContext != nil {
+        let managedObjectContext = self.managedObjectContext;
+        if (true) {
             if managedObjectContext.hasChanges && !managedObjectContext.save(&error) {
                 // Replace this implementation with code to handle the error appropriately.
                 // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -77,9 +79,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Returns the managed object context for the application.
     // If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
     var managedObjectContext: NSManagedObjectContext {
-        if !_managedObjectContext {
+        if !(_managedObjectContext != nil) {
             let coordinator = self.persistentStoreCoordinator
-            if coordinator != nil {
+            if (true) {
                 _managedObjectContext = NSManagedObjectContext()
                 _managedObjectContext!.persistentStoreCoordinator = coordinator
             }
@@ -91,7 +93,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Returns the managed object model for the application.
     // If the model doesn't already exist, it is created from the application's model.
     var managedObjectModel: NSManagedObjectModel {
-        if !_managedObjectModel {
+        if !(_managedObjectModel != nil) {
             let modelURL = NSBundle.mainBundle().URLForResource("MySteps", withExtension: "momd")
             _managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL)
         }
@@ -102,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Returns the persistent store coordinator for the application.
     // If the coordinator doesn't already exist, it is created and the application's store added to it.
     var persistentStoreCoordinator: NSPersistentStoreCoordinator {
-        if !_persistentStoreCoordinator {
+        if !(_persistentStoreCoordinator != nil) {
             let storeURL = self.applicationDocumentsDirectory.URLByAppendingPathComponent("MySteps.sqlite")
             var error: NSError? = nil
             _persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)

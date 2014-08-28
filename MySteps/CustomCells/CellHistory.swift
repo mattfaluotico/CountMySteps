@@ -19,11 +19,16 @@ class CellHistory: UITableViewCell {
     
     
     
-    init(style: UITableViewCellStyle, reuseIdentifier: String) {
+    override init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.awakeFromNib()
-        // Initialization code
     }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder);
+    }
+    
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
